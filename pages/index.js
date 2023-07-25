@@ -52,16 +52,16 @@ export default function Home() {
             </p>
           </div>
           <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-white">
-            <a href="https://www.facebook.com/michaldrajna/">
+            <a className="hover:scale-110" href="https://www.facebook.com/michaldrajna/">
               <AiFillFacebook />
             </a>
-            <a href="https://www.linkedin.com/in/michaldrajna-qa/">
+            <a className="hover:scale-110" href="https://www.linkedin.com/in/michaldrajna-qa/">
               <AiFillLinkedin />
             </a>
-            <a href="https://github.com/drajnamichal">
+            <a className="hover:scale-110" href="https://github.com/drajnamichal">
               <AiFillGithub />
             </a>
-            <a href="mailto:michal.drajna@gmail.com">
+            <a className="hover:scale-110" href="mailto:michal.drajna@gmail.com">
               <AiFillMail />
             </a>
           </div>
@@ -71,9 +71,9 @@ export default function Home() {
         </section>
 
         <section>
-          <div>
-          <h3 className="text-3xl py-1 dark:text-white">Services I offer</h3>
-            <p className="text-md py-5 leading-8 text-gray-800 dark:text-white">
+          <div className="text-center py-8">
+            <h3 className="text-3xl py-1 dark:text-white">Services I offer</h3>
+            <p className="text-md py-5 leading-8 text-gray-800 dark:text-white text-justify">
             I provide a comprehensive range of services tailored to meet the diverse needs of my clients. From ensuring seamless software performance to delivering top-notch user experiences, my expertise covers <span className="text-teal-500">automation testing</span>, allowing businesses to enhance efficiency and accuracy while reducing testing time. As a seasoned manual tester, I meticulously scrutinize applications to identify even the slightest flaws, guaranteeing the delivery of high-quality products. My commitment to overall quality assurance ensures that each aspect of the development process adheres to the highest standards. Furthermore, I offer specialized training as a <span className="text-teal-500">Playwright lecturer</span>, equipping individuals with the knowledge and skills to excel in <span className="text-teal-500">modern testing methodologies</span>. As an online teacher for testing, I am dedicated to empowering students worldwide by providing accessible and insightful learning experiences in the realm of software testing.
             I am an expert in all phases of the software testing life cycle, from the initial requirements testing to the final e2e testing.
             </p>
@@ -112,24 +112,15 @@ export default function Home() {
               </p>
             </div>
           </div>
-          
         </section>
+
         <section>
-          <div>
+          <div className="text-center">
             <h3 className="text-3xl py-1 dark:text-white">
               Portfolio
             </h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-white">
-              Since the beginning of my journey as a freelance designer and
-              developer, I've done remote work for
-              <span className="text-teal-500"> agencies </span>
-              consulted for <span className="text-teal-500">startups </span>
-              and collaborated with talanted people to create digital products
-              for both business and consumer use.
-            </p>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-white">
-              I offer from a wide range of services, including brand design,
-              programming and teaching.
+              As a QA Engineer, I have created <span className="text-teal-500">online course</span> for Playwright automation and developed numerous <span className="text-teal-500">automation frameworks</span> from scratch, contributing to the success of various projects and ensuring top-notch quality for digital products. I have also contributed to the industry through writing a few <span className="text-teal-500">articles</span> on testing and QA, sharing my knowledge and expertise with the community.
             </p>
           </div>
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap justify-center">
