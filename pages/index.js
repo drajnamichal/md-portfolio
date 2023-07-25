@@ -80,7 +80,7 @@ export default function Home() {
             </p>
           </div>
           <div className="lg:flex gap-10">
-            <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
+            <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-teal-500 flex-1">
               <div className="mx-auto">
                 <Image className="mx-auto" src={playwright} width={100} height={100} />
               </div>
@@ -91,7 +91,7 @@ export default function Home() {
                 Empower your team with expert test automation consulting and training. Craft a tailored automation strategy, integrate CI/CD pipelines, and master tools like Playwright and Selenium. Elevate your testing to deliver high-quality products faster.
               </p>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-teal-500 flex-1">
               <Image className="mx-auto" src={pc} width={100} height={100} />
               <h3 className="text-lg font-medium pt-8 pb-2 ">
                 Framework Development
@@ -100,7 +100,7 @@ export default function Home() {
                 Unlock test automation's potential with a custom-built framework. Modular and maintainable, it seamlessly integrates into your workflow, maximizing efficiency throughout the development process.
               </p>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-teal-500 flex-1">
               <Image className="mx-auto" src={consulting} width={100} height={100} />
               <h3 className="text-lg font-medium pt-8 pb-2 ">Remote QA Services</h3>
               <p className="py-2">
