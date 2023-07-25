@@ -61,7 +61,9 @@ export default function Home() {
             <a href="https://github.com/drajnamichal">
               <AiFillGithub />
             </a>
-            <AiFillMail />
+            <a href="mailto:michal.drajna@gmail.com">
+              <AiFillMail />
+            </a>
           </div>
           <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
             <Image alt="emoji" src={memoji} layout="fill" objectFit="cover"/>
