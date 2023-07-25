@@ -7,7 +7,7 @@ import Image from 'next/image';
 import memoji from '../public/memoji.png';
 import playwright from '../public/playwright.png';
 import pc from '../public/pc.png';
-import consulting from '../public/consulting.png';
+import qa from '../public/qa.png';
 import article from '../public/clanok.jpg';
 import skillmea from '../public/skillmea.jpg';
 import { useState } from "react";
@@ -103,7 +103,7 @@ export default function Home() {
               </p>
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-teal-500 flex-1">
-              <Image className="mx-auto" src={consulting} width={100} height={100} />
+              <Image className="mx-auto" src={qa} width={100} height={100} />
               <h3 className="text-lg font-bold pt-8 pb-2 ">
                 Remote QA Services
               </h3>
