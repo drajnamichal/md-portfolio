@@ -85,45 +85,27 @@ export default function Home() {
                 <Image className="mx-auto" src={playwright} width={100} height={100} />
               </div>
               <h3 className="text-lg font-medium pt-8 pb-2  ">
-                Lecturer
+                Consulting and Training
               </h3>
               <p className="py-2">
-                Creating elegant designs suited for your needs following core
-                design theory.
+                Empower your team with expert test automation consulting and training. Craft a tailored automation strategy, integrate CI/CD pipelines, and master tools like Playwright and Selenium. Elevate your testing to deliver high-quality products faster.
               </p>
-              <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Illustrator</p>
-              <p className="text-gray-800 py-1">Figma</p>
-              <p className="text-gray-800 py-1">Indesign</p>
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
               <Image className="mx-auto" src={pc} width={100} height={100} />
               <h3 className="text-lg font-medium pt-8 pb-2 ">
-                QA Engineer
+                Framework Development
               </h3>
               <p className="py-2">
-                Do you have an idea for your next great website? Let's make it a
-                reality.
+                Unlock test automation's potential with a custom-built framework. Modular and maintainable, it seamlessly integrates into your workflow, maximizing efficiency throughout the development process.
               </p>
-              <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Illustrator</p>
-              <p className="text-gray-800 py-1">Figma</p>
-              <p className="text-gray-800 py-1">Indesign</p>
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
               <Image className="mx-auto" src={consulting} width={100} height={100} />
-              <h3 className="text-lg font-medium pt-8 pb-2 ">Consulting</h3>
+              <h3 className="text-lg font-medium pt-8 pb-2 ">Remote QA Services</h3>
               <p className="py-2">
-                Are you interested in feedback for your current project? I can
-                give you tips and tricks to level it up.
+                Outsource QA testing to a seasoned professional. Rigorous testing across browsers and devices, detailed bug reports, and expert exploratory testing for a flawless user experience.
               </p>
-              <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Illustrator</p>
-              <p className="text-gray-800 py-1">Figma</p>
-              <p className="text-gray-800 py-1">Indesign</p>
             </div>
           </div>
           
