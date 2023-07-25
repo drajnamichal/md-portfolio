@@ -2,7 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.translate-z-0 {
+@font-face {
+  font-family: "burtons";
+  src: url("../public/Burtons.otf");
+}
+
+/* .translate-z-0 {
   transform: translateZ(0px);
 }
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
@@ -16,9 +21,9 @@
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev:after {
   color: #f13024;
-}
+} */
 
-@layer base {
+/* @layer base {
   body {
     @apply bg-secondary overflow-hidden leading-relaxed;
   }
@@ -47,5 +52,5 @@
   }
   .textarea {
     @apply w-full h-[180px] p-6 capitalize rounded-lg resize-none;
-  }
-}
+  } */
+/* } */
