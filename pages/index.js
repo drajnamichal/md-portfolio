@@ -86,7 +86,7 @@ export default function Home() {
               <div className="mx-auto">
                 <Image className="mx-auto" src={playwright} width={100} height={100} />
               </div>
-              <h3 className="text-lg font-medium pt-8 pb-2  ">
+              <h3 className="text-lg font-bold pt-8 pb-2  ">
                 Consulting and Training
               </h3>
               <p className="py-2">
@@ -95,7 +95,7 @@ export default function Home() {
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-teal-500 flex-1">
               <Image className="mx-auto" src={pc} width={100} height={100} />
-              <h3 className="text-lg font-medium pt-8 pb-2 ">
+              <h3 className="text-lg font-bold pt-8 pb-2 ">
                 Framework Development
               </h3>
               <p className="py-2">
@@ -104,7 +104,9 @@ export default function Home() {
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-teal-500 flex-1">
               <Image className="mx-auto" src={consulting} width={100} height={100} />
-              <h3 className="text-lg font-medium pt-8 pb-2 ">Remote QA Services</h3>
+              <h3 className="text-lg font-bold pt-8 pb-2 ">
+                Remote QA Services
+              </h3>
               <p className="py-2">
                 Outsource QA testing to a seasoned professional. Rigorous testing across browsers and devices, detailed bug reports, and expert exploratory testing for a flawless user experience.
               </p>
