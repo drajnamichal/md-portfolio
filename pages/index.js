@@ -133,14 +133,14 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap justify-center">
-            <a href="https://skillmea.sk/online-kurzy/test-automatizacia-playwright">
+            <a href="https://skillmea.sk/online-kurzy/test-automatizacia-playwright" target="_blank">
               <div className="basis-1/3 flex-1">
-                <Image src={skillmea} className="rounded-lg object-cover" width={400} height={400} layout="responsive" />
+                <Image src={skillmea} alt="Online Playwright course" className="rounded-lg object-cover" width={400} height={400} layout="responsive" />
               </div>
             </a>
-            <a href="https://skillmea.sk/blog/playwright-vs-selenium-vs-cypress">
+            <a href="https://skillmea.sk/blog_posts/playwright-vs-selenium-vs-cypress" target="_blank">
               <div className="basis-1/3 flex-1">
-                <Image src={article} className="rounded-lg object-cover" width={400} height={400} layout="responsive" />
+                <Image src={article} alt="Playwright/Selenium/Cypress article" className="rounded-lg object-cover" width={400} height={400} layout="responsive" />
               </div>
             </a>
           </div>
