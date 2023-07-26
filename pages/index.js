@@ -82,11 +82,11 @@ export default function Home() {
         <section>
           <div className="text-center py-8">
             <h3 className="text-3xl py-1 dark:text-white">Services I offer</h3>
-            <p className="text-md py-5 leading-8 text-gray-800 dark:text-white text-justify">
+            <p className="text-md py-5 leading-8 text-gray-800 dark:text-white text-center max-w-2xl mx-auto w-full">
             I provide a comprehensive range of services tailored to meet the diverse needs of my clients. From ensuring seamless software performance to delivering top-notch user experiences, my expertise covers <span className="text-teal-500">automation testing</span>, allowing businesses to enhance efficiency and accuracy while reducing testing time. As a seasoned manual tester, I meticulously scrutinize applications to identify even the slightest flaws, guaranteeing the delivery of high-quality products. My commitment to overall quality assurance ensures that each aspect of the development process adheres to the highest standards. Furthermore, I offer specialized training as a <span className="text-teal-500">Playwright lecturer</span>, equipping individuals with the knowledge and skills to excel in <span className="text-teal-500">modern testing methodologies</span>. As an online teacher for testing, I am dedicated to empowering students worldwide by providing accessible and insightful learning experiences in the realm of software testing.
             I am an expert in all phases of the software testing life cycle, from the initial requirements testing to the final e2e testing.
             </p>
-            <p className="text-md py-5 leading-8 text-gray-800 dark:text-white">
+            <p className="text-md py-5 leading-8 text-gray-800 dark:text-white text-center max-w-2xl mx-auto w-full">
             With a passion for excellence and a wealth of industry knowledge, I am dedicated to helping businesses thrive through exceptional testing practices.
             </p>
           </div>
@@ -128,7 +128,7 @@ export default function Home() {
             <h3 className="text-3xl py-1 dark:text-white">
               Portfolio
             </h3>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-white">
+            <p className="text-md py-2 leading-8 text-gray-800 dark:text-white text-center max-w-2xl mx-auto w-full">
               As a QA Engineer, I have created <span className="text-teal-500">online course</span> for Playwright automation and developed numerous <span className="text-teal-500">automation frameworks</span> from scratch, contributing to the success of various projects and ensuring top-notch quality for digital products. I have also contributed to the industry through writing a few <span className="text-teal-500">articles</span> on testing and QA, sharing my knowledge and expertise with the community.
             </p>
           </div>
