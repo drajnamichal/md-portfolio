@@ -11,6 +11,7 @@ import qa from '../public/qa.png';
 import article from '../public/clanok.jpg';
 import skillmea from '../public/skillmea.jpg';
 import { useState } from "react";
+import Typewriter from 'typewriter-effect';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -25,7 +26,15 @@ export default function Home() {
       <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between">
-            <h1 className="text-xl font-burtons dark:text-white">developedbymichal</h1>
+            <h1 className="text-xl font-burtons dark:text-white"> 
+              <Typewriter
+                options={{
+                  strings: ['developedbymichal'],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </h1>
             <ul className="flex items-center">
               <li>
                 <BsFillMoonStarsFill 
@@ -82,7 +91,7 @@ export default function Home() {
             </p>
           </div>
           <div className="lg:flex gap-10">
-            <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-teal-500 flex-1">
+            <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-teal-500 flex-1 hover:scale-105">
               <div className="mx-auto">
                 <Image className="mx-auto" src={playwright} width={100} height={100} />
               </div>
@@ -93,7 +102,7 @@ export default function Home() {
                 Empower your team with expert test automation consulting and training. Craft a tailored automation strategy, integrate CI/CD pipelines, and master tools like Playwright and Selenium. Elevate your testing to deliver high-quality products faster.
               </p>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-teal-500 flex-1">
+            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-teal-500 flex-1 hover:scale-105">
               <Image className="mx-auto" src={pc} width={100} height={100} />
               <h3 className="text-lg font-bold pt-8 pb-2 ">
                 Framework Development
@@ -102,7 +111,7 @@ export default function Home() {
                 Unlock test automation's potential with a custom-built framework. Modular and maintainable, it seamlessly integrates into your workflow, maximizing efficiency throughout the development process.
               </p>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-teal-500 flex-1">
+            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-teal-500 flex-1 hover:scale-105">
               <Image className="mx-auto" src={qa} width={100} height={100} />
               <h3 className="text-lg font-bold pt-8 pb-2 ">
                 Remote QA Services
@@ -134,6 +143,16 @@ export default function Home() {
                 <Image src={article} className="rounded-lg object-cover" width={400} height={400} layout="responsive" />
               </div>
             </a>
+          </div>
+        </section>
+
+        <section className="flex justify-center">
+          <div className='max-w-[1240px] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-300'>
+              <div className='lg:col-span-2 flex justify-between mt-6'>
+                <div>
+                  <h6 className='font-medium text-gray-400'>Copyright © 2023 Michal Drajna</h6>
+                </div>
+              </div>
           </div>
         </section>
 
