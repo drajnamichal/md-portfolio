@@ -248,7 +248,7 @@ export default function Home() {
               <h2 className="text-4xl font-semibold">
                 TestCrunch 2024 Conference
               </h2>
-              <p className="mt-4 text-xl">
+              <p className="mt-4 text-xl dark:text-white">
                 I delivered a presentation titled "Playwright: The Future of Test Automation?" at the prestigious TestCrunch conference,
                 attracting an audience of nearly 500 professionals eager to explore the latest advancements in the QA field. During my speech, I provided a brief overview of Playwright, its history,
                 future and the modern features it offers. I also showed the attendees the different kinds of testing they can do in Playwright and finally I compared it to its biggest competitor,
