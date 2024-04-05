@@ -5,7 +5,7 @@ import {BsFillMoonStarsFill} from 'react-icons/bs';
 import {AiFillFacebook, AiFillLinkedin, AiFillGithub, AiFillMail} from 'react-icons/ai';
 import Image from 'next/image';
 import memoji from '../public/memoji.png';
-import memoji2 from '../public/memoji2.jpg';
+// import memoji2 from '../public/memoji2.jpg';
 import playwright from '../public/playwright.png';
 import pc from '../public/pc.png';
 import qa from '../public/qa.png';
@@ -96,7 +96,7 @@ export default function Home() {
             </a>
           </div>
           <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
-            <Image alt="emoji" src={memoji2} layout="fill" objectFit="cover" />
+            <Image alt="emoji" src={memoji} layout="fill" objectFit="cover" />
           </div>
         </section>
 
