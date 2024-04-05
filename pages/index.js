@@ -138,6 +138,11 @@ export default function Home() {
                 <Image src={skillmea} alt="Online Playwright course" className="rounded-lg object-cover" width={400} height={400} layout="responsive" />
               </div>
             </a>
+            <a href="https://skillmea.sk/online-kurzy/playwright-pre-pokrocilych" target="_blank">
+              <div className="basis-1/3 flex-1">
+                <Image src={skillmea2} alt="Online Playwright course" className="rounded-lg object-cover" width={400} height={400} layout="responsive" />
+              </div>
+            </a>
             <a href="https://skillmea.sk/blog_posts/playwright-vs-selenium-vs-cypress" target="_blank">
               <div className="basis-1/3 flex-1">
                 <Image src={article} alt="Playwright/Selenium/Cypress article" className="rounded-lg object-cover" width={400} height={400} layout="responsive" />
