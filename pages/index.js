@@ -242,47 +242,28 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-16 bg-gray-50 dark:bg-gray-800">
+        <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="text-center mb-10">
-              <h2 className="text-4xl font-semibold text-gray-800 dark:text-white">
+              <h2 className="text-4xl font-semibold">
                 TestCrunch 2024 Conference
               </h2>
-              <p className="mt-4 text-xl text-gray-600 dark:text-gray-200">
-                I delivered a presentation titled "Playwright: The Future of
-                Test Automation?" at the prestigious TestCrunch conference,
-                attracting an audience of nearly 500 professionals eager to
-                explore the latest advancements in the QA field. During my
-                speech, I provided a brief overview of Playwright, its history,
-                future and the modern features it offers. I also showed the
-                attendees the different kinds of testing they can do in
-                Playwright and finally I compared it to its biggest competitor,
-                Cypress. The presentation not only captivated the audience but
-                also sparked meaningful discussions, evidenced by the multitude
-                of questions and positive feedback received post-event.
+              <p className="mt-4 text-xl">
+                I delivered a presentation titled "Playwright: The Future of Test Automation?" at the prestigious TestCrunch conference,
+                attracting an audience of nearly 500 professionals eager to explore the latest advancements in the QA field. During my speech, I provided a brief overview of Playwright, its history,
+                future and the modern features it offers. I also showed the attendees the different kinds of testing they can do in Playwright and finally I compared it to its biggest competitor,
+                Cypress. The presentation not only captivated the audience but also sparked meaningful discussions, evidenced by the multitude of questions and positive feedback received post-event.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="hover:shadow-lg transition duration-300 ease-in-out rounded-lg overflow-hidden">
-                <Image
-                  src={tc1}
-                  alt="testcrunch2024"
-                  className="w-full h-56 object-cover object-center transform hover:scale-110"
-                />
+                <Image src={tc1} alt="testcrunch2024" className="w-full h-56 object-cover object-center transform hover:scale-110" />
               </div>
               <div className="hover:shadow-lg transition duration-300 ease-in-out rounded-lg overflow-hidden">
-                <Image
-                  src={tc2}
-                  alt="testcrunch2024"
-                  className="w-full h-56 object-cover object-center transform hover:scale-110"
-                />
+                <Image src={tc2} alt="testcrunch2024" className="w-full h-56 object-cover object-center transform hover:scale-110" />
               </div>
               <div className="hover:shadow-lg transition duration-300 ease-in-out rounded-lg overflow-hidden">
-                <Image
-                  src={tc3}
-                  alt="testcrunch2024"
-                  className="w-full h-56 object-cover object-center transform hover:scale-110"
-                />
+                <Image src={tc3} alt="testcrunch2024" className="w-full h-56 object-cover object-center transform hover:scale-110" />
               </div>
             </div>
           </div>
