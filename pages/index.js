@@ -66,8 +66,7 @@ export default function Home() {
               Senior QA Engineer
             </h3>
             <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto dark:text-white">
-              Playwright Enthusiast 🎭 Manual & Automation 🤖 Frontend & Backend
-              | Web & Mobile 📱 Online Course Creator 🎥 Conference speaker 🎤 
+              Playwright Enthusiast 🎭 Online Course Creator 🎥 Conference speaker 🎤 
             </p>
           </div>
           <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-white">
