@@ -11,6 +11,9 @@ import qa from '../public/qa.png';
 import article from '../public/clanok.jpg';
 import skillmea from '../public/skillmea.jpg';
 import advanced from '../public/advanced.jpg';
+import tc1 from '../public/tc1.jpg';
+import tc2 from '../public/tc2.jpg';
+import tc3 from '../public/tc3.jpg';
 import { useState } from "react";
 import Typewriter from 'typewriter-effect';
 
@@ -149,6 +152,35 @@ export default function Home() {
                 <Image src={article} alt="Playwright/Selenium/Cypress article" className="rounded-lg object-cover" width={400} height={400} layout="responsive" />
               </div>
             </a>
+          </div>
+        </section>
+
+        <section className="py-16 bg-gray-50 dark:bg-gray-800">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-10">
+              <h2 className="text-4xl font-semibold text-gray-800 dark:text-white">TestCrunch 2024 Conference Presentation</h2>
+              <p className="mt-4 text-xl text-gray-600 dark:text-gray-200">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="shadow-lg rounded-lg overflow-hidden">
+              <Image src={tc1} alt="testcrunch2024" className="w-full h-56 object-cover object-center" />
+                <div className="p-4">
+                  <p className="text-gray-600 dark:text-gray-200">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros.</p>
+                </div>
+              </div>
+              <div className="shadow-lg rounded-lg overflow-hidden">
+              <Image src={tc2} alt="testcrunch2024" className="w-full h-56 object-cover object-center" />
+                <div className="p-4">
+                  <p className="text-gray-600 dark:text-gray-200">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros.</p>
+                </div>
+              </div>
+              <div className="shadow-lg rounded-lg overflow-hidden">
+              <Image src={tc3} alt="testcrunch2024" className="w-full h-56 object-cover object-center" />
+                <div className="p-4">
+                  <p className="text-gray-600 dark:text-gray-200">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
