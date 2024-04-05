@@ -155,7 +155,7 @@ export default function Home() {
           <div className='max-w-[1240px] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-300'>
               <div className='lg:col-span-2 flex justify-between mt-6'>
                 <div>
-                  <h6 className='font-medium text-gray-400'>Copyright © 2023 Michal Drajna</h6>
+                  <h6 className='font-medium text-gray-400'>Copyright © 2024 Michal Drajna</h6>
                 </div>
               </div>
           </div>
