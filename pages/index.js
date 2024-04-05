@@ -5,6 +5,7 @@ import {BsFillMoonStarsFill} from 'react-icons/bs';
 import {AiFillFacebook, AiFillLinkedin, AiFillGithub, AiFillMail} from 'react-icons/ai';
 import Image from 'next/image';
 import memoji from '../public/memoji.png';
+import memoji2 from '../public/memoji2.png';
 import playwright from '../public/playwright.png';
 import pc from '../public/pc.png';
 import qa from '../public/qa.png';
@@ -66,7 +67,7 @@ export default function Home() {
             </h3>
             <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto dark:text-white">
               Playwright Enthusiast 🎭 Manual & Automation 🤖 Frontend & Backend
-              | Web Apps & Mobile 📱 Playwright Online Course Creator 🎥
+              | Web & Mobile 📱 Online Course Creator 🎥 Conference speaker 🎤 
             </p>
           </div>
           <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-white">
@@ -96,7 +97,7 @@ export default function Home() {
             </a>
           </div>
           <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
-            <Image alt="emoji" src={memoji} layout="fill" objectFit="cover" />
+            <Image alt="emoji" src={memoji2} layout="fill" objectFit="cover" />
           </div>
         </section>
 
