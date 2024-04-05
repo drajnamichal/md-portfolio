@@ -245,10 +245,10 @@ export default function Home() {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="text-center mb-10">
-              <h2 className="text-4xl font-semibold">
+              <h2 className="text-3xl py-1 dark:text-white">
                 TestCrunch 2024 Conference
               </h2>
-              <p className="mt-4 text-xl dark:text-white">
+              <p className="text-md py-2 leading-8 text-gray-800 dark:text-white">
                 I delivered a presentation titled "Playwright: The Future of Test Automation?" at the prestigious TestCrunch conference,
                 attracting an audience of nearly 500 professionals eager to explore the latest advancements in the QA field. During my speech, I provided a brief overview of Playwright, its history,
                 future and the modern features it offers. I also showed the attendees the different kinds of testing they can do in Playwright and finally I compared it to its biggest competitor,
