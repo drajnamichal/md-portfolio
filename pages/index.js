@@ -10,6 +10,7 @@ import pc from '../public/pc.png';
 import qa from '../public/qa.png';
 import article from '../public/clanok.jpg';
 import skillmea from '../public/skillmea.jpg';
+import advanced from '../public/advanced.jpg';
 import { useState } from "react";
 import Typewriter from 'typewriter-effect';
 
