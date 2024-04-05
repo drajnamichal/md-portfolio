@@ -163,19 +163,25 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="shadow-lg rounded-lg overflow-hidden">
-              <Image src={tc1} alt="testcrunch2024" className="w-full h-56 object-cover object-center" />
+                <a href={tc1} target="_blank">
+                  <Image src={tc1} alt="testcrunch2024" className="w-full h-56 object-cover object-center hover:scale-110" />
+                </a>
                 <div className="p-4">
                   <p className="text-gray-600 dark:text-gray-200">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros.</p>
                 </div>
               </div>
               <div className="shadow-lg rounded-lg overflow-hidden">
-              <Image src={tc2} alt="testcrunch2024" className="w-full h-56 object-cover object-center" />
+                <a href={tc2} target="_blank">
+                  <Image src={tc2} alt="testcrunch2024" className="w-full h-56 object-cover object-center hover:scale-110" />
+                </a>
                 <div className="p-4">
                   <p className="text-gray-600 dark:text-gray-200">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros.</p>
                 </div>
               </div>
               <div className="shadow-lg rounded-lg overflow-hidden">
-              <Image src={tc3} alt="testcrunch2024" className="w-full h-56 object-cover object-center" />
+                <a href={tc3} target="_blank">
+                  <Image src={tc3} alt="testcrunch2024" className="w-full h-56 object-cover object-center hover:scale-110" />
+                </a>
                 <div className="p-4">
                   <p className="text-gray-600 dark:text-gray-200">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros.</p>
                 </div>
