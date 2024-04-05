@@ -246,10 +246,10 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-10">
               <h2 className="text-3xl py-1 dark:text-white">
-                TestCrunch 2024 Conference
+                TestCrunch 2024 conference
               </h2>
               <p className="text-md py-2 leading-8 text-gray-800 dark:text-white">
-                I delivered a presentation titled "Playwright: The Future of Test Automation?" at the prestigious TestCrunch conference,
+                I delivered a presentation titled "Playwright: The Future of Test Automation?" at the biggest SK/CZ TestCrunch conference,
                 attracting an audience of nearly 500 professionals eager to explore the latest advancements in the QA field. During my speech, I provided a brief overview of Playwright, its history,
                 future and the modern features it offers. I also showed the attendees the different kinds of testing they can do in Playwright and finally I compared it to its biggest competitor,
                 Cypress. The presentation not only captivated the audience but also sparked meaningful discussions, evidenced by the multitude of questions and positive feedback received post-event.
