@@ -17,6 +17,7 @@ import tc2 from '../public/tc2.jpg';
 import tc3 from '../public/tc3.jpg';
 import { useState } from "react";
 import Typewriter from 'typewriter-effect';
+import Link from 'next/link';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -46,6 +47,11 @@ export default function Home() {
                   onClick={() => setDarkMode(!darkMode)}
                   className="cursor-pointer text-2xl dark:text-white"
                 />
+              </li>
+              <li>
+                <Link href="/workshops" className="bg-teal-600 text-white px-4 py-2 rounded-md ml-8 hover:bg-teal-700">
+                  Workshops
+                </Link>
               </li>
               <li>
                 <a
