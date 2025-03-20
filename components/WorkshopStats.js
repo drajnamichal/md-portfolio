@@ -67,7 +67,7 @@ export default function WorkshopStats({ stats }) {
           viewport={{ once: true }}
         >
           <blockquote className="text-xl italic text-gray-700 dark:text-gray-300">
-            "{stats.testimonialHighlight.text}"
+            &ldquo;{stats.testimonialHighlight.text}&rdquo;
           </blockquote>
           <div className="mt-4 text-gray-600 dark:text-gray-400">
             {stats.testimonialHighlight.author}
