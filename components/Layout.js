@@ -39,21 +39,6 @@ export default function Layout({ children, title, description, image }) {
         <nav className={`py-6 px-10 md:px-20 lg:px-40 flex justify-between fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
           isScrolled ? "bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg" : "bg-transparent"
         }`}>
-          <button
-            onClick={() => setDarkMode(!darkMode)}
-            className="flex items-center space-x-2 px-4 py-2 text-gray-800 dark:text-white hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
-            aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
-          >
-            {darkMode ? (
-              <BsFillSunFill className="text-2xl" />
-            ) : (
-              <BsFillMoonStarsFill className="text-2xl" />
-            )}
-            <span className="text-sm hidden md:inline">
-              {darkMode ? "Light Mode" : "Dark Mode"}
-            </span>
-          </button>
-
           <ul className="flex items-center space-x-2">
             <li>
               <Link 
@@ -116,6 +101,21 @@ export default function Layout({ children, title, description, image }) {
               </Link>
             </li>
           </ul>
+
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className="flex items-center space-x-2 px-4 py-2 text-gray-800 dark:text-white hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
+            aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+          >
+            {darkMode ? (
+              <BsFillSunFill className="text-2xl" />
+            ) : (
+              <BsFillMoonStarsFill className="text-2xl" />
+            )}
+            <span className="text-sm hidden md:inline">
+              {darkMode ? "Light Mode" : "Dark Mode"}
+            </span>
+          </button>
         </nav>
 
         <div className="px-10 md:px-20 lg:px-40 pt-28">
