@@ -106,9 +106,6 @@ export default function Workshops() {
                 >
                   Register Your Interest
                 </a>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
-                  By registering, you'll receive detailed information about workshop dates, pricing, and customization options.
-                </p>
               </div>
             </div>
 
