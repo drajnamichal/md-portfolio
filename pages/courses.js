@@ -188,7 +188,7 @@ export default function Courses() {
                 </div>
                 <div className="mt-8">
                   <span className="inline-block bg-teal-600 text-white px-6 py-3 rounded-md hover:bg-teal-700 transition-colors">
-                    Learn More
+                    Go to Course
                   </span>
                 </div>
               </div>
