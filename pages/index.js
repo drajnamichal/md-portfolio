@@ -280,7 +280,7 @@ export default function Home() {
             <div className="lg:col-span-2 flex justify-between mt-6">
               <div>
                 <h6 className="font-medium text-gray-400">
-                  Copyright © 2024 Michal Drajna
+                  Copyright © 2025 Michal Drajna
                 </h6>
               </div>
             </div>
