@@ -32,14 +32,9 @@ export default function Layout({ children, title, description, image }) {
           isScrolled ? "bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg" : "bg-transparent"
         }`}>
           <h1 className="text-xl font-burtons dark:text-white">
-            <Link href="/" className="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
-              <Typewriter
-                options={{
-                  strings: ["developedbymichal"],
-                  autoStart: true,
-                  loop: true,
-                }}
-              />
+            <Link href="/" className="hover:text-teal-600 dark:hover:text-teal-400 transition-colors flex items-center">
+              <span className="mr-2">←</span>
+              developedbymichal
             </Link>
           </h1>
           <ul className="flex items-center space-x-8">
