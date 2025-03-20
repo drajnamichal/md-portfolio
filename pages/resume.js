@@ -42,7 +42,7 @@ export default function Resume() {
 
             <div className="mb-8 flex justify-center">
               <a
-                href="/resume.pdf"
+                href="/zivotopis.pdf"
                 className="bg-teal-600 text-white px-6 py-3 rounded-md hover:bg-teal-700 transition-colors flex items-center"
                 download
               >
@@ -55,8 +55,9 @@ export default function Resume() {
               <section>
                 <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400">Professional Summary</h3>
                 <p className="leading-7">
-                  Senior QA Engineer with 9+ years of experience in test automation and quality assurance. 
-                  Specialized in Playwright automation, course creation, and conference speaking. 
+                  Senior QA Engineer with 9+ years of experience in software testing and test automation. 
+                  Creator of online courses about test automation with Playwright, reaching thousands of students.
+                  Speaker at TestCrunch 2024, the biggest testing conference in Slovakia and Czech Republic.
                   Passionate about sharing knowledge and improving testing practices across the industry.
                 </p>
               </section>
@@ -64,18 +65,28 @@ export default function Resume() {
               {/* Experience Section */}
               <section>
                 <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400">Work Experience</h3>
-                <div className="space-y-6">
+                <div className="space-y-8">
                   <div>
                     <h4 className="text-xl font-medium">Senior QA Engineer</h4>
-                    <p className="text-gray-600 dark:text-gray-400">Company Name • 2020 - Present</p>
+                    <p className="text-gray-600 dark:text-gray-400">Kiwi.com • 2019 - Present</p>
                     <ul className="list-disc ml-6 mt-2 space-y-2">
-                      <li>Led end-to-end test automation initiatives using Playwright</li>
-                      <li>Created and delivered online courses on test automation</li>
-                      <li>Spoke at TestCrunch 2024 conference about Playwright automation</li>
-                      <li>Developed and maintained automated test frameworks</li>
+                      <li>Leading test automation initiatives using Playwright and TypeScript</li>
+                      <li>Developing and maintaining automated test frameworks</li>
+                      <li>Mentoring team members in test automation best practices</li>
+                      <li>Creating and delivering online courses on test automation</li>
+                      <li>Speaking at conferences about modern testing approaches</li>
                     </ul>
                   </div>
-                  {/* Add more experience entries as needed */}
+                  <div>
+                    <h4 className="text-xl font-medium">QA Engineer</h4>
+                    <p className="text-gray-600 dark:text-gray-400">ESET • 2015 - 2019</p>
+                    <ul className="list-disc ml-6 mt-2 space-y-2">
+                      <li>Implemented and maintained automated test suites</li>
+                      <li>Performed manual and automated testing of security products</li>
+                      <li>Collaborated with development teams to improve product quality</li>
+                      <li>Created detailed test documentation and reports</li>
+                    </ul>
+                  </div>
                 </div>
               </section>
 
@@ -87,9 +98,9 @@ export default function Resume() {
                     <h4 className="font-medium mb-2">Automation</h4>
                     <ul className="list-disc ml-6 space-y-1">
                       <li>Playwright</li>
-                      <li>Selenium</li>
-                      <li>Cypress</li>
-                      <li>JavaScript/TypeScript</li>
+                      <li>TypeScript</li>
+                      <li>JavaScript</li>
+                      <li>Python</li>
                     </ul>
                   </div>
                   <div>
@@ -102,12 +113,12 @@ export default function Resume() {
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-medium mb-2">Tools</h4>
+                    <h4 className="font-medium mb-2">Tools & Platforms</h4>
                     <ul className="list-disc ml-6 space-y-1">
                       <li>Git</li>
                       <li>CI/CD</li>
-                      <li>JIRA</li>
-                      <li>TestRail</li>
+                      <li>Docker</li>
+                      <li>AWS</li>
                     </ul>
                   </div>
                 </div>
@@ -117,16 +128,19 @@ export default function Resume() {
               <section>
                 <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400">Education</h3>
                 <div>
-                  <h4 className="text-xl font-medium">Your University Degree</h4>
-                  <p className="text-gray-600 dark:text-gray-400">University Name • Graduation Year</p>
+                  <h4 className="text-xl font-medium">Master's Degree in Computer Science</h4>
+                  <p className="text-gray-600 dark:text-gray-400">Technical University of Košice • 2015</p>
                 </div>
               </section>
 
-              {/* Certifications Section */}
+              {/* Certifications & Achievements Section */}
               <section>
-                <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400">Certifications</h3>
+                <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400">Certifications & Achievements</h3>
                 <ul className="list-disc ml-6 space-y-2">
-                  <li>Add your relevant certifications here</li>
+                  <li>Speaker at TestCrunch 2024 - "Playwright: The Future of Test Automation?"</li>
+                  <li>Creator of popular Playwright automation courses on Skillmea.sk</li>
+                  <li>Published technical articles on test automation and QA practices</li>
+                  <li>Regular contributor to testing communities and meetups</li>
                 </ul>
               </section>
             </div>
