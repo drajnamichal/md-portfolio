@@ -45,9 +45,6 @@ export default function Recommendations() {
           className="transition-opacity duration-500"
           key={currentIndex}
         >
-          <div className="text-center mb-6">
-            <h4 className="text-xl font-semibold text-gray-900 dark:text-white">{recommendations[currentIndex].name}</h4>
-          </div>
           <blockquote className="text-gray-800 dark:text-gray-200 text-center italic">
             &ldquo;{recommendations[currentIndex].text}&rdquo;
           </blockquote>
