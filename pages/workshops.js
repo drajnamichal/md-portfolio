@@ -21,9 +21,9 @@ export default function Workshops() {
 
       <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
         <section className="min-h-screen">
-          <nav className="py-10 mb-12 flex justify-between">
-            <Link href="/" className="text-xl font-burtons dark:text-white">
-              developedbymichal
+          <nav className="py-10 mb-12 flex justify-between items-center">
+            <Link href="/" className="text-xl font-burtons dark:text-white hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
+              ← Back to Home
             </Link>
             <ul className="flex items-center">
               <li>
@@ -115,10 +115,10 @@ export default function Workshops() {
               <p>
                 Have questions? Contact me at{" "}
                 <a
-                  href="mailto:your.email@example.com"
+                  href="mailto:michal.drajna@gmail.com"
                   className="text-teal-600 hover:text-teal-700"
                 >
-                  your.email@example.com
+                  michal.drajna@gmail.com
                 </a>
               </p>
             </div>
