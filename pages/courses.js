@@ -130,16 +130,16 @@ export default function Courses() {
         <Slider {...sliderSettings} className={styles.reviewSlider}>
           {reviews.map((review, index) => (
             <div key={index} className="px-3">
-              <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg h-full">
-                <div className="text-teal-600 mb-4">
-                  <FaQuoteLeft className="text-3xl opacity-50" />
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg h-full">
+                <div className="text-teal-600 mb-3">
+                  <FaQuoteLeft className="text-2xl opacity-50" />
                 </div>
-                <div className="flex text-yellow-400 mb-4">
+                <div className="flex text-yellow-400 mb-3">
                   {[...Array(review.stars)].map((_, i) => (
-                    <AiFillStar key={i} className="text-xl" />
+                    <AiFillStar key={i} className="text-lg" />
                   ))}
                 </div>
-                <p className="text-gray-600 dark:text-gray-300 italic text-lg mb-4">
+                <p className="text-gray-600 dark:text-gray-300 italic text-sm">
                   "{review.text}"
                 </p>
               </div>
@@ -191,7 +191,7 @@ export default function Courses() {
                 </div>
                 <div className="mt-6">
                   <span className="inline-block bg-teal-600 text-white px-5 py-2 rounded-md hover:bg-teal-700 transition-colors text-sm">
-                    Go to Course
+                    Start Learning
                   </span>
                 </div>
               </div>
