@@ -16,6 +16,7 @@ import tc3 from '../public/tc3.jpg';
 import Typewriter from 'typewriter-effect';
 import Layout from "../components/Layout";
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
@@ -24,50 +25,173 @@ export default function Home() {
       description="Senior QA Engineer specializing in test automation with Playwright. Expert in software testing, quality assurance, and online course creator. Offering workshops and consulting services."
       image="/memoji.png"
     >
-      <section className="min-h-screen">
-        <div className="text-center p-10">
-          <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
+      <section className="min-h-screen relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-teal-50 to-white dark:from-gray-800 dark:to-gray-900 opacity-50" />
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(0, 128, 128, 0.1) 1px, transparent 0)',
+          backgroundSize: '40px 40px'
+        }} />
+        <motion.div 
+          className="text-center p-10 relative"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.h2 
+            className="text-5xl py-2 text-teal-600 font-medium md:text-6xl lg:text-7xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             Michal Drajna
-          </h2>
-          <h3 className="text-2xl py-2 md:text-3xl dark:text-white">
+          </motion.h2>
+          <motion.h3 
+            className="text-2xl py-2 md:text-3xl lg:text-4xl dark:text-white font-light"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
             Senior QA Engineer
-          </h3>
-          <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto dark:text-white">
-            Playwright Enthusiast 🎭 Online Course Creator 🎥 Conference speaker 🎤 
-          </p>
+          </motion.h3>
+          <motion.div 
+            className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-2xl mx-auto dark:text-white"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            <Typewriter
+              options={{
+                strings: [
+                  'Playwright Enthusiast 🎭',
+                  'Online Course Creator 🎥',
+                  'Conference Speaker 🎤',
+                  'Test Automation Expert 🚀'
+                ],
+                autoStart: true,
+                loop: true,
+                delay: 50,
+                deleteSpeed: 30,
+                pauseFor: 2000,
+              }}
+            />
+          </motion.div>
+          <motion.div
+            className="mt-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            <motion.a
+              href="#contact"
+              className="bg-teal-600 text-white px-8 py-3 rounded-full text-lg inline-flex items-center gap-2 relative overflow-hidden group"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span className="relative z-10">Get in Touch</span>
+              <motion.span
+                className="absolute inset-0 bg-teal-700"
+                initial={{ x: '-100%' }}
+                whileHover={{ x: 0 }}
+                transition={{ duration: 0.3, ease: 'easeInOut' }}
+              />
+              <svg
+                className="w-5 h-5 relative z-10 transform group-hover:translate-x-1 transition-transform"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </motion.a>
+          </motion.div>
+        </motion.div>
+
+        <div className="text-4xl flex justify-center gap-8 py-3 text-gray-600 dark:text-white">
+          {[
+            { href: "https://www.facebook.com/michaldrajna/", icon: AiFillFacebook },
+            { href: "https://www.linkedin.com/in/michaldrajna-qa/", icon: AiFillLinkedin },
+            { href: "https://github.com/drajnamichal", icon: AiFillGithub },
+            { href: "mailto:michal.drajna@gmail.com", icon: AiFillMail }
+          ].map((social, index) => (
+            <motion.a
+              key={social.href}
+              href={social.href}
+              className="hover:text-teal-600 transition-colors"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1 + index * 0.1 }}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <social.icon />
+            </motion.a>
+          ))}
         </div>
-        <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-white">
-          <a
-            className="hover:scale-110"
-            href="https://www.facebook.com/michaldrajna/"
+
+        <motion.div 
+          className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96 shadow-2xl"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+          whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+        >
+          <Image 
+            alt="Michal Drajna - Senior QA Engineer" 
+            src={memoji} 
+            layout="fill" 
+            objectFit="cover"
+            priority
+            className="hover:scale-105 transition-transform duration-300"
+          />
+        </motion.div>
+
+        <motion.div
+          className="absolute bottom-0 left-0 right-0 flex justify-center pb-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.4 }}
+        >
+          <motion.div
+            animate={{
+              y: [0, -10, 0],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              repeatType: "reverse",
+            }}
           >
-            <AiFillFacebook />
-          </a>
-          <a
-            className="hover:scale-110"
-            href="https://www.linkedin.com/in/michaldrajna-qa/"
-          >
-            <AiFillLinkedin />
-          </a>
-          <a
-            className="hover:scale-110"
-            href="https://github.com/drajnamichal"
-          >
-            <AiFillGithub />
-          </a>
-          <a
-            className="hover:scale-110"
-            href="mailto:michal.drajna@gmail.com"
-          >
-            <AiFillMail />
-          </a>
-        </div>
-        <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
-          <Image alt="emoji" src={memoji} layout="fill" objectFit="cover" />
-        </div>
+            <a
+              href="#services"
+              className="text-teal-600 dark:text-teal-400 flex flex-col items-center cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              <span className="text-sm mb-2">Scroll to explore</span>
+              <svg
+                className="w-6 h-6 animate-bounce"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+              </svg>
+            </a>
+          </motion.div>
+        </motion.div>
       </section>
 
-      <section>
+      <section id="services">
         <div className="text-center py-8">
           <h3 className="text-3xl py-1 dark:text-white">Services I offer</h3>
           <p className="text-md py-5 leading-8 text-gray-800 dark:text-white text-center max-w-2xl mx-auto w-full">
