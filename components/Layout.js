@@ -36,12 +36,9 @@ export default function Layout({ children, title, description, image }) {
         <meta property="og:image" content={image} />
       </Head>
       <main className="bg-white dark:bg-gray-900 min-h-screen">
-        <nav className={`py-6 px-10 md:px-20 lg:px-40 flex items-center justify-between fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
+        <nav className={`py-6 px-10 md:px-20 lg:px-40 flex justify-end fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
           isScrolled ? "bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg" : "bg-transparent"
         }`}>
-          <h1 className="font-burtons text-xl text-gray-800 dark:text-white">
-            Michal Drajna
-          </h1>
           <div className="flex items-center space-x-4">
             <ul className="flex items-center space-x-2">
               <li>
