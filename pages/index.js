@@ -15,6 +15,7 @@ import tc2 from '../public/tc2.jpg';
 import tc3 from '../public/tc3.jpg';
 import Typewriter from 'typewriter-effect';
 import Layout from "../components/Layout";
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -86,11 +87,11 @@ export default function Home() {
             <span className="text-teal-500">
               modern testing methodologies
             </span>
-            . As an online teacher for testing, I am dedicated to empowering
-            students worldwide by providing accessible and insightful learning
-            experiences in the realm of software testing. I am an expert in
-            all phases of the software testing life cycle, from the initial
-            requirements testing to the final e2e testing.
+            . Check out my{" "}
+            <Link href="/courses" className="text-teal-500 hover:text-teal-600">
+              online courses
+            </Link>{" "}
+            to learn more about test automation with Playwright.
           </p>
           <p className="text-md py-5 leading-8 text-gray-800 dark:text-white text-center max-w-2xl mx-auto w-full">
             With a passion for excellence and a wealth of industry knowledge,
@@ -149,8 +150,10 @@ export default function Home() {
           <h3 className="text-3xl py-1 dark:text-white">Portfolio</h3>
           <p className="text-md py-2 leading-8 text-gray-800 dark:text-white text-center max-w-2xl mx-auto w-full">
             As a QA Engineer, I have created{" "}
-            <span className="text-teal-500">online course</span> for
-            Playwright automation and developed numerous{" "}
+            <Link href="/courses" className="text-teal-500 hover:text-teal-600">
+              online courses
+            </Link>{" "}
+            for Playwright automation and developed numerous{" "}
             <span className="text-teal-500">automation frameworks</span> from
             scratch, contributing to the success of various projects and
             ensuring top-notch quality for digital products. I have also
@@ -160,36 +163,6 @@ export default function Home() {
           </p>
         </div>
         <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap justify-center">
-          <a
-            href="https://skillmea.sk/online-kurzy/test-automatizacia-playwright"
-            target="_blank"
-          >
-            <div className="basis-1/3 flex-1">
-              <Image
-                src={skillmea}
-                alt="Online Playwright course"
-                className="rounded-lg object-cover"
-                width={400}
-                height={400}
-                layout="responsive"
-              />
-            </div>
-          </a>
-          <a
-            href="https://skillmea.sk/online-kurzy/playwright-pre-pokrocilych"
-            target="_blank"
-          >
-            <div className="basis-1/3 flex-1">
-              <Image
-                src={advanced}
-                alt="Online Playwright course"
-                className="rounded-lg object-cover"
-                width={400}
-                height={400}
-                layout="responsive"
-              />
-            </div>
-          </a>
           <a
             href="https://skillmea.sk/blog_posts/playwright-vs-selenium-vs-cypress"
             target="_blank"

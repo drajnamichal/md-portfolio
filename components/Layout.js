@@ -63,6 +63,18 @@ export default function Layout({ children, title, description, image }) {
               </Link>
             </li>
             <li>
+              <Link 
+                href="/courses" 
+                className={`px-4 py-2 rounded-md transition-colors ${
+                  isActive('/courses') 
+                    ? 'bg-teal-600 text-white hover:bg-teal-700' 
+                    : 'text-gray-800 dark:text-white hover:text-teal-600 dark:hover:text-teal-400'
+                }`}
+              >
+                Courses
+              </Link>
+            </li>
+            <li>
               <Link
                 href="/resume"
                 className={`px-4 py-2 rounded-md transition-colors ${
