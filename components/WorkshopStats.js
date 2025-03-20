@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaUsers, FaStar, FaGraduationCap, FaBuilding } from 'react-icons/fa';
+import AnimatedCounter from './AnimatedCounter';
 
 export default function WorkshopStats({ stats }) {
   const defaultStats = {
@@ -14,22 +15,24 @@ export default function WorkshopStats({ stats }) {
   const statItems = [
     {
       icon: FaUsers,
-      value: finalStats.participantCount,
+      value: '10',
+      suffix: '+',
       label: 'Participants Trained'
     },
     {
       icon: FaStar,
-      value: finalStats.satisfactionRate,
+      value: '4.8',
+      suffix: '/5',
       label: 'Satisfaction Rate'
     },
     {
       icon: FaGraduationCap,
-      value: finalStats.workshopsDelivered,
+      value: '1',
       label: 'Workshops Delivered'
     },
     {
       icon: FaBuilding,
-      value: finalStats.companiesServed,
+      value: '1',
       label: 'Companies Served'
     }
   ];
@@ -50,7 +53,11 @@ export default function WorkshopStats({ stats }) {
               <item.icon className="text-xl text-teal-600 dark:text-teal-400" />
             </div>
             <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-              {item.value}
+              <AnimatedCounter 
+                value={item.value} 
+                suffix={item.suffix || ''} 
+                duration={2}
+              />
             </div>
             <div className="text-sm text-gray-600 dark:text-gray-400">
               {item.label}
