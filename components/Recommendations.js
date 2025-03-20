@@ -33,7 +33,7 @@ export default function Recommendations() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % recommendations.length);
-    }, 10000); // Change slide every 10 seconds
+    }, 7000); // Change slide every 7 seconds
 
     return () => clearInterval(timer);
   }, []);
