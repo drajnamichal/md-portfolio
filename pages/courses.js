@@ -127,25 +127,27 @@ export default function Courses() {
 
       <div className="mb-16 px-4">
         <h3 className="text-3xl text-center text-teal-600 font-medium mb-8">What Students Say</h3>
-        <Slider {...sliderSettings} className={styles.reviewSlider}>
-          {reviews.map((review, index) => (
-            <div key={index} className="px-3">
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg h-full">
-                <div className="text-teal-600 mb-3">
-                  <FaQuoteLeft className="text-2xl opacity-50" />
+        <div className="max-w-6xl mx-auto">
+          <Slider {...sliderSettings} className={styles.reviewSlider}>
+            {reviews.map((review, index) => (
+              <div key={index} className="px-3">
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg h-full">
+                  <div className="text-teal-600 mb-3">
+                    <FaQuoteLeft className="text-2xl opacity-50" />
+                  </div>
+                  <div className="flex text-yellow-400 mb-3">
+                    {[...Array(review.stars)].map((_, i) => (
+                      <AiFillStar key={i} className="text-lg" />
+                    ))}
+                  </div>
+                  <p className="text-gray-600 dark:text-gray-300 italic text-sm">
+                    "{review.text}"
+                  </p>
                 </div>
-                <div className="flex text-yellow-400 mb-3">
-                  {[...Array(review.stars)].map((_, i) => (
-                    <AiFillStar key={i} className="text-lg" />
-                  ))}
-                </div>
-                <p className="text-gray-600 dark:text-gray-300 italic text-sm">
-                  "{review.text}"
-                </p>
               </div>
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </Slider>
+        </div>
       </div>
 
       <div className="grid md:grid-cols-2 gap-12 mb-16 max-w-6xl mx-auto px-4">
