@@ -52,9 +52,6 @@ export default function Recommendations() {
           <div className="text-center mb-6">
             <h4 className="text-xl font-semibold text-gray-900 dark:text-white">{recommendations[currentIndex].name}</h4>
             <p className="text-sm text-gray-600 dark:text-gray-400">{recommendations[currentIndex].title}</p>
-            <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">
-              {recommendations[currentIndex].date}, {recommendations[currentIndex].relationship}
-            </p>
           </div>
           <blockquote className="text-gray-800 dark:text-gray-200 text-center italic">
             &ldquo;{recommendations[currentIndex].text}&rdquo;
