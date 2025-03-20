@@ -8,10 +8,22 @@ import Image from 'next/image';
 import playwright from '../public/playwright.png';
 import { useState } from "react";
 import Footer from "../components/Footer";
+import WorkshopStats from "../components/WorkshopStats";
 
 export default function Workshops() {
   const [darkMode, setDarkMode] = useState(false);
   
+  const workshopStats = {
+    participantCount: '50+',
+    satisfactionRate: '4.9/5',
+    workshopsDelivered: '8+',
+    companiesServed: '6+',
+    testimonialHighlight: {
+      text: "Michal's workshop was incredibly practical and helped our team transition to Playwright smoothly. His expertise and teaching style made complex concepts easy to understand.",
+      author: "Workshop Participant"
+    }
+  };
+
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
@@ -53,6 +65,10 @@ export default function Workshops() {
 
           <div className="flex justify-center mb-16">
             <Image src={playwright} width={200} height={200} className="rounded-xl" />
+          </div>
+
+          <div className="max-w-4xl mx-auto mb-16">
+            <WorkshopStats stats={workshopStats} />
           </div>
 
           <div className="max-w-2xl mx-auto">
