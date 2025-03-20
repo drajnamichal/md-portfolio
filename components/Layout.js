@@ -35,12 +35,6 @@ export default function Layout({ children, title, description, image }) {
         <nav className={`py-6 px-10 md:px-20 lg:px-40 flex justify-between fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
           isScrolled ? "bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg" : "bg-transparent"
         }`}>
-          <h1 className="text-xl font-burtons dark:text-white">
-            <Link href="/" className="hover:text-teal-600 dark:hover:text-teal-400 transition-colors flex items-center">
-              <span className="mr-2">←</span>
-              developedbymichal
-            </Link>
-          </h1>
           <ul className="flex items-center space-x-8">
             <li>
               <Link 
