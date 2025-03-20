@@ -4,6 +4,8 @@ import Image from 'next/image';
 import Layout from "../components/Layout";
 import skillmea from '../public/skillmea.jpg';
 import advanced from '../public/advanced.jpg';
+import { AiFillStar } from 'react-icons/ai';
+import { FaUserGraduate } from 'react-icons/fa';
 
 export default function Courses() {
   const courses = [
@@ -37,6 +39,21 @@ export default function Courses() {
     }
   ];
 
+  const reviews = [
+    {
+      text: "Kurz byl srozumitelně vysvětlen a celkově hodnotím plným počtem",
+      stars: 5
+    },
+    {
+      text: "Super kurz. Simultánne som si vytvárala vlastne automatické testy a upravovala a spoznávala nove funkcie a všetko funguje ako ma!",
+      stars: 5
+    },
+    {
+      text: "Zatiaľ najlepší kurz, aký som na Skillmea prešiel a kvalitou mi pripadal porovnateľný s tými lepšími zahraničnými. Plánujem si niektoré témy zopakovať a prejsť na kurz pre pokročilých, na ktorý sa už teším.",
+      stars: 5
+    }
+  ];
+
   return (
     <Layout 
       title="Playwright Testing Courses | Michal Drajna"
@@ -50,6 +67,39 @@ export default function Courses() {
         <p className="text-md py-5 leading-8 text-gray-800 dark:text-white md:text-xl max-w-2xl mx-auto">
           Master test automation with my comprehensive Playwright courses. From fundamentals to advanced techniques, learn everything you need to become a testing expert.
         </p>
+      </div>
+
+      <div className="flex justify-center items-center gap-8 mb-16">
+        <div className="text-center">
+          <div className="flex items-center justify-center text-4xl text-teal-600 mb-2">
+            <FaUserGraduate className="mr-2" />
+            <span>800+</span>
+          </div>
+          <p className="text-gray-600 dark:text-gray-300">Students Trained</p>
+        </div>
+        <div className="text-center">
+          <div className="flex items-center justify-center text-4xl text-teal-600 mb-2">
+            <AiFillStar className="mr-2" />
+            <span>5/5</span>
+          </div>
+          <p className="text-gray-600 dark:text-gray-300">Average Rating</p>
+        </div>
+      </div>
+
+      <div className="mb-16">
+        <h3 className="text-3xl text-center text-teal-600 font-medium mb-8">What Students Say</h3>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {reviews.map((review, index) => (
+            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+              <div className="flex text-yellow-400 mb-4">
+                {[...Array(review.stars)].map((_, i) => (
+                  <AiFillStar key={i} className="text-xl" />
+                ))}
+              </div>
+              <p className="text-gray-600 dark:text-gray-300 italic">"{review.text}"</p>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="grid md:grid-cols-2 gap-12 mb-16">
