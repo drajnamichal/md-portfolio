@@ -3,7 +3,6 @@
 import {AiFillFacebook, AiFillLinkedin, AiFillGithub, AiFillMail} from 'react-icons/ai';
 import Image from 'next/image';
 import profile from '../public/profile.jpg';
-// import memoji2 from '../public/memoji2.jpg';
 import playwright from '../public/playwright.png';
 import pc from '../public/pc.png';
 import qa from '../public/qa.png';
@@ -26,7 +25,6 @@ export default function Home() {
       image="/profile.jpg"
     >
       <section className="min-h-screen relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-teal-50 to-white dark:from-gray-800 dark:to-gray-900 opacity-50" />
         <div className="absolute inset-0" style={{
           backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(0, 128, 128, 0.1) 1px, transparent 0)',
           backgroundSize: '40px 40px'
