@@ -57,7 +57,7 @@ export default function Recommendations() {
             </p>
           </div>
           <blockquote className="text-gray-800 dark:text-gray-200 text-center italic">
-            "{recommendations[currentIndex].text}"
+            &ldquo;{recommendations[currentIndex].text}&rdquo;
           </blockquote>
         </div>
       </div>
