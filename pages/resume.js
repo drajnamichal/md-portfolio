@@ -4,7 +4,11 @@ import Layout from "../components/Layout";
 
 export default function Resume() {
   return (
-    <Layout title="Resume - Michal Drajna">
+    <Layout 
+      title="Resume - Michal Drajna | Senior QA Engineer"
+      description="Professional resume of Michal Drajna, Senior QA Engineer with 9+ years of experience in test automation, software testing, and quality assurance. Expert in Playwright, Selenium, and modern testing methodologies."
+      image="/memoji.png"
+    >
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-10">
           <h1 className="text-5xl py-2 text-teal-600 font-medium">Michal Drajna</h1>

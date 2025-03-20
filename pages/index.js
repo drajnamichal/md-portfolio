@@ -18,7 +18,11 @@ import Layout from "../components/Layout";
 
 export default function Home() {
   return (
-    <Layout title="Michal Drajna - Portfolio">
+    <Layout 
+      title="Michal Drajna - Senior QA Engineer & Playwright Expert"
+      description="Senior QA Engineer specializing in test automation with Playwright. Expert in software testing, quality assurance, and online course creator. Offering workshops and consulting services."
+      image="/memoji.png"
+    >
       <section className="min-h-screen">
         <div className="text-center p-10">
           <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
