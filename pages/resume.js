@@ -47,7 +47,7 @@ export default function Resume() {
 
             <div className="mb-8 flex justify-center">
               <a
-                href="/zivotopis.pdf"
+                href="/Michal Drajna -- zivotopis.pdf"
                 className="bg-teal-600 text-white px-6 py-3 rounded-md hover:bg-teal-700 transition-colors flex items-center"
                 download
               >
