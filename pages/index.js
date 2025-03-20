@@ -75,38 +75,6 @@ export default function Home() {
               }}
             />
           </motion.div>
-          <motion.div
-            className="mt-8"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-          >
-            <motion.a
-              href="#contact"
-              className="bg-teal-600 text-white px-8 py-3 rounded-full text-lg inline-flex items-center gap-2 relative overflow-hidden group"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <span className="relative z-10">Get in Touch</span>
-              <motion.span
-                className="absolute inset-0 bg-teal-700"
-                initial={{ x: '-100%' }}
-                whileHover={{ x: 0 }}
-                transition={{ duration: 0.3, ease: 'easeInOut' }}
-              />
-              <svg
-                className="w-5 h-5 relative z-10 transform group-hover:translate-x-1 transition-transform"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-              </svg>
-            </motion.a>
-          </motion.div>
         </motion.div>
 
         <div className="text-4xl flex justify-center gap-8 py-3 text-gray-600 dark:text-white">
@@ -148,46 +116,6 @@ export default function Home() {
             priority
             className="hover:scale-105 transition-transform duration-300"
           />
-        </motion.div>
-
-        <motion.div
-          className="absolute bottom-0 left-0 right-0 flex justify-center pb-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.4 }}
-        >
-          <motion.div
-            animate={{
-              y: [0, -10, 0],
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              repeatType: "reverse",
-            }}
-          >
-            <a
-              href="#services"
-              className="text-teal-600 dark:text-teal-400 flex flex-col items-center cursor-pointer"
-              onClick={(e) => {
-                e.preventDefault();
-                document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-            >
-              <span className="text-sm mb-2">Scroll to explore</span>
-              <svg
-                className="w-6 h-6 animate-bounce"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-              </svg>
-            </a>
-          </motion.div>
         </motion.div>
       </section>
 
