@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { useState } from "react";
+import Recommendations from "../components/Recommendations";
 
 export default function Resume() {
   const [darkMode, setDarkMode] = useState(false);
@@ -216,6 +217,12 @@ export default function Resume() {
                   <li>Getting lost in a good book</li>
                   <li>Feeling the music</li>
                 </ul>
+              </section>
+
+              {/* Recommendations Section */}
+              <section>
+                <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400 text-center">Recommendations</h3>
+                <Recommendations />
               </section>
             </div>
           </div>
