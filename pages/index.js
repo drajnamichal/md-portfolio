@@ -43,12 +43,6 @@ export default function Home() {
             </h1>
             <ul className="flex items-center">
               <li>
-                <BsFillMoonStarsFill
-                  onClick={() => setDarkMode(!darkMode)}
-                  className="cursor-pointer text-2xl dark:text-white"
-                />
-              </li>
-              <li>
                 <Link href="/workshops" className="bg-teal-600 text-white px-4 py-2 rounded-md ml-8 hover:bg-teal-700">
                   Workshops
                 </Link>
@@ -61,6 +55,12 @@ export default function Home() {
                 >
                   Resume
                 </a>
+              </li>
+              <li>
+                <BsFillMoonStarsFill
+                  onClick={() => setDarkMode(!darkMode)}
+                  className="cursor-pointer text-2xl dark:text-white ml-8"
+                />
               </li>
             </ul>
           </nav>
