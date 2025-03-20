@@ -48,13 +48,12 @@ export default function Home() {
                 </Link>
               </li>
               <li>
-                <a
-                  href="/resume.pdf"
-                  className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
-                  download
+                <Link
+                  href="/resume"
+                  className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 hover:from-cyan-600 hover:to-teal-600"
                 >
                   Resume
-                </a>
+                </Link>
               </li>
               <li>
                 <BsFillMoonStarsFill
