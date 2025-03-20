@@ -2,10 +2,12 @@ import Link from "next/link";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
+import { AnimatePresence } from 'framer-motion';
 import Typewriter from 'typewriter-effect';
 import BackToTop from "./BackToTop";
 import Footer from "./Footer";
 import SEO from "./SEO";
+import PageTransition from "./PageTransition";
 
 export default function Layout({ children, title, description, image }) {
   const [darkMode, setDarkMode] = useState(false);
@@ -90,7 +92,11 @@ export default function Layout({ children, title, description, image }) {
         </nav>
 
         <div className="px-10 md:px-20 lg:px-40 pt-28">
-          {children}
+          <AnimatePresence mode="wait">
+            <PageTransition key={router.pathname}>
+              {children}
+            </PageTransition>
+          </AnimatePresence>
         </div>
         
         <BackToTop />

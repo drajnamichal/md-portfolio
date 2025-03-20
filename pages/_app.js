@@ -1,7 +1,13 @@
-import '../styles/globals.css'
+import '@/styles/globals.css'
+import { AnimatePresence } from 'framer-motion'
+import { useRouter } from 'next/router'
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default function App({ Component, pageProps }) {
+  const router = useRouter()
+
+  return (
+    <AnimatePresence mode="wait" initial={false}>
+      <Component {...pageProps} key={router.pathname} />
+    </AnimatePresence>
+  )
 }
-
-export default MyApp
