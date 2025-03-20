@@ -42,7 +42,10 @@ export default function Workshops() {
             <h3 className="text-2xl py-2 md:text-3xl dark:text-white">
               Master End-to-End Testing with Playwright
             </h3>
-            <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-4xl mx-auto dark:text-gray-200">
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <p className="text-md py-5 leading-8 text-gray-800 md:text-xl dark:text-gray-200">
               Join our comprehensive workshop to learn how to create reliable, maintainable, and efficient end-to-end tests using Playwright. Perfect for QA engineers, developers, and teams looking to improve their automation testing skills.
             </p>
           </div>
@@ -52,7 +55,7 @@ export default function Workshops() {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-3xl py-1 dark:text-white">Workshop Highlights</h3>
+            <h3 className="text-3xl py-1 dark:text-white text-center">Workshop Highlights</h3>
             <div className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
               <ul className="list-disc pl-5 space-y-2">
                 <li>Introduction to Playwright and its key features</li>
@@ -68,7 +71,7 @@ export default function Workshops() {
               </ul>
             </div>
 
-            <h3 className="text-3xl py-1 mt-8 dark:text-white">Who Should Attend?</h3>
+            <h3 className="text-3xl py-1 mt-8 dark:text-white text-center">Who Should Attend?</h3>
             <div className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
               <ul className="list-disc pl-5 space-y-2">
                 <li>QA Engineers looking to enhance their automation skills</li>
@@ -78,32 +81,30 @@ export default function Workshops() {
               </ul>
             </div>
 
-            <div className="text-center mt-10 space-y-6">
-              <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6 max-w-2xl mx-auto">
-                <div className="flex">
-                  <div className="ml-3">
-                    <p className="text-sm text-yellow-700">
-                      Please note: The registration form and workshop are available in Slovak and Czech languages only.
-                    </p>
-                  </div>
-                </div>
+            <div className="mt-10 space-y-6">
+              <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+                <p className="text-sm text-yellow-700">
+                  Please note: The registration form and workshop are available in Slovak and Czech languages only.
+                </p>
               </div>
-              <a
-                href="https://forms.gle/n8fXKZ7ZCGEyWrMbA"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-teal-600 text-white px-8 py-4 rounded-md text-lg hover:bg-teal-700 transition-colors inline-block"
-              >
-                Register Your Interest
-              </a>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                By registering, you'll receive detailed information about workshop dates, pricing, and customization options.
-              </p>
+              <div className="text-center">
+                <a
+                  href="https://forms.gle/n8fXKZ7ZCGEyWrMbA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-teal-600 text-white px-8 py-4 rounded-md text-lg hover:bg-teal-700 transition-colors inline-block"
+                >
+                  Register Your Interest
+                </a>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
+                  By registering, you'll receive detailed information about workshop dates, pricing, and customization options.
+                </p>
+              </div>
             </div>
 
-            <div className="text-md py-8 leading-8 text-gray-800 dark:text-gray-200 text-center mt-4">
-              <h4 className="text-xl font-semibold mb-4 dark:text-white">What to expect after registration:</h4>
-              <ul className="text-left max-w-2xl mx-auto space-y-2">
+            <div className="text-md py-8 leading-8 text-gray-800 dark:text-gray-200 mt-4">
+              <h4 className="text-xl font-semibold mb-4 dark:text-white text-center">What to expect after registration:</h4>
+              <ul className="space-y-2">
                 <li>• Personalized workshop planning based on your team's experience level</li>
                 <li>• Flexible scheduling options (online or in-person)</li>
                 <li>• Customized content focusing on your specific testing needs</li>
