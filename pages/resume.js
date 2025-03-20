@@ -128,7 +128,7 @@ export default function Resume() {
               <section>
                 <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400">Education</h3>
                 <div>
-                  <h4 className="text-xl font-medium">Master's Degree in Computer Science</h4>
+                  <h4 className="text-xl font-medium">Master&apos;s Degree in Computer Science</h4>
                   <p className="text-gray-600 dark:text-gray-400">Technical University of Košice • 2015</p>
                 </div>
               </section>
@@ -137,7 +137,7 @@ export default function Resume() {
               <section>
                 <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400">Certifications & Achievements</h3>
                 <ul className="list-disc ml-6 space-y-2">
-                  <li>Speaker at TestCrunch 2024 - "Playwright: The Future of Test Automation?"</li>
+                  <li>Speaker at TestCrunch 2024 - &ldquo;Playwright: The Future of Test Automation?&rdquo;</li>
                   <li>Creator of popular Playwright automation courses on Skillmea.sk</li>
                   <li>Published technical articles on test automation and QA practices</li>
                   <li>Regular contributor to testing communities and meetups</li>
