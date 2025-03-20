@@ -10,6 +10,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from '../styles/ReviewSlider.module.css';
+import AnimatedCounter from '../components/AnimatedCounter';
 
 export default function Courses() {
   const courses = [
@@ -112,14 +113,14 @@ export default function Courses() {
         <div className="text-center">
           <div className="flex items-center justify-center text-4xl text-teal-600 mb-2">
             <FaUserGraduate className="mr-2" />
-            <span>800+</span>
+            <AnimatedCounter value="800" suffix="+" />
           </div>
           <p className="text-gray-600 dark:text-gray-300">Students Trained</p>
         </div>
         <div className="text-center">
           <div className="flex items-center justify-center text-4xl text-teal-600 mb-2">
             <AiFillStar className="mr-2" />
-            <span>5/5</span>
+            <AnimatedCounter value="5" />
           </div>
           <p className="text-gray-600 dark:text-gray-300">Average Rating</p>
         </div>
