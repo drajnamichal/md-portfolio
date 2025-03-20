@@ -17,22 +17,22 @@ export default function WorkshopStats({ stats }) {
       icon: FaUsers,
       value: '10',
       suffix: '+',
-      label: 'Participants Trained'
+      label: 'Participants Trained',
+      isAnimated: true
     },
     {
       icon: FaStar,
-      value: '4.8',
-      suffix: '/5',
+      value: finalStats.satisfactionRate,
       label: 'Satisfaction Rate'
     },
     {
       icon: FaGraduationCap,
-      value: '1',
+      value: finalStats.workshopsDelivered,
       label: 'Workshops Delivered'
     },
     {
       icon: FaBuilding,
-      value: '1',
+      value: finalStats.companiesServed,
       label: 'Companies Served'
     }
   ];
@@ -53,11 +53,15 @@ export default function WorkshopStats({ stats }) {
               <item.icon className="text-xl text-teal-600 dark:text-teal-400" />
             </div>
             <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-              <AnimatedCounter 
-                value={item.value} 
-                suffix={item.suffix || ''} 
-                duration={2}
-              />
+              {item.isAnimated ? (
+                <AnimatedCounter 
+                  value={item.value} 
+                  suffix={item.suffix || ''} 
+                  duration={2}
+                />
+              ) : (
+                item.value
+              )}
             </div>
             <div className="text-sm text-gray-600 dark:text-gray-400">
               {item.label}
