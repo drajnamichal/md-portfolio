@@ -22,8 +22,8 @@ export default function Workshops() {
       <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between">
-            <Link href="/" className="text-xl font-burtons dark:text-white">
-              developedbymichal
+            <Link href="/" className="text-xl font-burtons dark:text-white hover:text-teal-600 dark:hover:text-teal-400 transition-colors flex items-center">
+              <span className="mr-2">←</span> Back to Home
             </Link>
             <ul className="flex items-center">
               <li>
@@ -37,7 +37,7 @@ export default function Workshops() {
 
           <div className="text-center mb-16">
             <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
-              Playwright Workshops
+              Playwright Automation Workshops for Teams 🚀
             </h2>
             <h3 className="text-2xl py-2 md:text-3xl dark:text-white">
               Master End-to-End Testing with Playwright
@@ -46,7 +46,7 @@ export default function Workshops() {
           
           <div className="max-w-2xl mx-auto mb-16">
             <p className="text-md py-5 leading-8 text-gray-800 md:text-xl dark:text-gray-200">
-              Join our comprehensive workshop to learn how to create reliable, maintainable, and efficient end-to-end tests using Playwright. Perfect for QA engineers, developers, and teams looking to improve their automation testing skills.
+              Struggling with flaky tests, slow execution, or unreliable automation? My hands-on Playwright workshops are designed to help your team write faster, more stable, and maintainable tests.
             </p>
           </div>
 
@@ -56,31 +56,36 @@ export default function Workshops() {
 
           <div className="max-w-2xl mx-auto">
             <div className="mb-16">
-              <h3 className="text-3xl py-1 mb-8 dark:text-white text-center">Workshop Highlights</h3>
+              <h3 className="text-3xl py-1 mb-8 dark:text-white text-center">What Your Team Will Learn</h3>
               <div className="text-md leading-8 text-gray-800 dark:text-gray-200">
                 <ul className="space-y-4 ml-8">
-                  <li>• Introduction to Playwright and its key features</li>
-                  <li>• Setting up your first Playwright test project</li>
-                  <li>• Writing and organizing test cases effectively</li>
-                  <li>• Advanced selectors and element interactions</li>
-                  <li>• Handling authentication and state management</li>
-                  <li>• API testing with Playwright</li>
-                  <li>• Visual testing and screenshot comparisons</li>
-                  <li>• CI/CD integration best practices</li>
-                  <li>• Performance testing and reporting</li>
-                  <li>• Best practices and common pitfalls to avoid</li>
+                  <li>✅ How to eliminate flaky tests and improve test reliability</li>
+                  <li>✅ Best practices for waiting strategies and selectors</li>
+                  <li>✅ Debugging techniques with trace files and Playwright Inspector</li>
+                  <li>✅ Optimizing tests for parallel execution and CI/CD pipelines</li>
+                  <li>✅ Advanced topics like API testing, visual testing, and accessibility</li>
                 </ul>
               </div>
             </div>
 
             <div className="mb-16">
-              <h3 className="text-3xl py-1 mb-8 dark:text-white text-center">Who Should Attend?</h3>
+              <h3 className="text-3xl py-1 mb-8 dark:text-white text-center">Why Choose This Workshop?</h3>
               <div className="text-md leading-8 text-gray-800 dark:text-gray-200">
                 <ul className="space-y-4 ml-8">
-                  <li>• QA Engineers looking to enhance their automation skills</li>
-                  <li>• Developers interested in end-to-end testing</li>
-                  <li>• Teams transitioning to Playwright from other frameworks</li>
-                  <li>• Anyone interested in modern web testing approaches</li>
+                  <li>🔹 Tailored for your team – real-world challenges, practical solutions</li>
+                  <li>🔹 Hands-on learning – interactive exercises, best practices, and live debugging</li>
+                  <li>🔹 Led by an experienced QA Engineer – 9+ years in automation, Playwright course creator</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="mb-16">
+              <h3 className="text-3xl py-1 mb-8 dark:text-white text-center">Who Is This For?</h3>
+              <div className="text-md leading-8 text-gray-800 dark:text-gray-200">
+                <ul className="space-y-4 ml-8">
+                  <li>📌 QA Engineers & Testers looking to improve their automation skills</li>
+                  <li>📌 Developers who want to integrate better testing into their workflow</li>
+                  <li>📌 Teams transitioning to Playwright from other frameworks</li>
                 </ul>
               </div>
             </div>
@@ -92,6 +97,7 @@ export default function Workshops() {
                 </p>
               </div>
               <div className="text-center">
+                <p className="text-xl mb-8 dark:text-white">Ready to take your test automation to the next level? Let's talk! 🚀</p>
                 <a
                   href="https://forms.gle/n8fXKZ7ZCGEyWrMbA"
                   target="_blank"
@@ -103,18 +109,6 @@ export default function Workshops() {
                 <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
                   By registering, you'll receive detailed information about workshop dates, pricing, and customization options.
                 </p>
-              </div>
-            </div>
-
-            <div className="mb-16">
-              <h4 className="text-xl font-semibold mb-8 dark:text-white text-center">What to expect after registration:</h4>
-              <div className="text-md leading-8 text-gray-800 dark:text-gray-200">
-                <ul className="space-y-4 ml-8">
-                  <li>• Personalized workshop planning based on your team's experience level</li>
-                  <li>• Flexible scheduling options (online or in-person)</li>
-                  <li>• Customized content focusing on your specific testing needs</li>
-                  <li>• Detailed pricing information based on group size and requirements</li>
-                </ul>
               </div>
             </div>
 
