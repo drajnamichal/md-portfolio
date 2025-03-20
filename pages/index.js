@@ -1,6 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable jsx-a11y/alt-text */
-import {AiFillFacebook, AiFillLinkedin, AiFillGithub, AiFillMail} from 'react-icons/ai';
 import Image from 'next/image';
 import profile from '../public/profile.jpg';
 import playwright from '../public/playwright.png';
@@ -16,6 +15,7 @@ import Typewriter from 'typewriter-effect';
 import Layout from "../components/Layout";
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import SocialIcons from '../components/SocialIcons';
 
 export default function Home() {
   return (
@@ -76,60 +76,7 @@ export default function Home() {
           </motion.div>
         </motion.div>
 
-        <div className="text-4xl flex justify-center gap-8 py-3">
-          {[
-            { 
-              href: "https://www.facebook.com/michaldrajna/", 
-              icon: AiFillFacebook,
-              label: "Facebook",
-              color: "hover:text-[#1877f2]" // Facebook blue
-            },
-            { 
-              href: "https://www.linkedin.com/in/michaldrajna-qa/", 
-              icon: AiFillLinkedin,
-              label: "LinkedIn",
-              color: "hover:text-[#0077b5]" // LinkedIn blue
-            },
-            { 
-              href: "https://github.com/drajnamichal", 
-              icon: AiFillGithub,
-              label: "GitHub",
-              color: "hover:text-[#333]" // GitHub dark
-            },
-            { 
-              href: "mailto:michal.drajna@gmail.com", 
-              icon: AiFillMail,
-              label: "Email",
-              color: "hover:text-[#EA4335]" // Gmail red
-            }
-          ].map((social, index) => (
-            <motion.a
-              key={social.href}
-              href={social.href}
-              aria-label={social.label}
-              className={`text-gray-600 dark:text-gray-300 transition-all duration-300 ${social.color}`}
-              whileHover={{ 
-                scale: 1.1,
-                y: -2
-              }}
-              whileTap={{ scale: 0.95 }}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ 
-                duration: 0.5, 
-                delay: 1 + index * 0.1,
-                type: "spring",
-                stiffness: 300
-              }}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="p-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
-                <social.icon />
-              </div>
-            </motion.a>
-          ))}
-        </div>
+        <SocialIcons />
 
         <motion.div 
           className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96 shadow-2xl"
