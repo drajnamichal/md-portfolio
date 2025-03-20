@@ -3,6 +3,7 @@ import Link from "next/link";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { useState } from "react";
 import Recommendations from "../components/Recommendations";
+import Footer from "../components/Footer";
 
 export default function Resume() {
   const [darkMode, setDarkMode] = useState(false);
@@ -220,13 +221,14 @@ export default function Resume() {
               </section>
 
               {/* Recommendations Section */}
-              <section>
+              <section className="mb-16">
                 <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400 text-center">Recommendations</h3>
                 <Recommendations />
               </section>
             </div>
           </div>
         </section>
+        <Footer />
       </main>
     </div>
   );

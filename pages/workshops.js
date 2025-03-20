@@ -7,6 +7,7 @@ import {AiFillFacebook, AiFillLinkedin, AiFillGithub, AiFillMail} from 'react-ic
 import Image from 'next/image';
 import playwright from '../public/playwright.png';
 import { useState } from "react";
+import Footer from "../components/Footer";
 
 export default function Workshops() {
   const [darkMode, setDarkMode] = useState(false);
@@ -121,6 +122,7 @@ export default function Workshops() {
               </p>
             </div>
           </div>
+          <Footer />
         </section>
       </main>
     </div>

@@ -18,6 +18,7 @@ import tc3 from '../public/tc3.jpg';
 import { useState } from "react";
 import Typewriter from 'typewriter-effect';
 import Link from 'next/link';
+import Footer from "../components/Footer";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -274,17 +275,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="flex justify-center">
-          <div className="max-w-[1240px] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-300">
-            <div className="lg:col-span-2 flex justify-between mt-6">
-              <div>
-                <h6 className="font-medium text-gray-400">
-                  Copyright © 2025 Michal Drajna
-                </h6>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Footer />
       </main>
     </div>
   );
