@@ -16,7 +16,6 @@ import tc3 from '../public/tc3.jpg';
 import Typewriter from 'typewriter-effect';
 import Layout from "../components/Layout";
 import Link from 'next/link';
-import Statistics from '../components/Statistics';
 
 export default function Home() {
   return (
@@ -145,8 +144,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <Statistics />
 
       <section>
         <div className="text-center">
