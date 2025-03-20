@@ -5,7 +5,11 @@ import Layout from "../components/Layout";
 import skillmea from '../public/skillmea.jpg';
 import advanced from '../public/advanced.jpg';
 import { AiFillStar } from 'react-icons/ai';
-import { FaUserGraduate } from 'react-icons/fa';
+import { FaUserGraduate, FaQuoteLeft } from 'react-icons/fa';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import styles from '../styles/ReviewSlider.module.css';
 
 export default function Courses() {
   const courses = [
@@ -51,8 +55,43 @@ export default function Courses() {
     {
       text: "Zatiaľ najlepší kurz, aký som na Skillmea prešiel a kvalitou mi pripadal porovnateľný s tými lepšími zahraničnými. Plánujem si niektoré témy zopakovať a prejsť na kurz pre pokročilých, na ktorý sa už teším.",
       stars: 5
+    },
+    {
+      text: "Kurz má vynikajúci obsah a praktické projekty. Oceňujem popis každej lekcie a Github repozitár. Odporúčam všetkým, ktorí chcú zdokonaliť svoje schopnosti v testovaní webových aplikácií.",
+      stars: 5
+    },
+    {
+      text: "Nato ze som nemal ziadne skusenosti tento pan mi vysvvetlil vsetko super",
+      stars: 5
     }
   ];
+
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
 
   return (
     <Layout 
@@ -86,20 +125,27 @@ export default function Courses() {
         </div>
       </div>
 
-      <div className="mb-16">
+      <div className="mb-16 px-4">
         <h3 className="text-3xl text-center text-teal-600 font-medium mb-8">What Students Say</h3>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <Slider {...sliderSettings} className={styles.reviewSlider}>
           {reviews.map((review, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-              <div className="flex text-yellow-400 mb-4">
-                {[...Array(review.stars)].map((_, i) => (
-                  <AiFillStar key={i} className="text-xl" />
-                ))}
+            <div key={index} className="px-3">
+              <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg h-full">
+                <div className="text-teal-600 mb-4">
+                  <FaQuoteLeft className="text-3xl opacity-50" />
+                </div>
+                <div className="flex text-yellow-400 mb-4">
+                  {[...Array(review.stars)].map((_, i) => (
+                    <AiFillStar key={i} className="text-xl" />
+                  ))}
+                </div>
+                <p className="text-gray-600 dark:text-gray-300 italic text-lg mb-4">
+                  "{review.text}"
+                </p>
               </div>
-              <p className="text-gray-600 dark:text-gray-300 italic">"{review.text}"</p>
             </div>
           ))}
-        </div>
+        </Slider>
       </div>
 
       <div className="grid md:grid-cols-2 gap-12 mb-16">

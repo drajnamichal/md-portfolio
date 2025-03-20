@@ -1,0 +1,54 @@
+/* Custom styles for the review slider */
+.reviewSlider {
+  margin: 0 -1rem;
+}
+
+.reviewSlider :global(.slick-slide) {
+  padding: 1rem;
+}
+
+.reviewSlider :global(.slick-dots) {
+  bottom: -2.5rem;
+}
+
+.reviewSlider :global(.slick-dots li button:before) {
+  color: #0d9488; /* teal-600 */
+  opacity: 0.25;
+  font-size: 0.75rem;
+}
+
+.reviewSlider :global(.slick-dots li.slick-active button:before) {
+  color: #0d9488; /* teal-600 */
+  opacity: 1;
+}
+
+.reviewSlider :global(.slick-prev),
+.reviewSlider :global(.slick-next) {
+  width: 2.5rem;
+  height: 2.5rem;
+  z-index: 1;
+}
+
+.reviewSlider :global(.slick-prev) {
+  left: -2.5rem;
+}
+
+.reviewSlider :global(.slick-next) {
+  right: -2.5rem;
+}
+
+.reviewSlider :global(.slick-prev:before),
+.reviewSlider :global(.slick-next:before) {
+  color: #0d9488; /* teal-600 */
+  font-size: 2.5rem;
+}
+
+@media (max-width: 1024px) {
+  .reviewSlider :global(.slick-prev) {
+    left: -1rem;
+  }
+
+  .reviewSlider :global(.slick-next) {
+    right: -1rem;
+  }
+} 
