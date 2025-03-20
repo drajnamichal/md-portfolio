@@ -6,8 +6,6 @@ import WorkshopStats from "../components/WorkshopStats";
 import Layout from "../components/Layout";
 
 export default function Workshops() {
-  const [darkMode, setDarkMode] = useState(false);
-  
   const workshopStats = {
     participantCount: '10+',
     satisfactionRate: '4.9/5',
