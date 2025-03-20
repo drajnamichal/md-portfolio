@@ -3,6 +3,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import {BsFillMoonStarsFill} from 'react-icons/bs';
+import {AiFillFacebook, AiFillLinkedin, AiFillGithub, AiFillMail} from 'react-icons/ai';
 import Image from 'next/image';
 import playwright from '../public/playwright.png';
 import { useState } from "react";
@@ -50,10 +51,10 @@ export default function Workshops() {
             <Image src={playwright} width={200} height={200} className="rounded-xl" />
           </div>
 
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto">
             <h3 className="text-3xl py-1 dark:text-white">Workshop Highlights</h3>
             <div className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              <ul className="list-disc space-y-2 inline-block text-left">
+              <ul className="list-disc pl-5 space-y-2">
                 <li>Introduction to Playwright and its key features</li>
                 <li>Setting up your first Playwright test project</li>
                 <li>Writing and organizing test cases effectively</li>
@@ -69,7 +70,7 @@ export default function Workshops() {
 
             <h3 className="text-3xl py-1 mt-8 dark:text-white">Who Should Attend?</h3>
             <div className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              <ul className="list-disc space-y-2 inline-block text-left">
+              <ul className="list-disc pl-5 space-y-2">
                 <li>QA Engineers looking to enhance their automation skills</li>
                 <li>Developers interested in end-to-end testing</li>
                 <li>Teams transitioning to Playwright from other frameworks</li>
@@ -77,11 +78,15 @@ export default function Workshops() {
               </ul>
             </div>
 
-            <div className="mt-10 space-y-6">
+            <div className="text-center mt-10 space-y-6">
               <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6 max-w-2xl mx-auto">
-                <p className="text-sm text-yellow-700">
-                  Please note: The registration form and workshop are available in Slovak and Czech languages only.
-                </p>
+                <div className="flex">
+                  <div className="ml-3">
+                    <p className="text-sm text-yellow-700">
+                      Please note: The registration form and workshop are available in Slovak and Czech languages only.
+                    </p>
+                  </div>
+                </div>
               </div>
               <a
                 href="https://forms.gle/n8fXKZ7ZCGEyWrMbA"
@@ -96,9 +101,9 @@ export default function Workshops() {
               </p>
             </div>
 
-            <div className="text-md py-8 leading-8 text-gray-800 dark:text-gray-200">
+            <div className="text-md py-8 leading-8 text-gray-800 dark:text-gray-200 text-center mt-4">
               <h4 className="text-xl font-semibold mb-4 dark:text-white">What to expect after registration:</h4>
-              <ul className="space-y-2 inline-block text-left">
+              <ul className="text-left max-w-2xl mx-auto space-y-2">
                 <li>• Personalized workshop planning based on your team's experience level</li>
                 <li>• Flexible scheduling options (online or in-person)</li>
                 <li>• Customized content focusing on your specific testing needs</li>
@@ -106,7 +111,7 @@ export default function Workshops() {
               </ul>
             </div>
 
-            <div className="text-md py-8 leading-8 text-gray-800 dark:text-gray-200">
+            <div className="text-md py-8 leading-8 text-gray-800 dark:text-gray-200 text-center">
               <p>
                 Have questions? Contact me at{" "}
                 <a
