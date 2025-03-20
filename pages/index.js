@@ -75,26 +75,57 @@ export default function Home() {
           </motion.div>
         </motion.div>
 
-        <div className="text-4xl flex justify-center gap-8 py-3 text-gray-600 dark:text-white">
+        <div className="text-4xl flex justify-center gap-8 py-3">
           {[
-            { href: "https://www.facebook.com/michaldrajna/", icon: AiFillFacebook },
-            { href: "https://www.linkedin.com/in/michaldrajna-qa/", icon: AiFillLinkedin },
-            { href: "https://github.com/drajnamichal", icon: AiFillGithub },
-            { href: "mailto:michal.drajna@gmail.com", icon: AiFillMail }
+            { 
+              href: "https://www.facebook.com/michaldrajna/", 
+              icon: AiFillFacebook,
+              label: "Facebook",
+              color: "hover:text-[#1877f2]" // Facebook blue
+            },
+            { 
+              href: "https://www.linkedin.com/in/michaldrajna-qa/", 
+              icon: AiFillLinkedin,
+              label: "LinkedIn",
+              color: "hover:text-[#0077b5]" // LinkedIn blue
+            },
+            { 
+              href: "https://github.com/drajnamichal", 
+              icon: AiFillGithub,
+              label: "GitHub",
+              color: "hover:text-[#333]" // GitHub dark
+            },
+            { 
+              href: "mailto:michal.drajna@gmail.com", 
+              icon: AiFillMail,
+              label: "Email",
+              color: "hover:text-[#EA4335]" // Gmail red
+            }
           ].map((social, index) => (
             <motion.a
               key={social.href}
               href={social.href}
-              className="hover:text-teal-600 transition-colors"
-              whileHover={{ scale: 1.1 }}
+              aria-label={social.label}
+              className={`text-gray-600 dark:text-gray-300 transition-all duration-300 ${social.color}`}
+              whileHover={{ 
+                scale: 1.1,
+                y: -2
+              }}
               whileTap={{ scale: 0.95 }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 1 + index * 0.1 }}
+              transition={{ 
+                duration: 0.5, 
+                delay: 1 + index * 0.1,
+                type: "spring",
+                stiffness: 300
+              }}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <social.icon />
+              <div className="p-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                <social.icon />
+              </div>
             </motion.a>
           ))}
         </div>
