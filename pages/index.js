@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import {AiFillFacebook, AiFillLinkedin, AiFillGithub, AiFillMail} from 'react-icons/ai';
 import Image from 'next/image';
-import memoji from '../public/memoji.png';
+import profile from '../public/profile.jpg';
 // import memoji2 from '../public/memoji2.jpg';
 import playwright from '../public/playwright.png';
 import pc from '../public/pc.png';
@@ -23,7 +23,7 @@ export default function Home() {
     <Layout 
       title="Michal Drajna - Senior QA Engineer & Playwright Expert"
       description="Senior QA Engineer specializing in test automation with Playwright. Expert in software testing, quality assurance, and online course creator. Offering workshops and consulting services."
-      image="/memoji.png"
+      image="/profile.jpg"
     >
       <section className="min-h-screen relative">
         <div className="absolute inset-0 bg-gradient-to-b from-teal-50 to-white dark:from-gray-800 dark:to-gray-900 opacity-50" />
@@ -110,7 +110,7 @@ export default function Home() {
         >
           <Image 
             alt="Michal Drajna - Senior QA Engineer" 
-            src={memoji} 
+            src={profile}
             layout="fill" 
             objectFit="cover"
             priority
