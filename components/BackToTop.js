@@ -34,10 +34,11 @@ export default function BackToTop() {
           exit={{ opacity: 0, scale: 0.8 }}
           whileHover={{ scale: 1.1 }}
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 p-3 bg-teal-600 text-white rounded-full shadow-lg hover:bg-teal-700 transition-colors z-50"
+          className="fixed bottom-8 right-8 p-4 bg-teal-600 text-white rounded-full shadow-lg hover:bg-teal-700 transition-colors z-50 group"
           aria-label="Back to top"
         >
-          <FaArrowUp className="text-xl" />
+          <FaArrowUp className="text-xl group-hover:animate-bounce" />
+          <span className="sr-only">Back to top</span>
         </motion.button>
       )}
     </AnimatePresence>

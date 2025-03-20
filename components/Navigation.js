@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BsFillMoonStarsFill } from 'react-icons/bs';
+import { BsFillMoonStarsFill, BsFillSunFill } from 'react-icons/bs';
 
 export default function Navigation({ darkMode, setDarkMode }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,8 +24,10 @@ export default function Navigation({ darkMode, setDarkMode }) {
 
   return (
     <motion.nav
-      className={`fixed top-0 left-0 right-0 z-50 py-4 px-10 md:px-20 lg:px-40 transition-colors duration-200 ${
-        isScrolled ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-sm' : 'bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 py-4 px-10 md:px-20 lg:px-40 transition-all duration-200 ${
+        isScrolled 
+          ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-sm' 
+          : 'bg-white dark:bg-gray-900'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -56,10 +58,17 @@ export default function Navigation({ darkMode, setDarkMode }) {
 
         <button
           onClick={() => setDarkMode(!darkMode)}
-          className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-          aria-label="Toggle dark mode"
+          className="flex items-center space-x-2 px-3 py-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+          aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
         >
-          <BsFillMoonStarsFill className="text-xl text-gray-600 dark:text-gray-300" />
+          <span className="text-sm text-gray-600 dark:text-gray-300">
+            {darkMode ? 'Light Mode' : 'Dark Mode'}
+          </span>
+          {darkMode ? (
+            <BsFillSunFill className="text-xl text-yellow-500" />
+          ) : (
+            <BsFillMoonStarsFill className="text-xl text-gray-600" />
+          )}
         </button>
       </div>
     </motion.nav>
