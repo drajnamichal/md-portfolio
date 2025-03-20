@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { BsFillMoonStarsFill } from "react-icons/bs";
+import { FaGlobeAmericas, FaRunning, FaBook, FaHeadphones } from "react-icons/fa";
 import { useState } from "react";
 import Recommendations from "../components/Recommendations";
 import Footer from "../components/Footer";
@@ -212,11 +213,23 @@ export default function Resume() {
               {/* Interests Section */}
               <section>
                 <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400">Interests</h3>
-                <ul className="list-disc ml-6 space-y-2">
-                  <li>Exploring distant lands</li>
-                  <li>Every kind of sport</li>
-                  <li>Getting lost in a good book</li>
-                  <li>Feeling the music</li>
+                <ul className="space-y-3">
+                  <li className="flex items-center space-x-3">
+                    <FaGlobeAmericas className="text-xl text-teal-600 dark:text-teal-400" />
+                    <span>Exploring distant lands</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <FaRunning className="text-xl text-teal-600 dark:text-teal-400" />
+                    <span>Every kind of sport</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <FaBook className="text-xl text-teal-600 dark:text-teal-400" />
+                    <span>Getting lost in a good book</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <FaHeadphones className="text-xl text-teal-600 dark:text-teal-400" />
+                    <span>Feeling the music</span>
+                  </li>
                 </ul>
               </section>
 
