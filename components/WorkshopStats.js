@@ -3,10 +3,10 @@ import { FaUsers, FaStar, FaGraduationCap, FaBuilding } from 'react-icons/fa';
 
 export default function WorkshopStats({ stats }) {
   const defaultStats = {
-    participantCount: '100+',
+    participantCount: '10+',
     satisfactionRate: '4.8/5',
-    workshopsDelivered: '15+',
-    companiesServed: '10+'
+    workshopsDelivered: '1',
+    companiesServed: '1'
   };
 
   const finalStats = { ...defaultStats, ...stats };

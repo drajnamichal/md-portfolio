@@ -14,10 +14,10 @@ export default function Workshops() {
   const [darkMode, setDarkMode] = useState(false);
   
   const workshopStats = {
-    participantCount: '50+',
+    participantCount: '10+',
     satisfactionRate: '4.9/5',
-    workshopsDelivered: '8+',
-    companiesServed: '6+',
+    workshopsDelivered: '1',
+    companiesServed: '1',
     testimonialHighlight: {
       text: "Michal's workshop was incredibly practical and helped our team transition to Playwright smoothly. His expertise and teaching style made complex concepts easy to understand.",
       author: "Workshop Participant"
