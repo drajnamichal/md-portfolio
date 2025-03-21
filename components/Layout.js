@@ -91,9 +91,11 @@ export default function Layout({ children, title, description, image }) {
         `}</style>
       </Head>
 
-      <nav className="fixed bottom-0 left-1/2 transform -translate-x-1/2 mb-4 z-50">
-        <div className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-md rounded-full shadow-lg px-6 py-3">
-          <ul className="flex items-center space-x-1">
+      <nav className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 transition-all duration-300">
+        <div className={`py-6 px-10 md:px-20 lg:px-40 flex justify-between ${
+          isScrolled ? "bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg" : "bg-transparent"
+        }`}>
+          <ul className="flex items-center space-x-2">
             {[
               { href: '/', label: 'Home' },
               { href: '/consultations', label: 'Consultations' },
@@ -105,7 +107,7 @@ export default function Layout({ children, title, description, image }) {
               <li key={item.href}>
                 <Link 
                   href={item.href} 
-                  className={`group px-3 py-1 rounded-full text-sm transition-all duration-300 ${
+                  className={`group px-4 py-2 rounded-md transition-all duration-300 relative ${
                     isActive(item.href) 
                       ? 'bg-teal-600 text-white hover:bg-teal-700' 
                       : 'text-gray-800 dark:text-white hover:text-teal-600 dark:hover:text-teal-400'
@@ -119,26 +121,27 @@ export default function Layout({ children, title, description, image }) {
               </li>
             ))}
           </ul>
+
+          <motion.button
+            onClick={() => setDarkMode(!darkMode)}
+            className="flex items-center space-x-2 px-4 py-2 text-gray-800 dark:text-white hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
+            aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            {darkMode ? (
+              <BsFillSunFill className="text-2xl" />
+            ) : (
+              <BsFillMoonStarsFill className="text-2xl" />
+            )}
+            <span className="text-sm hidden md:inline">
+              {darkMode ? "Light Mode" : "Dark Mode"}
+            </span>
+          </motion.button>
         </div>
       </nav>
 
-      <div className="fixed top-4 right-4 z-50">
-        <motion.button
-          onClick={() => setDarkMode(!darkMode)}
-          className="flex items-center space-x-2 px-3 py-1 rounded-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg text-gray-800 dark:text-white hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
-          aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          {darkMode ? (
-            <BsFillSunFill className="text-xl" />
-          ) : (
-            <BsFillMoonStarsFill className="text-xl" />
-          )}
-        </motion.button>
-      </div>
-
-      <main className="px-5 md:px-20 lg:px-40 pb-24">
+      <main className="px-5 md:px-20 lg:px-40">
         <AnimatePresence mode="wait">
           <PageTransition key={router.pathname}>
             {children}
@@ -146,8 +149,10 @@ export default function Layout({ children, title, description, image }) {
         </AnimatePresence>
       </main>
 
-      <footer className="py-10 mt-12 bg-gray-100 dark:bg-gray-800">
-        <Footer />
+      <footer className="py-6 mt-12 bg-gray-100 dark:bg-gray-800">
+        <div className="max-w-2xl mx-auto px-4 text-center">
+          <Footer />
+        </div>
       </footer>
     </div>
   );
