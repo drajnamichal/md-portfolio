@@ -37,9 +37,9 @@ export default function Home() {
               <Typewriter
                 options={{
                   strings: [
-                    'Passionate about test automation 🎭',
-                    'Playwright enthusiast 🚀',
-                    'Quality-driven developer 💻'
+                    'Conference speaker',
+                    'Playwright enthusiast',
+                    'Online course creator'
                   ],
                   autoStart: true,
                   loop: true,
