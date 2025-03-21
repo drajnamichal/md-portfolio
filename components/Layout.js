@@ -16,6 +16,26 @@ export default function Layout({ children, title, description, image }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
 
+  // Initialize dark mode from localStorage and system preference
+  useEffect(() => {
+    const isDark = localStorage.getItem('darkMode') === 'true' ||
+      (!('darkMode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    setDarkMode(isDark);
+    if (isDark) {
+      document.documentElement.classList.add('dark');
+    }
+  }, []);
+
+  // Sync dark mode changes with localStorage and document class
+  useEffect(() => {
+    localStorage.setItem('darkMode', darkMode);
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [darkMode]);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
