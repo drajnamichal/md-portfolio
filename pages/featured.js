@@ -27,7 +27,7 @@ export default function Featured() {
     {
       type: "Video",
       title: "Playwright: The Future of Test Automation?",
-      platform: "Presentation",
+      platform: "Nauč mě IT",
       date: "March 2024",
       description: "A comprehensive presentation about Playwright's powerful capabilities, including auto-waiting, codegen, tracing, and parallel execution. Discover why Playwright is becoming the go-to choice for modern web automation and how it's shaping the future of testing.",
       link: "https://www.youtube.com/live/tz7dfBxkYDA?si=rHDQQbNx31EKSjCZ",
