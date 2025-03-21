@@ -98,6 +98,7 @@ export default function Layout({ children, title, description, image }) {
           <ul className="flex items-center space-x-2">
             {[
               { href: '/', label: 'Home' },
+              { href: '/consultations', label: 'Consultations' },
               { href: '/workshops', label: 'Workshops' },
               { href: '/courses', label: 'Courses' },
               { href: '/featured', label: 'Featured' },
