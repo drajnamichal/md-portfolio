@@ -78,7 +78,7 @@ export default function Featured() {
       description="Check out where Michal Drajna has been featured in media, podcasts, and technical publications."
       image="/featured.jpg"
     >
-      <div className="min-h-screen pt-10">
+      <div className="min-h-screen pt-24 md:pt-32">
         <div className="text-center mb-16">
           <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
             Featured In
