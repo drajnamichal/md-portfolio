@@ -16,7 +16,6 @@ import Layout from "../components/Layout";
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import SocialIcons from '../components/SocialIcons';
-import ScrollIndicator from '../components/ScrollIndicator';
 
 export default function Home() {
   return (
@@ -96,7 +95,6 @@ export default function Home() {
               className="hover:scale-105 transition-transform duration-300"
             />
           </motion.div>
-          <ScrollIndicator />
         </section>
 
         <section id="services">
