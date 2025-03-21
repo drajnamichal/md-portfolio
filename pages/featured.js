@@ -25,6 +25,16 @@ export default function Featured() {
       image: "/pwcysel.png"
     },
     {
+      type: "Video",
+      title: "Playwright: The Future of Test Automation?",
+      platform: "TestCrunch Conference",
+      date: "March 2024",
+      description: "Conference presentation exploring Playwright's capabilities, history, and future in test automation, comparing it with other modern testing tools.",
+      link: "https://www.youtube.com/live/tz7dfBxkYDA?si=rHDQQbNx31EKSjCZ",
+      icon: FaYoutube,
+      image: "/yt.jpg"
+    },
+    {
       type: "Article",
       title: "Test Automation with Playwright",
       platform: "Medium",
