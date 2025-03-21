@@ -48,13 +48,14 @@ export default function Layout({ children, title, description, image }) {
   const isActive = (path) => router.pathname === path;
 
   return (
-    <div className={darkMode ? "dark" : ""}>
+    <div className="bg-white dark:bg-gray-900 min-h-screen">
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content={image} />
+        {image && <meta property="og:image" content={image} />}
+        <link rel="icon" href="/favicon.ico" />
         <style>{`
           #nprogress .bar {
             background: #0d9488 !important;
@@ -69,8 +70,9 @@ export default function Layout({ children, title, description, image }) {
           }
         `}</style>
       </Head>
-      <main className="bg-white dark:bg-gray-900 min-h-screen">
-        <nav className={`py-6 px-10 md:px-20 lg:px-40 flex justify-between fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
+
+      <nav className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 transition-all duration-300">
+        <div className={`py-6 px-10 md:px-20 lg:px-40 flex justify-between ${
           isScrolled ? "bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg" : "bg-transparent"
         }`}>
           <ul className="flex items-center space-x-2">
@@ -115,19 +117,20 @@ export default function Layout({ children, title, description, image }) {
               {darkMode ? "Light Mode" : "Dark Mode"}
             </span>
           </motion.button>
-        </nav>
-
-        <div className="px-10 md:px-20 lg:px-40 pt-28">
-          <AnimatePresence mode="wait">
-            <PageTransition key={router.pathname}>
-              {children}
-            </PageTransition>
-          </AnimatePresence>
         </div>
-        
-        <BackToTop />
-        <Footer />
+      </nav>
+
+      <main className="px-5 md:px-20 lg:px-40">
+        <AnimatePresence mode="wait">
+          <PageTransition key={router.pathname}>
+            {children}
+          </PageTransition>
+        </AnimatePresence>
       </main>
+
+      <footer className="py-10 mt-12 bg-gray-100 dark:bg-gray-800">
+        <Footer />
+      </footer>
     </div>
   );
 } 
