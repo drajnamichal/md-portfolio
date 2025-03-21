@@ -1,6 +1,7 @@
 import Layout from "../components/Layout";
 import Image from "next/image";
 import { FaNewspaper, FaPodcast, FaYoutube, FaMedium } from "react-icons/fa";
+import ScrollIndicator from "../components/ScrollIndicator";
 
 export default function Featured() {
   const featuredItems = [
@@ -78,7 +79,7 @@ export default function Featured() {
       description="Check out where Michal Drajna has been featured in media, podcasts, and technical publications."
       image="/featured.jpg"
     >
-      <div className="min-h-screen pt-10">
+      <div className="min-h-screen pt-10 relative">
         <div className="text-center mb-16">
           <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
             Featured In
@@ -86,6 +87,7 @@ export default function Featured() {
           <p className="text-md py-5 leading-8 text-gray-800 dark:text-white md:text-xl max-w-2xl mx-auto">
             Discover my contributions to the testing community through various media appearances, articles, and speaking engagements.
           </p>
+          <ScrollIndicator />
         </div>
 
         <div className="max-w-6xl mx-auto px-4 mb-16">
