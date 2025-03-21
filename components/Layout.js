@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
 import { AnimatePresence, motion } from 'framer-motion';
 import Typewriter from 'typewriter-effect';
-import BackToTop from "./BackToTop";
 import Footer from "./Footer";
 import SEO from "./SEO";
 import PageTransition from "./PageTransition";
