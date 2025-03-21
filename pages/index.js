@@ -51,7 +51,7 @@ export default function Home() {
           <SocialIcons />
 
           <motion.div 
-            className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96 shadow-2xl"
+            className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 mb-32 overflow-hidden md:h-96 md:w-96 shadow-2xl"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
