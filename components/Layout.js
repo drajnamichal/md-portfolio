@@ -128,13 +128,13 @@ export default function Layout({ children, title, description, image }) {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            {!darkMode ? (
+            {darkMode ? (
               <BsFillSunFill className="text-2xl" />
             ) : (
               <BsFillMoonStarsFill className="text-2xl" />
             )}
             <span className="text-sm hidden md:inline">
-              {!darkMode ? "Light Mode" : "Dark Mode"}
+              {darkMode ? "Light Mode" : "Dark Mode"}
             </span>
           </motion.button>
         </div>
