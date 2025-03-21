@@ -185,31 +185,15 @@ export default function Home() {
             for Playwright automation and developed numerous{" "}
             <span className="text-teal-500">automation frameworks</span> from
             scratch, contributing to the success of various projects and
-            ensuring top-notch quality for digital products. I have also
-            contributed to the industry through writing a few{" "}
-            <span className="text-teal-500">articles</span> on testing and QA,
-            sharing my knowledge and expertise with the community.
+            ensuring top-notch quality for digital products. Check out my{" "}
+            <Link href="/featured" className="text-teal-500 hover:text-teal-600">
+              featured articles and interviews
+            </Link>{" "}
+            to learn more about my contributions to the testing community.
           </p>
         </div>
         <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap justify-center">
-          <a
-            href="https://skillmea.sk/blog_posts/playwright-vs-selenium-vs-cypress"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="basis-1/3 flex-1"
-          >
-            <div className="relative group">
-              <Image
-                src={article}
-                alt="Playwright/Selenium/Cypress article"
-                className="rounded-lg object-cover transform transition-transform duration-300 group-hover:scale-105"
-                width={400}
-                height={400}
-                layout="responsive"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-opacity duration-300 rounded-lg"></div>
-            </div>
-          </a>
+          {/* Portfolio items will be added here */}
         </div>
       </section>
 

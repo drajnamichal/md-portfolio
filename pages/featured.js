@@ -16,6 +16,16 @@ export default function Featured() {
     },
     {
       type: "Article",
+      title: "Playwright vs Selenium vs Cypress: Which Tool is Best for Automated Testing?",
+      platform: "Skillmea",
+      date: "July 2023",
+      description: "A comprehensive comparison of the most popular test automation tools, helping you choose the right one for your needs.",
+      link: "https://skillmea.sk/blog/playwright-vs-selenium-vs-cypress",
+      icon: FaNewspaper,
+      image: "/pwcysel.png"
+    },
+    {
+      type: "Article",
       title: "Test Automation with Playwright",
       platform: "Medium",
       date: "2024",
