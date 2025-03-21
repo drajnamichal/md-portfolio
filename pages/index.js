@@ -19,9 +19,9 @@ import SocialIcons from '../components/SocialIcons';
 
 export default function Home() {
   return (
-    <Layout 
-      title="Michal Drajna - Senior QA Engineer & Playwright Expert"
-      description="Senior QA Engineer specializing in test automation with Playwright. Expert in software testing, quality assurance, and online course creator. Offering workshops and consulting services."
+    <Layout
+      title="Michal Drajna - QA Engineer"
+      description="Welcome to my portfolio website. I'm a QA Engineer specializing in test automation with Playwright."
       image="/profile.jpg"
     >
       <div className="relative">
@@ -35,98 +35,50 @@ export default function Home() {
             className="text-center p-10 relative"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
           >
-            <motion.h2 
-              className="text-5xl py-2 text-teal-600 font-medium md:text-6xl lg:text-7xl"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
+            <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
               Michal Drajna
-            </motion.h2>
-            <motion.h3 
-              className="text-2xl py-2 md:text-3xl lg:text-4xl dark:text-white font-light"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              Senior QA Engineer
-            </motion.h3>
-            <motion.div 
-              className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-2xl mx-auto dark:text-white"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
+            </h2>
+            <h3 className="text-2xl py-2 dark:text-white md:text-3xl">
+              QA Engineer
+            </h3>
+            <div className="text-md py-5 leading-8 text-gray-800 dark:text-white md:text-xl max-w-2xl mx-auto">
               <Typewriter
                 options={{
                   strings: [
-                    'Playwright Enthusiast 🎭',
-                    'Online Course Creator 🎥',
-                    'Conference Speaker 🎤',
-                    'Test Automation Expert 🚀'
+                    'Passionate about test automation',
+                    'Playwright enthusiast',
+                    'Quality-driven developer'
                   ],
                   autoStart: true,
                   loop: true,
-                  delay: 50,
-                  deleteSpeed: 30,
-                  pauseFor: 2000,
                 }}
               />
-            </motion.div>
+            </div>
           </motion.div>
 
           <SocialIcons />
 
           <motion.div 
             className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96 shadow-2xl"
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
-            whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+            transition={{
+              duration: 0.8,
+              delay: 0.5,
+              ease: [0, 0.71, 0.2, 1.01]
+            }}
           >
-            <Image 
-              alt="Michal Drajna - Senior QA Engineer" 
-              src={profile}
-              layout="fill" 
-              objectFit="cover"
-              priority
-              className="hover:scale-105 transition-transform duration-300"
-            />
+            <Image src={profile} alt="Michal Drajna" layout="fill" objectFit="cover" priority />
           </motion.div>
         </section>
 
-        <section id="services">
-          <div className="text-center py-8">
+        <section>
+          <div>
             <h3 className="text-3xl py-1 dark:text-white">Services I offer</h3>
-            <p className="text-md py-5 leading-8 text-gray-800 dark:text-white text-center max-w-2xl mx-auto w-full">
-              I provide a comprehensive range of services tailored to meet the
-              diverse needs of my clients. From ensuring seamless software
-              performance to delivering top-notch user experiences, my expertise
-              covers <span className="text-teal-500">automation testing</span>,
-              allowing businesses to enhance efficiency and accuracy while
-              reducing testing time. As a seasoned manual tester, I meticulously
-              scrutinize applications to identify even the slightest flaws,
-              guaranteeing the delivery of high-quality products. My commitment
-              to overall quality assurance ensures that each aspect of the
-              development process adheres to the highest standards. Furthermore,
-              I offer specialized training as a{" "}
-              <span className="text-teal-500">Playwright lecturer</span>,
-              equipping individuals with the knowledge and skills to excel in{" "}
-              <span className="text-teal-500">
-                modern testing methodologies
-              </span>
-              . Check out my{" "}
-              <Link href="/courses" className="text-teal-500 hover:text-teal-600">
-                online courses
-              </Link>{" "}
-              to learn more about test automation with Playwright.
-            </p>
-            <p className="text-md py-5 leading-8 text-gray-800 dark:text-white text-center max-w-2xl mx-auto w-full">
-              With a passion for excellence and a wealth of industry knowledge,
-              I am dedicated to helping businesses thrive through exceptional
-              testing practices.
+            <p className="text-md py-2 leading-8 text-gray-800 dark:text-white">
+              As a QA Engineer, I specialize in creating robust <span className="text-teal-500">test automation frameworks</span> and implementing efficient testing strategies.
             </p>
           </div>
           <div className="lg:flex gap-10">
@@ -195,33 +147,6 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap justify-center">
             {/* Portfolio items will be added here */}
-          </div>
-        </section>
-
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl py-1 dark:text-white">
-                TestCrunch 2024 conference
-              </h2>
-              <p className="text-md py-2 leading-8 text-gray-800 dark:text-white">
-                I delivered a presentation titled "Playwright: The Future of Test Automation?" at the biggest SK/CZ TestCrunch conference,
-                attracting an audience of nearly 500 professionals eager to explore the latest advancements in the QA field. During my speech, I provided a brief overview of Playwright, its history,
-                future and the modern features it offers. I also showed the attendees the different kinds of testing they can do in Playwright and finally I compared it to its biggest competitor,
-                Cypress. The presentation not only captivated the audience but also sparked meaningful discussions, evidenced by the multitude of questions and positive feedback received post-event.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="hover:shadow-lg transition duration-300 ease-in-out rounded-lg overflow-hidden">
-                <Image src={tc1} alt="testcrunch2024" className="w-full h-56 object-cover object-center transform hover:scale-110" />
-              </div>
-              <div className="hover:shadow-lg transition duration-300 ease-in-out rounded-lg overflow-hidden">
-                <Image src={tc2} alt="testcrunch2024" className="w-full h-56 object-cover object-center transform hover:scale-110" />
-              </div>
-              <div className="hover:shadow-lg transition duration-300 ease-in-out rounded-lg overflow-hidden">
-                <Image src={tc3} alt="testcrunch2024" className="w-full h-56 object-cover object-center transform hover:scale-110" />
-              </div>
-            </div>
           </div>
         </section>
       </div>

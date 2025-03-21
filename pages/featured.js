@@ -15,6 +15,16 @@ export default function Featured() {
       image: "/bs-michal.png"
     },
     {
+      type: "Conference",
+      title: "Test Automation with Playwright",
+      platform: "TestCrunch Conference",
+      date: "March 2024",
+      description: "Presented modern testing approaches and Playwright capabilities at TestCrunch Conference, sharing insights about efficient test automation strategies.",
+      link: "/testcrunch",
+      icon: FaNewspaper,
+      image: "/tc1.jpg"
+    },
+    {
       type: "Article",
       title: "Playwright vs Selenium vs Cypress: Which Tool is Best for Automated Testing?",
       platform: "Skillmea",
@@ -33,42 +43,6 @@ export default function Featured() {
       link: "https://www.youtube.com/live/tz7dfBxkYDA?si=rHDQQbNx31EKSjCZ",
       icon: FaYoutube,
       image: "/yt.jpg"
-    },
-    {
-      type: "Article",
-      title: "Test Automation with Playwright",
-      platform: "Medium",
-      date: "2024",
-      description: "An in-depth article about modern test automation approaches using Playwright.",
-      link: "#",
-      icon: FaMedium
-    },
-    {
-      type: "Podcast",
-      title: "The Future of Testing",
-      platform: "Testing Podcast",
-      date: "2023",
-      description: "Discussion about the evolution of test automation and best practices in the industry.",
-      link: "#",
-      icon: FaPodcast
-    },
-    {
-      type: "Video",
-      title: "Playwright Workshop",
-      platform: "YouTube",
-      date: "2023",
-      description: "Live workshop demonstrating advanced Playwright testing techniques.",
-      link: "#",
-      icon: FaYoutube
-    },
-    {
-      type: "Article",
-      title: "E2E Testing Best Practices",
-      platform: "Tech Blog",
-      date: "2023",
-      description: "Expert insights on end-to-end testing strategies and implementation.",
-      link: "#",
-      icon: FaNewspaper
     }
   ];
 
