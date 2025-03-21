@@ -68,8 +68,8 @@ export default function Featured() {
               <a
                 key={index}
                 href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
+                target={item.link.startsWith('http') ? "_blank" : undefined}
+                rel={item.link.startsWith('http') ? "noopener noreferrer" : undefined}
                 className="block bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               >
                 {item.image && (
