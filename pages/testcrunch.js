@@ -15,10 +15,10 @@ export default function TestCrunch() {
       <div className="min-h-screen pt-24 md:pt-32">
         <div className="text-center mb-16">
           <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
-            TestCrunch Conference
+            TestCrunch
           </h2>
           <p className="text-md py-5 leading-8 text-gray-800 dark:text-white md:text-xl max-w-2xl mx-auto">
-            I had the honor of being a speaker at TestCrunch Conference, where I shared insights about test automation and Playwright.
+            I had the honor of being a speaker at TestCrunch 2024 Conference, where I shared insights about test automation and Playwright.
           </p>
         </div>
 
