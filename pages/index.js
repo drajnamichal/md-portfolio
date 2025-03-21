@@ -41,15 +41,15 @@ export default function Home() {
               Michal Drajna
             </h2>
             <h3 className="text-2xl py-2 dark:text-white md:text-3xl">
-              QA Engineer
+              Senior QA Engineer
             </h3>
             <div className="text-md py-5 leading-8 text-gray-800 dark:text-white md:text-xl max-w-2xl mx-auto">
               <Typewriter
                 options={{
                   strings: [
-                    'Passionate about test automation',
-                    'Playwright enthusiast',
-                    'Quality-driven developer'
+                    'Online Course Creator 🎥',
+                    'Playwright enthusiast 🎭',
+                    'Conference speaker 🎤'
                   ],
                   autoStart: true,
                   loop: true,
