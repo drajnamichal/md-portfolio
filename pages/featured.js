@@ -27,9 +27,9 @@ export default function Featured() {
     {
       type: "Video",
       title: "Playwright: The Future of Test Automation?",
-      platform: "TestCrunch Conference",
+      platform: "Presentation",
       date: "March 2024",
-      description: "Conference presentation exploring Playwright's capabilities, history, and future in test automation, comparing it with other modern testing tools.",
+      description: "A comprehensive presentation about Playwright's powerful capabilities, including auto-waiting, codegen, tracing, and parallel execution. Discover why Playwright is becoming the go-to choice for modern web automation and how it's shaping the future of testing.",
       link: "https://www.youtube.com/live/tz7dfBxkYDA?si=rHDQQbNx31EKSjCZ",
       icon: FaYoutube,
       image: "/yt.jpg"
@@ -126,7 +126,7 @@ export default function Featured() {
                     {item.description}
                   </p>
                   <div className="mt-4 flex items-center text-teal-600 text-sm font-medium">
-                    Read More
+                    {item.type === "Video" ? "Watch it" : "Read More"}
                     <svg
                       className="ml-2 w-4 h-4"
                       fill="none"
