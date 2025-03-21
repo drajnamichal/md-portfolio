@@ -68,7 +68,7 @@ export default function Layout({ children, title, description, image }) {
   const isActive = (path) => router.pathname === path;
 
   return (
-    <div className="bg-white dark:bg-gray-900 min-h-screen">
+    <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900">
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -141,7 +141,7 @@ export default function Layout({ children, title, description, image }) {
         </div>
       </nav>
 
-      <main className="px-5 md:px-20 lg:px-40">
+      <main className="flex-grow px-5 md:px-20 lg:px-40">
         <AnimatePresence mode="wait">
           <PageTransition key={router.pathname}>
             {children}
@@ -149,7 +149,7 @@ export default function Layout({ children, title, description, image }) {
         </AnimatePresence>
       </main>
 
-      <footer className="py-6 mt-12 bg-gray-100 dark:bg-gray-800">
+      <footer className="py-6 bg-gray-100 dark:bg-gray-800">
         <div className="max-w-2xl mx-auto px-4 text-center">
           <Footer />
         </div>
