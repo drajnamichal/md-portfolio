@@ -193,24 +193,6 @@ export default function Home() {
         </div>
         <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap justify-center">
           <a
-            href="https://www.browserstack.com/blog/honoring-iconsofquality-michal-drajna/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="basis-1/3 flex-1"
-          >
-            <div className="relative group">
-              <Image
-                src="/bs-michal.png"
-                alt="BrowserStack Icons of Quality Interview"
-                className="rounded-lg object-cover transform transition-transform duration-300 group-hover:scale-105"
-                width={400}
-                height={400}
-                layout="responsive"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-opacity duration-300 rounded-lg"></div>
-            </div>
-          </a>
-          <a
             href="https://skillmea.sk/blog_posts/playwright-vs-selenium-vs-cypress"
             target="_blank"
             rel="noopener noreferrer"

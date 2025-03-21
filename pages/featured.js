@@ -5,6 +5,16 @@ import { FaNewspaper, FaPodcast, FaYoutube, FaMedium } from "react-icons/fa";
 export default function Featured() {
   const featuredItems = [
     {
+      type: "Interview",
+      title: "Honoring #IconsOfQuality: Michal Drajna, QA Engineer",
+      platform: "BrowserStack",
+      date: "September 2024",
+      description: "Featured in BrowserStack's #IconsOfQuality series, sharing insights about test automation, AI in testing, and productivity tips for QA professionals.",
+      link: "https://www.browserstack.com/blog/honoring-iconsofquality-michal-drajna/",
+      icon: FaNewspaper,
+      image: "/bs-michal.png"
+    },
+    {
       type: "Article",
       title: "Test Automation with Playwright",
       platform: "Medium",
@@ -68,6 +78,17 @@ export default function Featured() {
                 rel="noopener noreferrer"
                 className="block bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               >
+                {item.image && (
+                  <div className="relative h-48 w-full">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      layout="fill"
+                      objectFit="cover"
+                      className="transition-transform duration-300 hover:scale-105"
+                    />
+                  </div>
+                )}
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center">
