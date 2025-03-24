@@ -60,7 +60,7 @@ export default function WorkshopStats({ stats }) {
                   duration={2}
                 />
               ) : (
-                item.value
+                <span>{item.value}</span>
               )}
             </div>
             <div className="text-sm text-gray-600 dark:text-gray-400">

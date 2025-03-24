@@ -53,7 +53,7 @@ export default function AnimatedCounter({ value, suffix = '', prefix = '', durat
       ref={counterRef}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="text-2xl md:text-3xl font-bold text-teal-600 dark:text-teal-400"
+      className="text-2xl md:text-3xl font-bold"
     >
       {prefix}{count}{suffix}
     </motion.div>
