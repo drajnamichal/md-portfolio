@@ -7,10 +7,6 @@
   src: url("../public/Burtons.otf");
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 /* .translate-z-0 {
   transform: translateZ(0px);
 }
@@ -56,5 +52,5 @@ html {
   }
   .textarea {
     @apply w-full h-[180px] p-6 capitalize rounded-lg resize-none;
-  }
-} */
+  } */
+/* } */

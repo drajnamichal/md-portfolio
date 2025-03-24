@@ -15,7 +15,7 @@ export default function Home() {
       image="/profile.jpg"
     >
       <div className="relative">
-        <section id="home" className="min-h-screen relative pt-24 md:pt-32">
+        <section className="min-h-screen relative pt-24 md:pt-32">
           <div className="absolute inset-0" style={{
             backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(0, 128, 128, 0.1) 1px, transparent 0)',
             backgroundSize: '40px 40px',
