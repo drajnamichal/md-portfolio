@@ -3,9 +3,7 @@ import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
 import { AnimatePresence, motion } from 'framer-motion';
-import Typewriter from 'typewriter-effect';
 import Footer from "./Footer";
-import SEO from "./SEO";
 import PageTransition from "./PageTransition";
 import Head from "next/head";
 import NProgress from 'nprogress';
@@ -16,43 +14,26 @@ export default function Layout({ children, title, description, image }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
 
-  // Initialize dark mode from localStorage and system preference
   useEffect(() => {
     const isDark = localStorage.getItem('darkMode') === 'true';
     setDarkMode(isDark);
-    if (isDark) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+    document.documentElement.classList.toggle('dark', isDark);
   }, []);
 
-  // Sync dark mode changes with localStorage and document class
   useEffect(() => {
     localStorage.setItem('darkMode', darkMode);
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+    document.documentElement.classList.toggle('dark', darkMode);
   }, [darkMode]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 10);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
-    const handleStart = () => {
-      NProgress.start();
-    };
-    const handleStop = () => {
-      NProgress.done();
-    };
+    const handleStart = () => NProgress.start();
+    const handleStop = () => NProgress.done();
 
     router.events.on('routeChangeStart', handleStart);
     router.events.on('routeChangeComplete', handleStop);
@@ -66,6 +47,15 @@ export default function Layout({ children, title, description, image }) {
   }, [router]);
 
   const isActive = (path) => router.pathname === path;
+
+  const navigationItems = [
+    { href: '/', label: 'Home' },
+    { href: '/consultations', label: 'Consultations' },
+    { href: '/workshops', label: 'Workshops' },
+    { href: '/courses', label: 'Courses' },
+    { href: '/featured', label: 'Featured' },
+    { href: '/resume', label: 'Resume' }
+  ];
 
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900">
@@ -96,14 +86,7 @@ export default function Layout({ children, title, description, image }) {
           isScrolled ? "bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg" : "bg-transparent"
         }`}>
           <ul className="flex items-center space-x-2">
-            {[
-              { href: '/', label: 'Home' },
-              { href: '/consultations', label: 'Consultations' },
-              { href: '/workshops', label: 'Workshops' },
-              { href: '/courses', label: 'Courses' },
-              { href: '/featured', label: 'Featured' },
-              { href: '/resume', label: 'Resume' }
-            ].map((item) => (
+            {navigationItems.map((item) => (
               <li key={item.href}>
                 <Link 
                   href={item.href} 
