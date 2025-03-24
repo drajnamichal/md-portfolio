@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BsFillMoonStarsFill, BsFillSunFill } from 'react-icons/bs';
+import { smoothScroll } from '../utils/smoothScroll';
 
 export default function Navigation({ darkMode, setDarkMode }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,6 +23,14 @@ export default function Navigation({ darkMode, setDarkMode }) {
     { href: '/resume', label: 'Resume' }
   ];
 
+  const handleClick = (e, href) => {
+    if (href === '/') {
+      smoothScroll(e, 'home');
+    } else {
+      router.push(href);
+    }
+  };
+
   return (
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 py-4 px-10 md:px-20 lg:px-40 transition-all duration-200 ${
@@ -39,6 +48,7 @@ export default function Navigation({ darkMode, setDarkMode }) {
             <Link
               key={link.href}
               href={link.href}
+              onClick={(e) => handleClick(e, link.href)}
               className={`relative text-lg transition-colors ${
                 router.pathname === link.href
                   ? 'text-teal-600 dark:text-teal-400'
