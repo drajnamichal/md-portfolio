@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Layout from "../components/Layout";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -37,7 +38,7 @@ export default function TestCrunch() {
             
             <div className="prose dark:prose-invert max-w-none mb-12">
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-                I had the privilege of speaking at TestCrunch Conference 2024, where I presented on "Test Automation with Playwright". 
+                I had the privilege of speaking at TestCrunch Conference 2024, where I presented on &ldquo;Test Automation with Playwright&rdquo;. 
                 The conference brought together testing professionals from across the region to discuss modern testing approaches and best practices.
               </p>
 
