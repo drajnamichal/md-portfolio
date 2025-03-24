@@ -43,7 +43,7 @@ export default function Workshops() {
           src={playwright} 
           width={200} 
           height={200} 
-          className="rounded-xl shadow-lg transform transition-transform duration-500 hover:scale-105" 
+          className="rounded-xl shadow-lg" 
           alt="Playwright Workshop"
           placeholder="blur"
           sizes="200px"
