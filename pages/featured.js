@@ -20,7 +20,7 @@ export default function Featured() {
       platform: "TestCrunch Conference",
       date: "March 2024",
       description: "Presented modern testing approaches and Playwright capabilities at TestCrunch Conference, sharing insights about efficient test automation strategies.",
-      link: "https://www.testcrunch.cz/",
+      link: "/testcrunch",
       icon: FaNewspaper,
       image: "/tc1.jpg"
     },
