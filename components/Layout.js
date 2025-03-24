@@ -91,8 +91,8 @@ export default function Layout({ children, title, description, image }) {
         `}</style>
       </Head>
 
-      <nav className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 transition-all duration-300">
-        <div className={`py-6 px-10 md:px-20 lg:px-40 flex justify-between ${
+      <nav className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 transition-all duration-300 h-20">
+        <div className={`h-full py-0 px-10 md:px-20 lg:px-40 flex justify-between items-center ${
           isScrolled ? "bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg" : "bg-transparent"
         }`}>
           <ul className="flex items-center space-x-2">
@@ -141,7 +141,7 @@ export default function Layout({ children, title, description, image }) {
         </div>
       </nav>
 
-      <main className="flex-grow px-5 md:px-20 lg:px-40">
+      <main className="flex-grow px-5 md:px-20 lg:px-40 pt-24">
         <AnimatePresence mode="wait">
           <PageTransition key={router.pathname}>
             {children}
