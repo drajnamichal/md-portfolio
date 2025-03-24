@@ -52,7 +52,7 @@ export default function WorkshopStats({ stats }) {
             <div className="mx-auto w-12 h-12 bg-teal-100 dark:bg-teal-900 rounded-full flex items-center justify-center mb-4">
               <item.icon className="text-xl text-teal-600 dark:text-teal-400" />
             </div>
-            <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+            <div className="text-3xl font-bold text-teal-600 dark:text-teal-400 mb-2">
               {item.isAnimated ? (
                 <AnimatedCounter 
                   value={item.value} 
