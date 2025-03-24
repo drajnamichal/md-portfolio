@@ -155,46 +155,44 @@ export default function Courses() {
         {courses.map((course, index) => (
           <div 
             key={index}
-            className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
           >
-            <a href={course.link} target="_blank" rel="noopener noreferrer" className="block">
-              <div className="relative h-52 w-full">
+            <a href={course.link} target="_blank" rel="noopener noreferrer" className="flex flex-col h-full">
+              <div className="relative aspect-video w-full">
                 <Image
                   src={course.image}
                   alt={course.title}
-                  width={600}
-                  height={400}
-                  className="rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105"
+                  fill
+                  className="object-cover"
                   placeholder="blur"
-                  sizes="(max-width: 768px) 100vw, 600px"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   quality={90}
+                  priority={true}
                 />
               </div>
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-semibold text-teal-600 dark:text-teal-400 mb-3">
                   {course.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm">
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
                   {course.description}
                 </p>
-                <div className="space-y-2">
-                  <h4 className="font-semibold text-gray-800 dark:text-white mb-2 text-sm">
+                <div className="mt-auto">
+                  <h4 className="font-semibold text-gray-800 dark:text-white mb-2">
                     What you'll learn:
                   </h4>
-                  <ul className="grid grid-cols-2 gap-2">
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-6">
                     {course.topics.map((topic, topicIndex) => (
                       <li 
                         key={topicIndex}
-                        className="text-xs text-gray-600 dark:text-gray-300 flex items-center"
+                        className="text-sm text-gray-600 dark:text-gray-300 flex items-start"
                       >
-                        <span className="w-1.5 h-1.5 bg-teal-500 rounded-full mr-2 flex-shrink-0"></span>
-                        {topic}
+                        <span className="w-1.5 h-1.5 bg-teal-500 rounded-full mr-2 mt-1.5 flex-shrink-0"></span>
+                        <span>{topic}</span>
                       </li>
                     ))}
                   </ul>
-                </div>
-                <div className="mt-6">
-                  <span className="inline-block bg-teal-600 text-white px-5 py-2 rounded-md hover:bg-teal-700 transition-colors text-sm">
+                  <span className="inline-block bg-teal-600 text-white px-5 py-2 rounded-md hover:bg-teal-700 transition-colors">
                     Start Learning
                   </span>
                 </div>
