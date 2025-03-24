@@ -39,7 +39,16 @@ export default function Workshops() {
       </div>
 
       <div className="flex justify-center mb-16">
-        <Image src={playwright} width={200} height={200} className="rounded-xl" />
+        <Image 
+          src={playwright} 
+          width={200} 
+          height={200} 
+          className="rounded-xl shadow-lg transform transition-transform duration-500 hover:scale-105" 
+          alt="Playwright Workshop"
+          placeholder="blur"
+          sizes="200px"
+          quality={90}
+        />
       </div>
 
       <div className="max-w-4xl mx-auto mb-16">

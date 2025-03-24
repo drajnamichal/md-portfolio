@@ -162,11 +162,12 @@ export default function Courses() {
                 <Image
                   src={course.image}
                   alt={course.title}
-                  className="object-cover"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  width={600}
+                  height={400}
+                  className="rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105"
+                  placeholder="blur"
+                  sizes="(max-width: 768px) 100vw, 600px"
                   quality={90}
-                  priority={true}
                 />
               </div>
               <div className="p-6">

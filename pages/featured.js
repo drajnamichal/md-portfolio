@@ -73,13 +73,15 @@ export default function Featured() {
                 className="block bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               >
                 {item.image && (
-                  <div className="relative h-48 w-full">
+                  <div className="relative w-full h-48 md:h-64 mb-4 overflow-hidden rounded-lg">
                     <Image
                       src={item.image}
                       alt={item.title}
-                      layout="fill"
-                      objectFit="cover"
-                      className="transition-transform duration-300 hover:scale-105"
+                      fill
+                      className="object-cover transform transition-transform duration-500 hover:scale-105"
+                      placeholder="blur"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      quality={90}
                     />
                   </div>
                 )}

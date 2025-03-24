@@ -60,7 +60,16 @@ export default function Home() {
               ease: [0, 0.71, 0.2, 1.01]
             }}
           >
-            <Image src={profile} alt="Michal Drajna" layout="fill" objectFit="cover" priority />
+            <Image
+              src={profile}
+              alt="Michal Drajna - QA Engineer"
+              layout="fill"
+              objectFit="cover"
+              priority
+              placeholder="blur"
+              sizes="(max-width: 768px) 320px, 384px"
+              className="transform transition-transform duration-500 hover:scale-105"
+            />
           </motion.div>
         </section>
       </div>
