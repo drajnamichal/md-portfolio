@@ -6,6 +6,7 @@ import Typewriter from 'typewriter-effect';
 import Layout from "../components/Layout";
 import { motion } from 'framer-motion';
 import SocialIcons from '../components/SocialIcons';
+import VisitorCounter from '../components/VisitorCounter';
 
 export default function Home() {
   return (
@@ -46,6 +47,7 @@ export default function Home() {
                 }}
               />
             </div>
+            <VisitorCounter />
           </motion.div>
 
           <SocialIcons />
