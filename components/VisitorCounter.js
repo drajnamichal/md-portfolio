@@ -5,36 +5,63 @@ export default function VisitorCounter() {
   const [visitorCount, setVisitorCount] = useState(0);
 
   useEffect(() => {
-    const incrementVisitorCount = async () => {
+    const getVisitorCount = async () => {
       try {
-        // First, get the current count
-        const { data: currentCount } = await supabase
+        // Get current visitor count
+        const { data: countData } = await supabase
           .from('visitor_count')
           .select('count')
           .single();
 
-        const newCount = (currentCount?.count || 0) + 1;
+        if (countData) {
+          setVisitorCount(countData.count);
+        }
 
-        // Update the count
-        const { error } = await supabase
-          .from('visitor_count')
-          .upsert({ id: 1, count: newCount });
+        // Get client IP address using a free IP API
+        const ipResponse = await fetch('https://api.ipify.org?format=json');
+        const { ip } = await ipResponse.json();
 
-        if (error) throw error;
-        
-        setVisitorCount(newCount);
+        // Check if this IP has visited in the last 24 hours
+        const twentyFourHoursAgo = new Date();
+        twentyFourHoursAgo.setHours(twentyFourHoursAgo.getTime() - 24 * 60 * 60 * 1000);
+
+        const { data: existingVisit } = await supabase
+          .from('visitor_ips')
+          .select('*')
+          .eq('ip', ip)
+          .gte('visited_at', twentyFourHoursAgo.toISOString())
+          .single();
+
+        if (!existingVisit) {
+          // This is a new visit
+          const newCount = (countData?.count || 0) + 1;
+
+          // Update the total count
+          await supabase
+            .from('visitor_count')
+            .upsert({ id: 1, count: newCount });
+
+          // Record this IP visit
+          await supabase
+            .from('visitor_ips')
+            .insert({
+              ip: ip,
+              visited_at: new Date().toISOString()
+            });
+
+          setVisitorCount(newCount);
+        }
       } catch (error) {
-        console.error('Error updating visitor count:', error);
+        console.error('Error handling visitor count:', error);
       }
     };
 
-    incrementVisitorCount();
+    getVisitorCount();
   }, []);
 
   return (
-    <div className="text-center p-4">
-      <p className="text-lg font-semibold">Visitors</p>
-      <span className="text-2xl font-bold">{visitorCount}</span>
+    <div className="text-sm text-gray-400 dark:text-gray-500">
+      <span>{visitorCount.toLocaleString()} unique visitors</span>
     </div>
   );
 } 
