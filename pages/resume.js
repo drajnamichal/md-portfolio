@@ -94,7 +94,7 @@ export default function Resume() {
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-12 h-12 relative mt-1">
                   <Image
-                    src="/images/companies/currys.svg"
+                    src="/images/companies/currys.png"
                     alt="Currys logo"
                     fill
                     className="object-contain dark:invert-[.85] dark:brightness-200 transition-all duration-200"
@@ -115,7 +115,7 @@ export default function Resume() {
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-12 h-12 relative mt-1">
                   <Image
-                    src="/images/companies/globallogic.svg"
+                    src="/images/companies/globallogic.png"
                     alt="GlobalLogic logo"
                     fill
                     className="object-contain dark:invert-[.85] dark:brightness-200 transition-all duration-200"
@@ -136,7 +136,7 @@ export default function Resume() {
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-12 h-12 relative mt-1">
                   <Image
-                    src="/images/companies/fpt.svg"
+                    src="/images/companies/fpt.png"
                     alt="FPT logo"
                     fill
                     className="object-contain dark:invert-[.85] dark:brightness-200 transition-all duration-200"
