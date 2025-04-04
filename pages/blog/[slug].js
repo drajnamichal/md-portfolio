@@ -6,8 +6,12 @@ import Layout from '../../components/Layout';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FaTwitter, FaLinkedin, FaCopy } from 'react-icons/fa';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import RelatedPosts from '../../components/RelatedPosts';
+import ReadingProgress from '../../components/ReadingProgress';
+import BackToTop from '../../components/BackToTop';
+import CopyCodeButton from '../../components/CopyCodeButton';
+import { createRoot } from 'react-dom/client';
 
 function calculateReadingTime(content) {
   const wordsPerMinute = 200;
@@ -19,6 +23,35 @@ function calculateReadingTime(content) {
 export default function BlogPost({ post, allPosts }) {
   const [copySuccess, setCopySuccess] = useState(false);
   const readingTime = calculateReadingTime(post.content);
+
+  useEffect(() => {
+    // Add copy button to code blocks
+    const codeBlocks = document.querySelectorAll('pre code');
+    codeBlocks.forEach(codeBlock => {
+      const pre = codeBlock.parentElement;
+      if (!pre.querySelector('button')) {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'relative';
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(pre);
+        const copyButton = document.createElement('div');
+        copyButton.className = 'copy-button';
+        wrapper.appendChild(copyButton);
+        const root = createRoot(copyButton);
+        root.render(<CopyCodeButton code={codeBlock.textContent} />);
+      }
+    });
+
+    return () => {
+      // Cleanup copy buttons when component unmounts
+      document.querySelectorAll('.copy-button').forEach(button => {
+        const root = button._reactRootContainer;
+        if (root) {
+          root.unmount();
+        }
+      });
+    };
+  }, []);
 
   const handleShare = async platform => {
     const url = window.location.href;
@@ -49,6 +82,7 @@ export default function BlogPost({ post, allPosts }) {
 
   return (
     <Layout description={post.excerpt} image={post.coverImage}>
+      <ReadingProgress />
       <article className="max-w-4xl mx-auto px-4 py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -132,6 +166,7 @@ export default function BlogPost({ post, allPosts }) {
           <RelatedPosts currentPost={post} allPosts={allPosts} />
         </motion.div>
       </article>
+      <BackToTop />
     </Layout>
   );
 }

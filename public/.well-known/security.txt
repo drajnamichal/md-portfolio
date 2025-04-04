@@ -1,0 +1,5 @@
+Contact: mailto:michal.drajna@gmail.com
+Expires: 2025-12-31T23:59:59.000Z
+Preferred-Languages: en
+Policy: https://github.com/michaldrajna/md-portfolio/security/policy
+Canonical: https://michaldrajna.com/.well-known/security.txt 
