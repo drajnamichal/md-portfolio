@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "commit-push": "sh scripts/auto-commit.sh"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.49.4",

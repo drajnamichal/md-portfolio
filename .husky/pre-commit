@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+# Run lint-staged
+npx lint-staged
+
+# Validate branch naming convention
+local_branch="$(git rev-parse --abbrev-ref HEAD)"
+
+# Skip branch name validation for main and develop branches
+if [ "$local_branch" = "main" ] || [ "$local_branch" = "develop" ]; then
+    exit 0
+fi
+
+valid_branch_regex="^(feature|bugfix|improvement|library|prerelease|release|hotfix)\/[a-z0-9._-]+$"
+
+if [[ ! $local_branch =~ $valid_branch_regex ]]
+then
+    echo "Branch name '$local_branch' doesn't adhere to the naming convention:"
+    echo "feature/name-of-feature"
+    echo "bugfix/name-of-bug"
+    echo "improvement/name-of-improvement"
+    echo "library/name-of-library"
+    echo "prerelease/version"
+    echo "release/version"
+    echo "hotfix/name-of-hotfix"
+    exit 1
+fi
+
+# Check for console.log statements
+if git diff --cached | grep -E '^\+.*console\.log'; then
+    echo "Warning: You have console.log statements in your changes"
+    exit 1
+fi 

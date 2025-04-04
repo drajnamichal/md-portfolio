@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Run ESLint
+npm run lint
+
+# Check for sensitive information
+if grep -r --include="*.{js,jsx,ts,tsx,json,env}" -E "(password|secret|key|token|api_key|apikey|auth)" .; then
+  echo "Warning: Potential sensitive information found in files"
+  exit 1
+fi 

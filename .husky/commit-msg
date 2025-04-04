@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+# Regex for conventional commit message format
+commit_msg_regex="^(feat|fix|docs|style|refactor|perf|test|chore|ci|build|revert)(\([a-z-]+\))?: .{1,50}"
+
+if ! grep -qE "$commit_msg_regex" "$1"; then
+    echo "Commit message format must match regex: $commit_msg_regex"
+    echo "Examples:"
+    echo "feat: add new feature"
+    echo "fix(auth): resolve login issue"
+    echo "docs: update README"
+    echo "style: format code"
+    echo "refactor: restructure component"
+    echo "perf: improve loading time"
+    echo "test: add unit tests"
+    echo "chore: update dependencies"
+    exit 1
+fi
+
+# Check commit message length
+if [ $(cat "$1" | wc -c) -gt 72 ]; then
+    echo "Commit message is too long (max 72 characters)"
+    exit 1
+fi 
