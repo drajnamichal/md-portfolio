@@ -139,30 +139,6 @@ export default function BlogPost({ post, allPosts }) {
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
-          {/* Author section */}
-          <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
-            <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">
-              About the Author
-            </h2>
-            <div className="flex items-center">
-              <Image
-                src="/memoji.png"
-                alt="Michal Drajna"
-                width={80}
-                height={80}
-                className="rounded-full"
-              />
-              <div className="ml-4">
-                <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
-                  Michal Drajna
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Senior QA Engineer and Test Automation Specialist with a passion for quality and efficiency.
-                </p>
-              </div>
-            </div>
-          </div>
-
           {/* Related Posts */}
           <RelatedPosts currentPost={post} allPosts={allPosts} />
         </motion.div>
