@@ -54,6 +54,7 @@ export default function Layout({ children, title, description, image }) {
     { href: '/consultations', label: 'Consultations' },
     { href: '/workshops', label: 'Workshops' },
     { href: '/courses', label: 'Courses' },
+    { href: '/blog', label: 'Blog' },
     { href: '/featured', label: 'Featured' },
     { href: '/resume', label: 'Resume' }
   ];
