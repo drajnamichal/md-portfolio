@@ -77,8 +77,8 @@ export default function Blog({ posts }) {
           </div>
         </div>
 
-        {/* Posts Grid */}
-        <div className="grid gap-8">
+        {/* Blog posts grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
           {filteredPosts.length > 0 ? (
             filteredPosts.map((post, index) => (
               <motion.article
@@ -134,9 +134,9 @@ export default function Blog({ posts }) {
               </motion.article>
             ))
           ) : (
-            <div className="text-center py-12">
-              <p className="text-gray-600 dark:text-gray-400">No articles found matching your criteria.</p>
-            </div>
+            <p className="text-gray-600 dark:text-gray-400 col-span-full text-center">
+              No articles found matching your criteria.
+            </p>
           )}
         </div>
       </div>
