@@ -2,13 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Optimize scrolling performance */
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Optimize animations */
+* {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Optimize fixed navigation performance */
+.fixed {
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 @font-face {
   font-family: "burtons";
   src: url("../public/Burtons.otf");
+  font-display: swap; /* Optimize font loading */
 }
 
 /* .translate-z-0 {
