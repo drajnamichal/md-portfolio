@@ -49,6 +49,16 @@ export default function Resume() {
             <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400">Work Experience</h3>
             <div className="space-y-8">
               <div>
+                <h4 className="text-xl font-medium">Senior Quality Assurance Engineer</h4>
+                <p className="text-gray-600 dark:text-gray-400">Bloomreach • Full-time • Sep 2024 - Present • Brno, South Moravia, Czechia • Remote</p>
+                <ul className="list-disc ml-6 mt-2 space-y-2">
+                  <li>Specializing in Robot Framework and k6 for comprehensive test automation</li>
+                  <li>Contributing to the development and maintenance of automated test suites</li>
+                  <li>Collaborating with cross-functional teams to ensure software quality</li>
+                  <li>Implementing best practices in test automation and quality assurance</li>
+                </ul>
+              </div>
+              <div>
                 <h4 className="text-xl font-medium">QA Engineer</h4>
                 <p className="text-gray-600 dark:text-gray-400">Investown • 10/2022 - Present • Prague</p>
                 <ul className="list-disc ml-6 mt-2 space-y-2">
