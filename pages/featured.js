@@ -52,9 +52,8 @@ export default function Featured() {
 
   return (
     <Layout
-      title="Featured In | Michal Drajna"
-      description="Check out where Michal Drajna has been featured in media, podcasts, and technical publications."
-      image="/featured.jpg"
+      title="Featured Projects - Michal Drajna's Portfolio"
+      description="Explore my featured projects and case studies"
     >
       <div className="min-h-screen pt-24 md:pt-32 bg-white dark:bg-gray-900">
         <div className="text-center mb-16">
@@ -66,7 +65,7 @@ export default function Featured() {
         </div>
 
         <div className="max-w-6xl mx-auto px-4 mb-16">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredItems.map((item, index) => (
               <a
                 key={index}

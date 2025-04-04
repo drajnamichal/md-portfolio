@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:fix": "next lint --fix && prettier --write .",
     "prepare": "husky install",
     "format": "prettier --write .",
     "commit-push": "sh scripts/auto-commit.sh"
@@ -43,11 +44,13 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
+      "eslint --fix --max-warnings=0",
       "prettier --write",
-      "eslint --fix"
+      "git add"
     ],
     "*.{json,md}": [
-      "prettier --write"
+      "prettier --write",
+      "git add"
     ]
   }
 }

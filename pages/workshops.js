@@ -19,9 +19,8 @@ export default function Workshops() {
 
   return (
     <Layout
-      title="Playwright Testing Workshops | Michal Drajna"
-      description="Expert-led Playwright testing workshops by Michal Drajna. Learn test automation best practices, framework development, and modern testing techniques. Perfect for teams transitioning to Playwright."
-      image="/playwright.png"
+      title="Workshops & Training - Michal Drajna"
+      description="Explore technical workshops and training sessions by Michal Drajna"
     >
       <div className="text-center mb-16">
         <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">

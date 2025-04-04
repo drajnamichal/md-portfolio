@@ -50,14 +50,11 @@ export default function Layout({ children, title, description, image }) {
 
   const isActive = path => router.pathname === path;
 
-  const navigationItems = [
+  const navigation = [
     { href: '/', label: 'Home' },
-    { href: '/consultations', label: 'Consultations' },
-    { href: '/workshops', label: 'Workshops' },
-    { href: '/courses', label: 'Courses' },
     { href: '/blog', label: 'Blog' },
     { href: '/featured', label: 'Featured' },
-    { href: '/resume', label: 'Resume' },
+    { href: '/workshops', label: 'Workshops' },
   ];
 
   return (
