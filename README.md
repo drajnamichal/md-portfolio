@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website built with Next.js, showcasing my work as a QA Engineer and Test Automation specialist.
 
-## 🚀 Features
+## Features
 
 - **Responsive Design**: Fully responsive layout that works on all devices
 - **Dark Mode**: Toggle between light and dark themes
@@ -12,7 +12,7 @@ A modern, responsive portfolio website built with Next.js, showcasing my work as
 - **Analytics**: Visitor tracking with Supabase
 - **API**: RESTful API endpoints for data access and analytics
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Framework**: Next.js
 - **Styling**: Tailwind CSS
@@ -22,33 +22,37 @@ A modern, responsive portfolio website built with Next.js, showcasing my work as
 - **Icons**: React Icons
 - **Testing**: Playwright
 
-## 📦 Installation
+## Installation
 
 1. Clone the repository:
-```bash
-git clone https://github.com/drajnamichal/md-portfolio.git
-cd md-portfolio
-```
+
+   ```bash
+   git clone https://github.com/drajnamichal/md-portfolio.git
+   cd md-portfolio
+   ```
 
 2. Install dependencies:
-```bash
-npm install
-```
+
+   ```bash
+   npm install
+   ```
 
 3. Create a `.env.local` file in the root directory and add your environment variables:
-```
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-```
+
+   ```plaintext
+   NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+   ```
 
 4. Run the development server:
-```bash
-npm run dev
-```
+
+   ```bash
+   npm run dev
+   ```
 
 5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## 🔧 Configuration
+## Configuration
 
 ### Environment Variables
 
@@ -62,7 +66,7 @@ The project uses Supabase for visitor tracking. Required tables:
 - `visitor_count`: Tracks total unique visitors
 - `visitor_ips`: Stores visitor information and analytics
 
-## 📱 Available Scripts
+## Available Scripts
 
 - `npm run dev`: Runs the development server
 - `npm run build`: Builds the production application
@@ -70,48 +74,49 @@ The project uses Supabase for visitor tracking. Required tables:
 - `npm run lint`: Runs ESLint for code quality
 - `npm test`: Runs Playwright tests (if configured)
 
-## 🎨 Project Structure
+## Project Structure
 
-```
+```plaintext
 md-portfolio/
 ├── components/         # React components
 ├── pages/             # Next.js pages
 ├── public/            # Static assets
 ├── styles/            # CSS styles
-├── lib/              # Utility functions
+├── lib/               # Utility functions
 └── tests/            # Test files
 ```
 
-## 🌟 Key Components
+## Key Components
 
 - `Layout.js`: Main layout wrapper
 - `Footer.js`: Site footer with dynamic content
 - `SocialIcons.js`: Social media links
 - `VisitorTracker.js`: Analytics tracking
 
-## 🚀 Deployment
-
-The site is automatically deployed to Vercel on push to the main branch. To deploy manually:
+## Deployment
 
 1. Install Vercel CLI:
-```bash
-npm i -g vercel
-```
+
+   ```bash
+   npm i -g vercel
+   ```
 
 2. Deploy:
-```bash
-vercel
-```
 
-## 📈 Analytics
+   ```bash
+   vercel
+   ```
+
+## Analytics
 
 The site uses Supabase to track:
+
 - Unique visitors
 - Visitor locations
 - Most visited pages
 - User engagement
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -119,24 +124,24 @@ The site uses Supabase to track:
 4. Push to the branch
 5. Open a pull request
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📧 Contact
+## Contact
 
 - Website: [michaldrajna.com](https://michaldrajna.com)
 - LinkedIn: [Michal Drajna](https://www.linkedin.com/in/michaldrajna)
 - Twitter: [@drajnamichal](https://twitter.com/drajnamichal)
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Next.js team for the amazing framework
 - Vercel for hosting
 - Supabase for backend services
 - All contributors and users of the site
 
-## 📚 Documentation
+## Documentation
 
 - [API Documentation](docs/API.md) - Detailed documentation of all API endpoints
 - [Contributing Guidelines](CONTRIBUTING.md) - Guidelines for contributing to the project

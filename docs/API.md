@@ -4,7 +4,7 @@ This document outlines the API endpoints available in the portfolio website.
 
 ## Base URL
 
-```
+```plaintext
 Production: https://michaldrajna.com/api
 Development: http://localhost:3000/api
 ```
@@ -13,7 +13,7 @@ Development: http://localhost:3000/api
 
 All analytics endpoints require authentication using Supabase. Include your Supabase anon key in the request headers:
 
-```
+```plaintext
 Authorization: Bearer your_supabase_anon_key
 ```
 
@@ -22,6 +22,7 @@ Authorization: Bearer your_supabase_anon_key
 ### Analytics
 
 #### Get Visitor Count
+
 ```http
 GET /api/analytics/visitors
 ```
@@ -29,6 +30,7 @@ GET /api/analytics/visitors
 Returns the total number of unique visitors.
 
 **Response**
+
 ```json
 {
   "total": 1234,
@@ -37,6 +39,7 @@ Returns the total number of unique visitors.
 ```
 
 #### Track Page Visit
+
 ```http
 POST /api/analytics/track
 ```
@@ -44,6 +47,7 @@ POST /api/analytics/track
 Records a new page visit.
 
 **Request Body**
+
 ```json
 {
   "ip": "string",
@@ -60,6 +64,7 @@ Records a new page visit.
 ```
 
 **Response**
+
 ```json
 {
   "success": true,
@@ -70,6 +75,7 @@ Records a new page visit.
 ### Contact Form
 
 #### Submit Contact Form
+
 ```http
 POST /api/contact
 ```
@@ -77,6 +83,7 @@ POST /api/contact
 Sends a contact form submission.
 
 **Request Body**
+
 ```json
 {
   "name": "string",
@@ -87,6 +94,7 @@ Sends a contact form submission.
 ```
 
 **Response**
+
 ```json
 {
   "success": true,
@@ -97,6 +105,7 @@ Sends a contact form submission.
 ### Projects
 
 #### Get Featured Projects
+
 ```http
 GET /api/projects
 ```
@@ -104,6 +113,7 @@ GET /api/projects
 Returns a list of featured projects.
 
 **Response**
+
 ```json
 {
   "projects": [
@@ -122,6 +132,7 @@ Returns a list of featured projects.
 ### Blog Posts
 
 #### Get Blog Posts
+
 ```http
 GET /api/posts
 ```
@@ -129,11 +140,13 @@ GET /api/posts
 Returns a list of blog posts.
 
 **Query Parameters**
+
 - `page` (optional): Page number for pagination (default: 1)
 - `limit` (optional): Number of posts per page (default: 10)
 - `tag` (optional): Filter by tag
 
 **Response**
+
 ```json
 {
   "posts": [
@@ -153,6 +166,7 @@ Returns a list of blog posts.
 ```
 
 #### Get Single Post
+
 ```http
 GET /api/posts/[slug]
 ```
@@ -160,6 +174,7 @@ GET /api/posts/[slug]
 Returns a single blog post by slug.
 
 **Response**
+
 ```json
 {
   "id": "string",
@@ -188,6 +203,7 @@ All endpoints follow the same error response format:
 ```
 
 Common Error Codes:
+
 - `400`: Bad Request
 - `401`: Unauthorized
 - `403`: Forbidden
@@ -197,8 +213,8 @@ Common Error Codes:
 ## Rate Limiting
 
 API requests are limited to:
+
 - 100 requests per minute for authenticated endpoints
-- 50 requests per minute for public endpoints
 
 ## Data Models
 
@@ -281,19 +297,22 @@ X-Webhook-Secret: your_webhook_secret
 To run the API locally:
 
 1. Install dependencies:
-```bash
-npm install
-```
 
-2. Set up environment variables:
-```bash
-cp .env.example .env.local
-```
+   ```bash
+   npm install
+   ```
 
-3. Start the development server:
-```bash
-npm run dev
-```
+1. Set up environment variables:
+
+   ```bash
+   cp .env.example .env.local
+   ```
+
+1. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
 
 ## Testing
 
