@@ -8,6 +8,7 @@ import PageTransition from "./PageTransition";
 import Head from "next/head";
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
+import VisitorTracker from './VisitorTracker';
 
 export default function Layout({ children, title, description, image }) {
   const [darkMode, setDarkMode] = useState(false);
@@ -59,6 +60,7 @@ export default function Layout({ children, title, description, image }) {
 
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900">
+      <VisitorTracker />
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />

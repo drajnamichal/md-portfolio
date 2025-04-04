@@ -1,5 +1,4 @@
 import Typewriter from 'typewriter-effect';
-import VisitorCounter from './VisitorCounter';
 
 export default function Footer() {
   return (
@@ -16,12 +15,9 @@ export default function Footer() {
             }}
           />
         </div>
-        <div className="flex flex-col items-center space-y-1">
-          <p className="text-sm">
-            Copyright © <span className="text-gray-400 dark:text-gray-500">2025</span>
-          </p>
-          <VisitorCounter />
-        </div>
+        <p className="text-sm">
+          Copyright © <span className="text-gray-400 dark:text-gray-500">2025</span>
+        </p>
       </div>
     </div>
   );
