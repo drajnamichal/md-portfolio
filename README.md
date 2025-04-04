@@ -10,6 +10,7 @@ A modern, responsive portfolio website built with Next.js, showcasing my work as
 - **Performance Optimized**: Fast loading times and optimized assets
 - **Accessibility**: WCAG compliant and screen-reader friendly
 - **Analytics**: Visitor tracking with Supabase
+- **API**: RESTful API endpoints for data access and analytics
 
 ## 🛠 Tech Stack
 
@@ -134,3 +135,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Vercel for hosting
 - Supabase for backend services
 - All contributors and users of the site
+
+## 📚 Documentation
+
+- [API Documentation](docs/API.md) - Detailed documentation of all API endpoints
+- [Contributing Guidelines](CONTRIBUTING.md) - Guidelines for contributing to the project
+- [License](LICENSE) - MIT License details
