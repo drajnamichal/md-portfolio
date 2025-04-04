@@ -206,7 +206,7 @@ export default function Resume() {
           </section>
 
           {/* Recommendations Section */}
-          <section className="mb-16">
+          <section className="mb-24">
             <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400 text-center">Recommendations</h3>
             <Recommendations />
           </section>

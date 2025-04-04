@@ -31,7 +31,7 @@ export default function Recommendations() {
   }, []);
 
   return (
-    <div className="relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-lg p-8">
+    <div className="relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-lg p-8 mb-8">
       <div className="max-w-3xl mx-auto">
         <div 
           className="transition-opacity duration-500"
