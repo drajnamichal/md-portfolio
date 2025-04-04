@@ -37,7 +37,7 @@ export default function AnimatedCounter({ value, suffix = '', prefix = '', durat
     const step = timestamp => {
       if (!start) start = timestamp;
       const progress = Math.min((timestamp - start) / (duration * 1000), 1);
-      
+
       setCount(Math.floor(progress * targetValue));
 
       if (progress < 1) {
@@ -55,7 +55,9 @@ export default function AnimatedCounter({ value, suffix = '', prefix = '', durat
       animate={{ opacity: 1 }}
       className="text-2xl md:text-3xl font-bold"
     >
-      {prefix}{count}{suffix}
+      {prefix}
+      {count}
+      {suffix}
     </motion.div>
   );
-} 
+}

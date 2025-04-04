@@ -7,7 +7,7 @@ export default function WorkshopStats({ stats }) {
     participantCount: '10+',
     satisfactionRate: '4.8/5',
     workshopsDelivered: '1',
-    companiesServed: '1'
+    companiesServed: '1',
   };
 
   const finalStats = { ...defaultStats, ...stats };
@@ -18,23 +18,23 @@ export default function WorkshopStats({ stats }) {
       value: '10',
       suffix: '+',
       label: 'Participants Trained',
-      isAnimated: true
+      isAnimated: true,
     },
     {
       icon: FaStar,
       value: finalStats.satisfactionRate,
-      label: 'Satisfaction Rate'
+      label: 'Satisfaction Rate',
     },
     {
       icon: FaGraduationCap,
       value: finalStats.workshopsDelivered,
-      label: 'Workshops Delivered'
+      label: 'Workshops Delivered',
     },
     {
       icon: FaBuilding,
       value: finalStats.companiesServed,
-      label: 'Companies Served'
-    }
+      label: 'Companies Served',
+    },
   ];
 
   return (
@@ -54,18 +54,12 @@ export default function WorkshopStats({ stats }) {
             </div>
             <div className="text-3xl font-bold text-teal-600 dark:text-teal-400 mb-2">
               {item.isAnimated ? (
-                <AnimatedCounter 
-                  value={item.value} 
-                  suffix={item.suffix || ''} 
-                  duration={2}
-                />
+                <AnimatedCounter value={item.value} suffix={item.suffix || ''} duration={2} />
               ) : (
                 <span>{item.value}</span>
               )}
             </div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">
-              {item.label}
-            </div>
+            <div className="text-sm text-gray-600 dark:text-gray-400">{item.label}</div>
           </motion.div>
         ))}
       </div>
@@ -87,4 +81,4 @@ export default function WorkshopStats({ stats }) {
       )}
     </div>
   );
-} 
+}

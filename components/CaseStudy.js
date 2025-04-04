@@ -9,7 +9,7 @@ export default function CaseStudy({ study }) {
   const sections = [
     { icon: FaLightbulb, title: 'Challenge', content: study.challenge },
     { icon: FaTools, title: 'Solution', content: study.solution },
-    { icon: FaChartLine, title: 'Results', content: study.results }
+    { icon: FaChartLine, title: 'Results', content: study.results },
   ];
 
   return (
@@ -20,12 +20,7 @@ export default function CaseStudy({ study }) {
       viewport={{ once: true }}
     >
       <div className="relative h-64 w-full">
-        <Image
-          src={study.image}
-          alt={study.title}
-          fill
-          className="object-cover"
-        />
+        <Image src={study.image} alt={study.title} fill className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
           <div className="p-6 text-white">
             <h3 className="text-2xl font-semibold mb-2">{study.title}</h3>
@@ -35,17 +30,12 @@ export default function CaseStudy({ study }) {
       </div>
 
       <div className="p-6">
-        <div 
+        <div
           className="flex items-center justify-between cursor-pointer"
           onClick={() => setIsExpanded(!isExpanded)}
         >
-          <h4 className="text-xl font-medium text-gray-900 dark:text-white">
-            Project Details
-          </h4>
-          <motion.div
-            animate={{ rotate: isExpanded ? 180 : 0 }}
-            transition={{ duration: 0.2 }}
-          >
+          <h4 className="text-xl font-medium text-gray-900 dark:text-white">Project Details</h4>
+          <motion.div animate={{ rotate: isExpanded ? 180 : 0 }} transition={{ duration: 0.2 }}>
             <FaChevronDown className="text-gray-500 dark:text-gray-400" />
           </motion.div>
         </div>
@@ -54,7 +44,7 @@ export default function CaseStudy({ study }) {
           {isExpanded && (
             <motion.div
               initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
+              animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3 }}
               className="overflow-hidden"
@@ -71,9 +61,7 @@ export default function CaseStudy({ study }) {
                       <h5 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
                         {title}
                       </h5>
-                      <p className="text-gray-600 dark:text-gray-300">
-                        {content}
-                      </p>
+                      <p className="text-gray-600 dark:text-gray-300">{content}</p>
                     </div>
                   </div>
                 ))}
@@ -102,4 +90,4 @@ export default function CaseStudy({ study }) {
       </div>
     </motion.div>
   );
-} 
+}

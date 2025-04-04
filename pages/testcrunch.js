@@ -1,22 +1,22 @@
 /* eslint-disable react/no-unescaped-entities */
-import Layout from "../components/Layout";
-import Image from "next/image";
-import { motion } from "framer-motion";
+import Layout from '../components/Layout';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export default function TestCrunch() {
   const images = [
     {
-      src: "/tc1.jpg",
-      alt: "TestCrunch Conference - Presentation"
+      src: '/tc1.jpg',
+      alt: 'TestCrunch Conference - Presentation',
     },
     {
-      src: "/tc2.jpg",
-      alt: "TestCrunch Conference - Event"
+      src: '/tc2.jpg',
+      alt: 'TestCrunch Conference - Event',
     },
     {
-      src: "/tc3.jpg",
-      alt: "TestCrunch Conference - Audience"
-    }
+      src: '/tc3.jpg',
+      alt: 'TestCrunch Conference - Audience',
+    },
   ];
 
   return (
@@ -35,17 +35,17 @@ export default function TestCrunch() {
             <h1 className="text-4xl md:text-5xl font-bold text-teal-600 mb-6">
               TestCrunch Conference 2024
             </h1>
-            
+
             <div className="prose dark:prose-invert max-w-none mb-12">
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-                I had the privilege of speaking at TestCrunch Conference 2024, where I presented on &ldquo;Test Automation with Playwright&rdquo;. 
-                The conference brought together testing professionals from across the region to discuss modern testing approaches and best practices.
+                I had the privilege of speaking at TestCrunch Conference 2024, where I presented on
+                &ldquo;Test Automation with Playwright&rdquo;. The conference brought together
+                testing professionals from across the region to discuss modern testing approaches
+                and best practices.
               </p>
 
-              <h2 className="text-2xl font-semibold text-teal-600 mb-4">
-                Presentation Highlights
-              </h2>
-              
+              <h2 className="text-2xl font-semibold text-teal-600 mb-4">Presentation Highlights</h2>
+
               <ul className="list-disc pl-6 mb-6 text-gray-700 dark:text-gray-300">
                 <li>Introduction to Playwright and its advantages</li>
                 <li>Real-world examples of test automation</li>
@@ -55,8 +55,9 @@ export default function TestCrunch() {
               </ul>
 
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
-                The presentation was well-received, generating engaging discussions about modern testing approaches 
-                and how Playwright is revolutionizing the way we think about test automation.
+                The presentation was well-received, generating engaging discussions about modern
+                testing approaches and how Playwright is revolutionizing the way we think about test
+                automation.
               </p>
             </div>
 
@@ -82,9 +83,7 @@ export default function TestCrunch() {
             </div>
 
             <div className="bg-teal-50 dark:bg-teal-900/30 rounded-lg p-6 mb-12">
-              <h2 className="text-2xl font-semibold text-teal-600 mb-4">
-                Key Takeaways
-              </h2>
+              <h2 className="text-2xl font-semibold text-teal-600 mb-4">Key Takeaways</h2>
               <ul className="space-y-3 text-gray-700 dark:text-gray-300">
                 <li className="flex items-start">
                   <span className="w-1.5 h-1.5 bg-teal-500 rounded-full mr-2 mt-2 flex-shrink-0"></span>
@@ -105,4 +104,4 @@ export default function TestCrunch() {
       </div>
     </Layout>
   );
-} 
+}

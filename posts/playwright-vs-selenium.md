@@ -20,11 +20,13 @@ The choice of automation framework can significantly impact your project's succe
 ### 1. Architecture
 
 Playwright uses a modern architecture that provides better control over browser automation:
+
 - Built-in support for multiple browser engines
 - Direct communication with browser protocols
 - Better handling of modern web features
 
 Selenium, being the older framework:
+
 - Relies on WebDriver protocol
 - Requires browser-specific drivers
 - Has a more traditional client-server architecture
@@ -32,6 +34,7 @@ Selenium, being the older framework:
 ### 2. Performance
 
 In my experience, Playwright shows superior performance in several areas:
+
 - Faster test execution
 - Better handling of dynamic content
 - More reliable wait mechanisms
@@ -40,6 +43,7 @@ In my experience, Playwright shows superior performance in several areas:
 ### 3. Features
 
 Playwright comes with modern features out of the box:
+
 - Network interception
 - Mobile emulation
 - Multiple tabs and contexts
@@ -48,12 +52,14 @@ Playwright comes with modern features out of the box:
 ## When to Choose Each Framework
 
 ### Choose Playwright When:
+
 - You need modern web application testing
 - Performance is a critical factor
 - You want built-in mobile testing capabilities
 - You need powerful network interception
 
 ### Choose Selenium When:
+
 - You have legacy applications to test
 - You need extensive community support
 - You require specific language bindings
@@ -68,7 +74,7 @@ Here's a simple example of how both frameworks handle clicking a button:
 await page.click('#submit-button');
 
 // Selenium
-driver.findElement(By.id("submit-button")).click();
+driver.findElement(By.id('submit-button')).click();
 ```
 
 ## Conclusion
@@ -77,4 +83,4 @@ While both frameworks have their place, I find Playwright to be the more modern 
 
 ## Next Steps
 
-Interested in learning more about Playwright? Check out my [Playwright courses](/courses) where I dive deep into modern test automation practices. 
+Interested in learning more about Playwright? Check out my [Playwright courses](/courses) where I dive deep into modern test automation practices.

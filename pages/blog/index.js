@@ -22,8 +22,9 @@ export default function Blog({ posts }) {
   // Filter posts based on search term and selected tag
   const filteredPosts = useMemo(() => {
     return posts.filter(post => {
-      const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesSearch =
+        post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesTag = !selectedTag || post.tags.includes(selectedTag);
       return matchesSearch && matchesTag;
     });
@@ -36,7 +37,7 @@ export default function Blog({ posts }) {
     >
       <div className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-8">Blog</h1>
-        
+
         {/* Search and Filter Section */}
         <div className="mb-8 space-y-4">
           <div className="relative">
@@ -44,12 +45,12 @@ export default function Blog({ posts }) {
               type="text"
               placeholder="Search articles..."
               value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
+              onChange={e => setSearchTerm(e.target.value)}
               className="w-full px-4 py-2 pl-10 rounded-lg border dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-800 dark:text-white focus:ring-2 focus:ring-teal-500 focus:border-transparent"
             />
             <FaSearch className="absolute left-3 top-3 text-gray-400" />
           </div>
-          
+
           <div className="flex flex-wrap gap-2">
             <button
               onClick={() => setSelectedTag('')}
@@ -91,12 +92,7 @@ export default function Blog({ posts }) {
                 <Link href={`/blog/${post.slug}`} className="block">
                   <div className="relative h-48 w-full">
                     {post.coverImage && (
-                      <Image
-                        src={post.coverImage}
-                        alt={post.title}
-                        fill
-                        className="object-cover"
-                      />
+                      <Image src={post.coverImage} alt={post.title} fill className="object-cover" />
                     )}
                   </div>
                   <div className="p-6">
@@ -105,7 +101,7 @@ export default function Blog({ posts }) {
                         {new Date(post.date).toLocaleDateString('en-US', {
                           year: 'numeric',
                           month: 'long',
-                          day: 'numeric'
+                          day: 'numeric',
                         })}
                       </time>
                       <div className="mx-2">•</div>
@@ -123,9 +119,7 @@ export default function Blog({ posts }) {
                     <h2 className="text-2xl font-semibold text-gray-800 dark:text-white mb-3">
                       {post.title}
                     </h2>
-                    <p className="text-gray-600 dark:text-gray-300 mb-4">
-                      {post.excerpt}
-                    </p>
+                    <p className="text-gray-600 dark:text-gray-300 mb-4">{post.excerpt}</p>
                     <div className="flex items-center">
                       <span className="text-teal-600 dark:text-teal-400">Read more →</span>
                     </div>
@@ -154,21 +148,21 @@ export async function getStaticProps() {
       const filePath = path.join(postsDirectory, filename);
       const fileContents = fs.readFileSync(filePath, 'utf8');
       const { data } = matter(fileContents);
-      
+
       return {
         slug: filename.replace('.md', ''),
         title: data.title,
         date: data.date,
         excerpt: data.excerpt,
         coverImage: data.coverImage,
-        tags: data.tags || []
+        tags: data.tags || [],
       };
     })
     .sort((a, b) => new Date(b.date) - new Date(a.date));
 
   return {
     props: {
-      posts
-    }
+      posts,
+    },
   };
-} 
+}

@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="text-sm font-burtons h-6 flex justify-center items-center">
           <Typewriter
             options={{
-              strings: ["developedbymichal"],
+              strings: ['developedbymichal'],
               autoStart: true,
               loop: true,
               delay: 100,
@@ -21,4 +21,4 @@ export default function Footer() {
       </div>
     </div>
   );
-} 
+}

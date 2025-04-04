@@ -219,6 +219,7 @@ API requests are limited to:
 ## Data Models
 
 ### Visitor
+
 ```typescript
 {
   id: string;
@@ -237,6 +238,7 @@ API requests are limited to:
 ```
 
 ### Project
+
 ```typescript
 {
   id: string;
@@ -251,6 +253,7 @@ API requests are limited to:
 ```
 
 ### Post
+
 ```typescript
 {
   id: string;
@@ -271,6 +274,7 @@ API requests are limited to:
 ## Webhooks
 
 ### Analytics Webhook
+
 ```http
 POST /api/webhooks/analytics
 ```
@@ -278,11 +282,13 @@ POST /api/webhooks/analytics
 Receives analytics data from external services.
 
 **Request Headers**
+
 ```
 X-Webhook-Secret: your_webhook_secret
 ```
 
 **Request Body**
+
 ```json
 {
   "event": "string",
@@ -317,6 +323,7 @@ To run the API locally:
 ## Testing
 
 Run API tests:
+
 ```bash
 npm run test:api
 ```
@@ -324,7 +331,8 @@ npm run test:api
 ## Changelog
 
 ### v1.0.0 (2024-01-01)
+
 - Initial API release
 - Added visitor analytics endpoints
 - Added contact form endpoint
-- Added project and blog post endpoints 
+- Added project and blog post endpoints

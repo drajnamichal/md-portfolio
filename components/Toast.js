@@ -14,14 +14,14 @@ export default function Toast({ message, type = 'success', onClose, duration = 3
   const variants = {
     initial: { opacity: 0, y: 50 },
     animate: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: -50 }
+    exit: { opacity: 0, y: -50 },
   };
 
   const colors = {
     success: 'bg-teal-600',
     error: 'bg-red-600',
     info: 'bg-blue-600',
-    warning: 'bg-yellow-600'
+    warning: 'bg-yellow-600',
   };
 
   return (
@@ -37,7 +37,12 @@ export default function Toast({ message, type = 'success', onClose, duration = 3
         <div className="flex items-center space-x-2">
           {type === 'success' && (
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M5 13l4 4L19 7"
+              />
             </svg>
           )}
           <span>{message}</span>
@@ -47,11 +52,16 @@ export default function Toast({ message, type = 'success', onClose, duration = 3
             aria-label="Close notification"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           </button>
         </div>
       </motion.div>
     </AnimatePresence>
   );
-} 
+}

@@ -14,9 +14,9 @@ export default function SkillBar({ skill, level, icon: Icon }) {
           initial={{ width: 0 }}
           whileInView={{ width: `${level}%` }}
           viewport={{ once: true }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 1, ease: 'easeOut' }}
         />
       </div>
     </div>
   );
-} 
+}

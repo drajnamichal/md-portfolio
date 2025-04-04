@@ -9,15 +9,12 @@ export default function VisitorTracker() {
     const trackVisit = async () => {
       try {
         // Get current visitor count
-        const { data: countData } = await supabase
-          .from('visitor_count')
-          .select('count')
-          .single();
+        const { data: countData } = await supabase.from('visitor_count').select('count').single();
 
         // Get client IP address and location data
         const ipResponse = await fetch('https://ipapi.co/json/');
         const ipData = await ipResponse.json();
-        
+
         const visitorData = {
           ip: ipData.ip,
           city: ipData.city,
@@ -28,7 +25,7 @@ export default function VisitorTracker() {
           user_agent: window.navigator.userAgent,
           language: window.navigator.language,
           page_visited: router.pathname,
-          referrer: document.referrer || null
+          referrer: document.referrer || null,
         };
 
         // Check if this IP has visited in the last 24 hours
@@ -46,14 +43,10 @@ export default function VisitorTracker() {
           const newCount = (countData?.count || 0) + 1;
 
           // Update the total count
-          await supabase
-            .from('visitor_count')
-            .upsert({ id: 1, count: newCount });
+          await supabase.from('visitor_count').upsert({ id: 1, count: newCount });
 
           // Record this IP visit with additional data
-          await supabase
-            .from('visitor_ips')
-            .insert(visitorData);
+          await supabase.from('visitor_ips').insert(visitorData);
         }
       } catch (error) {
         // Silently log error without affecting the user experience
@@ -66,4 +59,4 @@ export default function VisitorTracker() {
 
   // This component doesn't render anything
   return null;
-} 
+}

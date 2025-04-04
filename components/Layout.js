@@ -1,11 +1,11 @@
-import Link from "next/link";
-import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
-import { useState, useEffect } from "react";
+import Link from 'next/link';
+import { BsFillMoonStarsFill, BsFillSunFill } from 'react-icons/bs';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { AnimatePresence, motion } from 'framer-motion';
-import Footer from "./Footer";
-import PageTransition from "./PageTransition";
-import Head from "next/head";
+import Footer from './Footer';
+import PageTransition from './PageTransition';
+import Head from 'next/head';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 import VisitorTracker from './VisitorTracker';
@@ -48,7 +48,7 @@ export default function Layout({ children, title, description, image }) {
     };
   }, [router]);
 
-  const isActive = (path) => router.pathname === path;
+  const isActive = path => router.pathname === path;
 
   const navigationItems = [
     { href: '/', label: 'Home' },
@@ -57,7 +57,7 @@ export default function Layout({ children, title, description, image }) {
     { href: '/courses', label: 'Courses' },
     { href: '/blog', label: 'Blog' },
     { href: '/featured', label: 'Featured' },
-    { href: '/resume', label: 'Resume' }
+    { href: '/resume', label: 'Resume' },
   ];
 
   return (
@@ -65,9 +65,15 @@ export default function Layout({ children, title, description, image }) {
       <VisitorTracker />
       <Head>
         <title>Michal Drajna</title>
-        <meta name="description" content={description || "Michal Drajna's personal website and blog"} />
+        <meta
+          name="description"
+          content={description || "Michal Drajna's personal website and blog"}
+        />
         <meta property="og:title" content="Michal Drajna" />
-        <meta property="og:description" content={description || "Michal Drajna's personal website and blog"} />
+        <meta
+          property="og:description"
+          content={description || "Michal Drajna's personal website and blog"}
+        />
         {image && <meta property="og:image" content={image} />}
         <link rel="icon" href="/favicon.ico" />
         <style>{`
@@ -88,9 +94,7 @@ export default function Layout({ children, title, description, image }) {
       <Header />
       <main className="flex-grow px-5 md:px-20 lg:px-40 pt-24">
         <AnimatePresence mode="wait">
-          <PageTransition key={router.pathname}>
-            {children}
-          </PageTransition>
+          <PageTransition key={router.pathname}>{children}</PageTransition>
         </AnimatePresence>
       </main>
 
@@ -101,4 +105,4 @@ export default function Layout({ children, title, description, image }) {
       </footer>
     </div>
   );
-} 
+}

@@ -8,16 +8,11 @@ export default function BlogCard({ post }) {
     <motion.article
       className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg"
       whileHover={{ y: -5 }}
-      transition={{ type: "spring", stiffness: 300 }}
+      transition={{ type: 'spring', stiffness: 300 }}
     >
       {post.coverImage && (
         <div className="relative h-48 w-full">
-          <Image
-            src={post.coverImage}
-            alt={post.title}
-            fill
-            className="object-cover"
-          />
+          <Image src={post.coverImage} alt={post.title} fill className="object-cover" />
           {post.category && (
             <div className="absolute top-4 left-4">
               <span className="px-3 py-1 text-sm bg-teal-600 text-white rounded-full flex items-center">
@@ -28,7 +23,7 @@ export default function BlogCard({ post }) {
           )}
         </div>
       )}
-      
+
       <div className="p-6">
         <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
           <FaClock className="mr-2" />
@@ -40,10 +35,8 @@ export default function BlogCard({ post }) {
             {post.title}
           </h3>
         </Link>
-        
-        <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">
-          {post.excerpt}
-        </p>
+
+        <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">{post.excerpt}</p>
 
         <div className="flex items-center mt-4">
           <div className="flex items-center">
@@ -55,4 +48,4 @@ export default function BlogCard({ post }) {
       </div>
     </motion.article>
   );
-} 
+}

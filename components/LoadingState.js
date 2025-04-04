@@ -9,9 +9,9 @@ export default function LoadingState() {
         transition={{
           duration: 1,
           repeat: Infinity,
-          ease: "linear"
+          ease: 'linear',
         }}
       />
     </div>
   );
-} 
+}

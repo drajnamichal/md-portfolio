@@ -1,11 +1,11 @@
-import { FaGlobeAmericas, FaRunning, FaBook, FaHeadphones } from "react-icons/fa";
-import Recommendations from "../components/Recommendations";
-import Layout from "../components/Layout";
-import Image from "next/image";
+import { FaGlobeAmericas, FaRunning, FaBook, FaHeadphones } from 'react-icons/fa';
+import Recommendations from '../components/Recommendations';
+import Layout from '../components/Layout';
+import Image from 'next/image';
 
 export default function Resume() {
   return (
-    <Layout 
+    <Layout
       title="Resume - Michal Drajna | Senior QA Engineer"
       description="Professional resume of Michal Drajna, Senior QA Engineer with 9+ years of experience in test automation, software testing, and quality assurance. Expert in Playwright, Selenium, and modern testing methodologies."
       image="/memoji.png"
@@ -34,20 +34,26 @@ export default function Resume() {
         <div className="space-y-12 text-gray-800 dark:text-gray-200">
           {/* Summary Section */}
           <section>
-            <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400">Professional Summary</h3>
+            <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400">
+              Professional Summary
+            </h3>
             <p className="leading-7">
-              I am a Senior QA Engineer with 9 years of experience in the QA industry. I have expertise in all phases of 
-              the software testing lifecycle, from requirements testing to regression testing, and understand the importance 
-              of shift-left testing. My extensive experience spans web, API, and mobile testing. Currently, I am focused on 
-              expanding my skills in security and performance testing to further improve software quality. As a dedicated learner, 
-              I stay up-to-date with the latest testing techniques and advancements in the field. Additionally, I am a Playwright 
-              enthusiast with a strong interest in challenging projects and opportunities for professional growth.
+              I am a Senior QA Engineer with 9 years of experience in the QA industry. I have
+              expertise in all phases of the software testing lifecycle, from requirements testing
+              to regression testing, and understand the importance of shift-left testing. My
+              extensive experience spans web, API, and mobile testing. Currently, I am focused on
+              expanding my skills in security and performance testing to further improve software
+              quality. As a dedicated learner, I stay up-to-date with the latest testing techniques
+              and advancements in the field. Additionally, I am a Playwright enthusiast with a
+              strong interest in challenging projects and opportunities for professional growth.
             </p>
           </section>
 
           {/* Experience Section */}
           <section>
-            <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400">Work Experience</h3>
+            <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400">
+              Work Experience
+            </h3>
             <div className="space-y-8">
               <div className="flex gap-4">
                 <div className="flex-shrink-0 w-12 h-12 relative mt-1">
@@ -60,10 +66,17 @@ export default function Resume() {
                 </div>
                 <div className="flex-grow">
                   <h4 className="text-xl font-medium">Senior Quality Assurance Engineer</h4>
-                  <p className="text-gray-600 dark:text-gray-400">Bloomreach • Full-time • Sep 2024 - Present • Brno, South Moravia, Czechia • Remote</p>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Bloomreach • Full-time • Sep 2024 - Present • Brno, South Moravia, Czechia •
+                    Remote
+                  </p>
                   <ul className="list-disc ml-6 mt-2 space-y-2">
-                    <li>Specializing in Robot Framework and k6 for comprehensive test automation</li>
-                    <li>Contributing to the development and maintenance of automated test suites</li>
+                    <li>
+                      Specializing in Robot Framework and k6 for comprehensive test automation
+                    </li>
+                    <li>
+                      Contributing to the development and maintenance of automated test suites
+                    </li>
                     <li>Collaborating with cross-functional teams to ensure software quality</li>
                     <li>Implementing best practices in test automation and quality assurance</li>
                   </ul>
@@ -81,12 +94,23 @@ export default function Resume() {
                 </div>
                 <div className="flex-grow">
                   <h4 className="text-xl font-medium">QA Engineer</h4>
-                  <p className="text-gray-600 dark:text-gray-400">Investown • 10/2022 - Present • Prague</p>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Investown • 10/2022 - Present • Prague
+                  </p>
                   <ul className="list-disc ml-6 mt-2 space-y-2">
-                    <li>Designed, developed, and maintain a comprehensive test framework in the fastest-growing fintech startup in the Czech Republic</li>
-                    <li>Implemented end-to-end regression and visual tests for both web and mobile applications using Playwright and TypeScript</li>
+                    <li>
+                      Designed, developed, and maintain a comprehensive test framework in the
+                      fastest-growing fintech startup in the Czech Republic
+                    </li>
+                    <li>
+                      Implemented end-to-end regression and visual tests for both web and mobile
+                      applications using Playwright and TypeScript
+                    </li>
                     <li>Test Android and iOS apps using Detox</li>
-                    <li>Contribute to the CI/CD pipeline to ensure thorough testing of new code changes before release</li>
+                    <li>
+                      Contribute to the CI/CD pipeline to ensure thorough testing of new code
+                      changes before release
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -102,11 +126,18 @@ export default function Resume() {
                 </div>
                 <div className="flex-grow">
                   <h4 className="text-xl font-medium">Senior QA Engineer</h4>
-                  <p className="text-gray-600 dark:text-gray-400">Currys CoE, s.r.o. • 09/2021 - 03/2024 • Brno</p>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Currys CoE, s.r.o. • 09/2021 - 03/2024 • Brno
+                  </p>
                   <ul className="list-disc ml-6 mt-2 space-y-2">
-                    <li>Contributed to application development for Currys stores, ensuring smooth customer interactions via iPads</li>
+                    <li>
+                      Contributed to application development for Currys stores, ensuring smooth
+                      customer interactions via iPads
+                    </li>
                     <li>Utilized Postman for API testing and CodeceptJS for end-to-end testing</li>
-                    <li>Used tools including BrowserStack, Bamboo, Jenkins, Bitbucket, Jira, Zephyr</li>
+                    <li>
+                      Used tools including BrowserStack, Bamboo, Jenkins, Bitbucket, Jira, Zephyr
+                    </li>
                     <li>Implemented k6 for performance testing and visual testing</li>
                   </ul>
                 </div>
@@ -123,11 +154,21 @@ export default function Resume() {
                 </div>
                 <div className="flex-grow">
                   <h4 className="text-xl font-medium">Test Engineer</h4>
-                  <p className="text-gray-600 dark:text-gray-400">GlobalLogic Slovakia • 11/2017 - 06/2019 • Košice</p>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    GlobalLogic Slovakia • 11/2017 - 06/2019 • Košice
+                  </p>
                   <ul className="list-disc ml-6 mt-2 space-y-2">
-                    <li>Conducted web application testing for wearable defibrillator project using Selenium and Python</li>
-                    <li>Worked on secure document sharing project ensuring safe document sharing across platforms</li>
-                    <li>Utilized tools including Pytest, Git, Jira, Zephyr, Confluence, and Appium</li>
+                    <li>
+                      Conducted web application testing for wearable defibrillator project using
+                      Selenium and Python
+                    </li>
+                    <li>
+                      Worked on secure document sharing project ensuring safe document sharing
+                      across platforms
+                    </li>
+                    <li>
+                      Utilized tools including Pytest, Git, Jira, Zephyr, Confluence, and Appium
+                    </li>
                     <li>Performed UI/UX testing, manual testing, and bug reporting</li>
                   </ul>
                 </div>
@@ -144,12 +185,20 @@ export default function Resume() {
                 </div>
                 <div className="flex-grow">
                   <h4 className="text-xl font-medium">Test Automation Developer</h4>
-                  <p className="text-gray-600 dark:text-gray-400">FPT Slovakia • 08/2015 - 10/2017 • Košice</p>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    FPT Slovakia • 08/2015 - 10/2017 • Košice
+                  </p>
                   <ul className="list-disc ml-6 mt-2 space-y-2">
-                    <li>Designed and developed automated tests for REST Web services using CA DevTest (LISA)</li>
+                    <li>
+                      Designed and developed automated tests for REST Web services using CA DevTest
+                      (LISA)
+                    </li>
                     <li>Worked with tools including Spira, Jira, TortoiseSVN, XML, and JSON</li>
                     <li>Served as manual tester using Mantis and Polarion</li>
-                    <li>Member of internal security testing team focusing on web application security using Burp Suite, Webscarab, and OWASP ZAP</li>
+                    <li>
+                      Member of internal security testing team focusing on web application security
+                      using Burp Suite, Webscarab, and OWASP ZAP
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -158,7 +207,9 @@ export default function Resume() {
 
           {/* Skills Section */}
           <section>
-            <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400">Technical Skills</h3>
+            <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400">
+              Technical Skills
+            </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               <div>
                 <h4 className="font-medium mb-2">Core Skills</h4>
@@ -192,20 +243,27 @@ export default function Resume() {
 
           {/* Education Section */}
           <section>
-            <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400">Education</h3>
+            <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400">
+              Education
+            </h3>
             <div>
               <h4 className="text-xl font-medium">Master&apos;s Degree in Business Informatics</h4>
-              <p className="text-gray-600 dark:text-gray-400">Technical University of Košice • 2009 - 2014</p>
+              <p className="text-gray-600 dark:text-gray-400">
+                Technical University of Košice • 2009 - 2014
+              </p>
               <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                Focus on analysis and design of information systems based on business processes, including enterprise information systems,
-                IT services management, and modern systems for management support and decision-making.
+                Focus on analysis and design of information systems based on business processes,
+                including enterprise information systems, IT services management, and modern systems
+                for management support and decision-making.
               </p>
             </div>
           </section>
 
           {/* Languages Section */}
           <section>
-            <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400">Languages</h3>
+            <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400">
+              Languages
+            </h3>
             <ul className="list-disc ml-6 space-y-2">
               <li>English - Professional</li>
               <li>German - Elementary</li>
@@ -215,13 +273,22 @@ export default function Resume() {
 
           {/* Certifications & Achievements Section */}
           <section>
-            <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400">Certifications & Achievements</h3>
+            <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400">
+              Certifications & Achievements
+            </h3>
             <ul className="list-disc ml-6 space-y-2">
               <li>ISTQB Certified Tester - Foundation Level</li>
-              <li>Speaker at TestCrunch 2024 - &ldquo;Playwright: The Future of Test Automation?&rdquo;</li>
-              <li>Creator of two online courses on Skillmea portal:
+              <li>
+                Speaker at TestCrunch 2024 - &ldquo;Playwright: The Future of Test
+                Automation?&rdquo;
+              </li>
+              <li>
+                Creator of two online courses on Skillmea portal:
                 <ul className="list-disc ml-6 mt-2">
-                  <li>&ldquo;Test Automation in Playwright&rdquo; - Introduction to testing in Playwright</li>
+                  <li>
+                    &ldquo;Test Automation in Playwright&rdquo; - Introduction to testing in
+                    Playwright
+                  </li>
                   <li>&ldquo;Advanced Playwright&rdquo; - Advanced testing techniques</li>
                 </ul>
               </li>
@@ -230,11 +297,16 @@ export default function Resume() {
 
           {/* Other Projects Section */}
           <section>
-            <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400">Other Projects</h3>
+            <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400">
+              Other Projects
+            </h3>
             <div className="space-y-4">
               <div>
                 <h4 className="font-medium">Osobnyudaj.sk • 07/2021 - 12/2021</h4>
-                <p>Streamlined testing for web application using CodeceptJS + Playwright automation framework</p>
+                <p>
+                  Streamlined testing for web application using CodeceptJS + Playwright automation
+                  framework
+                </p>
               </div>
               <div>
                 <h4 className="font-medium">Butikovo.sk • 03/2021 - 05/2021</h4>
@@ -242,14 +314,18 @@ export default function Resume() {
               </div>
               <div>
                 <h4 className="font-medium">Spusti.to • 11/2020 - 02/2021</h4>
-                <p>Automation and manual testing for revolutionary form of accounting in Slovakia</p>
+                <p>
+                  Automation and manual testing for revolutionary form of accounting in Slovakia
+                </p>
               </div>
             </div>
           </section>
 
           {/* Interests Section */}
           <section>
-            <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400">Interests</h3>
+            <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400">
+              Interests
+            </h3>
             <ul className="space-y-3">
               <li className="flex items-center space-x-3">
                 <FaGlobeAmericas className="text-xl text-teal-600 dark:text-teal-400" />
@@ -272,11 +348,13 @@ export default function Resume() {
 
           {/* Recommendations Section */}
           <section className="mb-24">
-            <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400 text-center">Recommendations</h3>
+            <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400 text-center">
+              Recommendations
+            </h3>
             <Recommendations />
           </section>
         </div>
       </div>
     </Layout>
   );
-} 
+}

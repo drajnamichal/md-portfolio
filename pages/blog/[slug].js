@@ -20,16 +20,20 @@ export default function BlogPost({ post, allPosts }) {
   const [copySuccess, setCopySuccess] = useState(false);
   const readingTime = calculateReadingTime(post.content);
 
-  const handleShare = async (platform) => {
+  const handleShare = async platform => {
     const url = window.location.href;
     const text = `Check out this article: ${post.title}`;
 
     switch (platform) {
       case 'twitter':
-        window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`);
+        window.open(
+          `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`
+        );
         break;
       case 'linkedin':
-        window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`);
+        window.open(
+          `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`
+        );
         break;
       case 'copy':
         try {
@@ -44,10 +48,7 @@ export default function BlogPost({ post, allPosts }) {
   };
 
   return (
-    <Layout
-      description={post.excerpt}
-      image={post.coverImage}
-    >
+    <Layout description={post.excerpt} image={post.coverImage}>
       <article className="max-w-4xl mx-auto px-4 py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -56,25 +57,18 @@ export default function BlogPost({ post, allPosts }) {
         >
           {post.coverImage && (
             <div className="relative h-96 w-full mb-8 rounded-lg overflow-hidden">
-              <Image
-                src={post.coverImage}
-                alt={post.title}
-                fill
-                className="object-cover"
-              />
+              <Image src={post.coverImage} alt={post.title} fill className="object-cover" />
             </div>
           )}
 
           <header className="mb-8">
-            <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">
-              {post.title}
-            </h1>
+            <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">{post.title}</h1>
             <div className="flex items-center text-gray-600 dark:text-gray-400 mb-4">
               <time dateTime={post.date}>
                 {new Date(post.date).toLocaleDateString('en-US', {
                   year: 'numeric',
                   month: 'long',
-                  day: 'numeric'
+                  day: 'numeric',
                 })}
               </time>
               <span className="mx-2">•</span>
@@ -91,12 +85,10 @@ export default function BlogPost({ post, allPosts }) {
                 ))}
               </div>
             </div>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
-              {post.excerpt}
-            </p>
+            <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">{post.excerpt}</p>
           </header>
 
-          <div 
+          <div
             className="prose prose-lg dark:prose-invert max-w-none"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
@@ -132,9 +124,7 @@ export default function BlogPost({ post, allPosts }) {
               <FaCopy size={20} />
             </motion.button>
             {copySuccess && (
-              <span className="text-sm text-teal-600 dark:text-teal-400">
-                Link copied!
-              </span>
+              <span className="text-sm text-teal-600 dark:text-teal-400">Link copied!</span>
             )}
           </div>
 
@@ -154,13 +144,13 @@ export async function getStaticPaths() {
     .filter(filename => filename.endsWith('.md'))
     .map(filename => ({
       params: {
-        slug: filename.replace('.md', '')
-      }
+        slug: filename.replace('.md', ''),
+      },
     }));
 
   return {
     paths,
-    fallback: false
+    fallback: false,
   };
 }
 
@@ -169,7 +159,7 @@ export async function getStaticProps({ params }) {
   const filePath = path.join(postsDirectory, `${params.slug}.md`);
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const { data, content } = matter(fileContents);
-  
+
   const htmlContent = marked(content);
 
   // Get all posts for related posts feature
@@ -180,13 +170,13 @@ export async function getStaticProps({ params }) {
       const postPath = path.join(postsDirectory, filename);
       const postContents = fs.readFileSync(postPath, 'utf8');
       const { data } = matter(postContents);
-      
+
       return {
         slug: filename.replace('.md', ''),
         title: data.title,
         excerpt: data.excerpt,
         coverImage: data.coverImage,
-        tags: data.tags || []
+        tags: data.tags || [],
       };
     });
 
@@ -199,9 +189,9 @@ export async function getStaticProps({ params }) {
         date: data.date,
         excerpt: data.excerpt,
         coverImage: data.coverImage,
-        tags: data.tags || []
+        tags: data.tags || [],
       },
-      allPosts
-    }
+      allPosts,
+    },
   };
-} 
+}

@@ -11,4 +11,4 @@ export default function FadeInView({ children, delay = 0 }) {
       {children}
     </motion.div>
   );
-} 
+}

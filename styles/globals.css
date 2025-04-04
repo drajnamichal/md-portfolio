@@ -23,8 +23,8 @@ html {
 }
 
 @font-face {
-  font-family: "burtons";
-  src: url("../public/Burtons.otf");
+  font-family: 'burtons';
+  src: url('../public/Burtons.otf');
   font-display: swap; /* Optimize font loading */
 }
 

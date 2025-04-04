@@ -26,7 +26,7 @@ export default function Timeline({ experiences }) {
             </div>
 
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-              <div 
+              <div
                 className="cursor-pointer"
                 onClick={() => setExpandedId(expandedId === index ? null : index)}
               >
@@ -39,14 +39,16 @@ export default function Timeline({ experiences }) {
                     <FaChevronDown className="text-gray-500 dark:text-gray-400" />
                   </motion.div>
                 </div>
-                <p className="text-gray-600 dark:text-gray-400 mt-1">{exp.company} • {exp.period} • {exp.location}</p>
+                <p className="text-gray-600 dark:text-gray-400 mt-1">
+                  {exp.company} • {exp.period} • {exp.location}
+                </p>
               </div>
 
               <AnimatePresence>
                 {expandedId === index && (
                   <motion.div
                     initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
+                    animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
@@ -65,4 +67,4 @@ export default function Timeline({ experiences }) {
       </div>
     </div>
   );
-} 
+}

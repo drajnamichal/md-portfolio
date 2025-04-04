@@ -6,32 +6,32 @@ export default function Statistics() {
   const stats = [
     {
       icon: FaUserGraduate,
-      value: "800",
-      suffix: "+",
-      label: "Students Trained",
-      color: "text-blue-500"
+      value: '800',
+      suffix: '+',
+      label: 'Students Trained',
+      color: 'text-blue-500',
     },
     {
       icon: FaLaptopCode,
-      value: "2",
-      suffix: "",
-      label: "Courses Created",
-      color: "text-purple-500"
+      value: '2',
+      suffix: '',
+      label: 'Courses Created',
+      color: 'text-purple-500',
     },
     {
       icon: FaStar,
-      value: "5",
-      prefix: "",
-      label: "Course Rating",
-      color: "text-yellow-500"
+      value: '5',
+      prefix: '',
+      label: 'Course Rating',
+      color: 'text-yellow-500',
     },
     {
       icon: FaBuilding,
-      value: "10",
-      suffix: "+",
-      label: "Companies Served",
-      color: "text-green-500"
-    }
+      value: '10',
+      suffix: '+',
+      label: 'Companies Served',
+      color: 'text-green-500',
+    },
   ];
 
   const container = {
@@ -39,14 +39,14 @@ export default function Statistics() {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const item = {
     hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 }
+    show: { opacity: 1, y: 0 },
   };
 
   return (
@@ -68,11 +68,7 @@ export default function Statistics() {
               className="flex flex-col items-center p-6 bg-white dark:bg-gray-700 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
             >
               <stat.icon className={`text-4xl mb-4 ${stat.color}`} />
-              <AnimatedCounter
-                value={stat.value}
-                suffix={stat.suffix}
-                prefix={stat.prefix}
-              />
+              <AnimatedCounter value={stat.value} suffix={stat.suffix} prefix={stat.prefix} />
               <p className="mt-2 text-sm text-gray-600 dark:text-gray-300 text-center">
                 {stat.label}
               </p>
@@ -82,4 +78,4 @@ export default function Statistics() {
       </div>
     </motion.div>
   );
-} 
+}

@@ -3,29 +3,29 @@ import { motion } from 'framer-motion';
 
 const socialLinks = [
   {
-    href: "https://www.facebook.com/michaldrajna/",
+    href: 'https://www.facebook.com/michaldrajna/',
     icon: AiFillFacebook,
-    label: "Facebook",
-    color: "#1877f2"
+    label: 'Facebook',
+    color: '#1877f2',
   },
   {
-    href: "https://www.linkedin.com/in/michaldrajna-qa/",
+    href: 'https://www.linkedin.com/in/michaldrajna-qa/',
     icon: AiFillLinkedin,
-    label: "LinkedIn",
-    color: "#0077b5"
+    label: 'LinkedIn',
+    color: '#0077b5',
   },
   {
-    href: "https://github.com/drajnamichal",
+    href: 'https://github.com/drajnamichal',
     icon: AiFillGithub,
-    label: "GitHub",
-    color: "#333"
+    label: 'GitHub',
+    color: '#333',
   },
   {
-    href: "mailto:michal.drajna@gmail.com",
+    href: 'mailto:michal.drajna@gmail.com',
     icon: AiFillMail,
-    label: "Email",
-    color: "#EA4335"
-  }
+    label: 'Email',
+    color: '#EA4335',
+  },
 ];
 
 export default function SocialIcons() {
@@ -51,12 +51,12 @@ export default function SocialIcons() {
             whileTap={{ scale: 0.95 }}
             style={{ zIndex: 20 }}
           >
-            <Icon 
+            <Icon
               className="w-8 h-8 text-gray-600 dark:text-gray-300 transition-colors duration-200"
-              style={{ 
-                ':hover': { 
-                  color: social.color 
-                }
+              style={{
+                ':hover': {
+                  color: social.color,
+                },
               }}
             />
           </motion.a>
@@ -64,4 +64,4 @@ export default function SocialIcons() {
       })}
     </div>
   );
-} 
+}

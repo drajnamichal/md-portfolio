@@ -18,45 +18,62 @@ export default function Navigation() {
   }, []);
 
   // Memoize the menu button SVGs
-  const menuIcons = useMemo(() => ({
-    close: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-      </svg>
-    ),
-    open: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    )
-  }), []);
+  const menuIcons = useMemo(
+    () => ({
+      close: (
+        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      ),
+      open: (
+        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      ),
+    }),
+    []
+  );
 
   // Memoize the desktop menu items
-  const desktopMenuItems = useMemo(() => (
-    navItems.map((item) => (
-      <ScrollLink
-        key={item.href}
-        href={item.href}
-        className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
-      >
-        {item.label}
-      </ScrollLink>
-    ))
-  ), []);
+  const desktopMenuItems = useMemo(
+    () =>
+      navItems.map(item => (
+        <ScrollLink
+          key={item.href}
+          href={item.href}
+          className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
+        >
+          {item.label}
+        </ScrollLink>
+      )),
+    []
+  );
 
   // Memoize the mobile menu items
-  const mobileMenuItems = useMemo(() => (
-    navItems.map((item) => (
-      <ScrollLink
-        key={item.href}
-        href={item.href}
-        className="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium"
-        onClick={() => setIsOpen(false)}
-      >
-        {item.label}
-      </ScrollLink>
-    ))
-  ), []);
+  const mobileMenuItems = useMemo(
+    () =>
+      navItems.map(item => (
+        <ScrollLink
+          key={item.href}
+          href={item.href}
+          className="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium"
+          onClick={() => setIsOpen(false)}
+        >
+          {item.label}
+        </ScrollLink>
+      )),
+    []
+  );
 
   return (
     <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-sm z-50 shadow-sm will-change-transform">
@@ -81,20 +98,16 @@ export default function Navigation() {
           </div>
 
           {/* Desktop menu */}
-          <div className="hidden sm:flex sm:items-center sm:space-x-8">
-            {desktopMenuItems}
-          </div>
+          <div className="hidden sm:flex sm:items-center sm:space-x-8">{desktopMenuItems}</div>
         </div>
       </div>
 
       {/* Mobile menu */}
       {isOpen && (
         <div className="sm:hidden">
-          <div className="pt-2 pb-3 space-y-1">
-            {mobileMenuItems}
-          </div>
+          <div className="pt-2 pb-3 space-y-1">{mobileMenuItems}</div>
         </div>
       )}
     </nav>
   );
-} 
+}

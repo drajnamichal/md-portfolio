@@ -2,21 +2,24 @@ import { motion } from 'framer-motion';
 import { useCallback } from 'react';
 
 export default function ScrollLink({ href, children, className = '' }) {
-  const handleScroll = useCallback((e) => {
-    e.preventDefault();
-    const targetId = href.replace('#', '');
-    const element = document.getElementById(targetId);
-    if (element) {
-      // Use requestAnimationFrame for smoother performance
-      requestAnimationFrame(() => {
-        element.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
+  const handleScroll = useCallback(
+    e => {
+      e.preventDefault();
+      const targetId = href.replace('#', '');
+      const element = document.getElementById(targetId);
+      if (element) {
+        // Use requestAnimationFrame for smoother performance
+        requestAnimationFrame(() => {
+          element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          });
+          window.history.pushState({}, '', href);
         });
-        window.history.pushState({}, '', href);
-      });
-    }
-  }, [href]);
+      }
+    },
+    [href]
+  );
 
   return (
     <motion.a
@@ -31,4 +34,4 @@ export default function ScrollLink({ href, children, className = '' }) {
       {children}
     </motion.a>
   );
-} 
+}

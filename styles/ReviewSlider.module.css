@@ -48,7 +48,7 @@
   .reviewSlider {
     padding: 0 2rem;
   }
-  
+
   .reviewSlider :global(.slick-prev) {
     left: -0.5rem;
   }
@@ -56,4 +56,4 @@
   .reviewSlider :global(.slick-next) {
     right: -0.5rem;
   }
-} 
+}
