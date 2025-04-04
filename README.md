@@ -1,34 +1,136 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Michal Drajna Portfolio Website
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js, showcasing my work as a QA Engineer and Test Automation specialist.
 
-First, run the development server:
+## 🚀 Features
 
+- **Responsive Design**: Fully responsive layout that works on all devices
+- **Dark Mode**: Toggle between light and dark themes
+- **Dynamic Content**: Interactive sections showcasing projects and skills
+- **Performance Optimized**: Fast loading times and optimized assets
+- **Accessibility**: WCAG compliant and screen-reader friendly
+- **Analytics**: Visitor tracking with Supabase
+
+## 🛠 Tech Stack
+
+- **Framework**: Next.js
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Database**: Supabase
+- **Deployment**: Vercel
+- **Icons**: React Icons
+- **Testing**: Playwright
+
+## 📦 Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
+git clone https://github.com/drajnamichal/md-portfolio.git
+cd md-portfolio
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+3. Create a `.env.local` file in the root directory and add your environment variables:
+```
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+4. Run the development server:
+```bash
+npm run dev
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## Learn More
+## 🔧 Configuration
 
-To learn more about Next.js, take a look at the following resources:
+### Environment Variables
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `NEXT_PUBLIC_SUPABASE_URL`: Your Supabase project URL
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`: Your Supabase anonymous key
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Database Setup
 
-## Deploy on Vercel
+The project uses Supabase for visitor tracking. Required tables:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `visitor_count`: Tracks total unique visitors
+- `visitor_ips`: Stores visitor information and analytics
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 📱 Available Scripts
+
+- `npm run dev`: Runs the development server
+- `npm run build`: Builds the production application
+- `npm run start`: Starts the production server
+- `npm run lint`: Runs ESLint for code quality
+- `npm test`: Runs Playwright tests (if configured)
+
+## 🎨 Project Structure
+
+```
+md-portfolio/
+├── components/         # React components
+├── pages/             # Next.js pages
+├── public/            # Static assets
+├── styles/            # CSS styles
+├── lib/              # Utility functions
+└── tests/            # Test files
+```
+
+## 🌟 Key Components
+
+- `Layout.js`: Main layout wrapper
+- `Footer.js`: Site footer with dynamic content
+- `SocialIcons.js`: Social media links
+- `VisitorTracker.js`: Analytics tracking
+
+## 🚀 Deployment
+
+The site is automatically deployed to Vercel on push to the main branch. To deploy manually:
+
+1. Install Vercel CLI:
+```bash
+npm i -g vercel
+```
+
+2. Deploy:
+```bash
+vercel
+```
+
+## 📈 Analytics
+
+The site uses Supabase to track:
+- Unique visitors
+- Visitor locations
+- Most visited pages
+- User engagement
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a pull request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📧 Contact
+
+- Website: [michaldrajna.com](https://michaldrajna.com)
+- LinkedIn: [Michal Drajna](https://www.linkedin.com/in/michaldrajna)
+- Twitter: [@drajnamichal](https://twitter.com/drajnamichal)
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Vercel for hosting
+- Supabase for backend services
+- All contributors and users of the site
