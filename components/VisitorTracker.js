@@ -1,7 +1,10 @@
 import { useEffect } from 'react';
 import { supabase } from '../lib/supabase';
+import { useRouter } from 'next/router';
 
 export default function VisitorTracker() {
+  const router = useRouter();
+
   useEffect(() => {
     const trackVisit = async () => {
       try {
@@ -11,9 +14,22 @@ export default function VisitorTracker() {
           .select('count')
           .single();
 
-        // Get client IP address
-        const ipResponse = await fetch('https://api.ipify.org?format=json');
-        const { ip } = await ipResponse.json();
+        // Get client IP address and location data
+        const ipResponse = await fetch('https://ipapi.co/json/');
+        const ipData = await ipResponse.json();
+        
+        const visitorData = {
+          ip: ipData.ip,
+          city: ipData.city,
+          region: ipData.region,
+          country: ipData.country_name,
+          timezone: ipData.timezone,
+          visited_at: new Date().toISOString(),
+          user_agent: window.navigator.userAgent,
+          language: window.navigator.language,
+          page_visited: router.pathname,
+          referrer: document.referrer || null
+        };
 
         // Check if this IP has visited in the last 24 hours
         const twentyFourHoursAgo = new Date(Date.now() - 24 * 60 * 60 * 1000);
@@ -21,7 +37,7 @@ export default function VisitorTracker() {
         const { data: existingVisit } = await supabase
           .from('visitor_ips')
           .select('*')
-          .eq('ip', ip)
+          .eq('ip', ipData.ip)
           .gte('visited_at', twentyFourHoursAgo.toISOString())
           .single();
 
@@ -34,13 +50,10 @@ export default function VisitorTracker() {
             .from('visitor_count')
             .upsert({ id: 1, count: newCount });
 
-          // Record this IP visit
+          // Record this IP visit with additional data
           await supabase
             .from('visitor_ips')
-            .insert({
-              ip: ip,
-              visited_at: new Date().toISOString()
-            });
+            .insert(visitorData);
         }
       } catch (error) {
         // Silently log error without affecting the user experience
@@ -49,7 +62,7 @@ export default function VisitorTracker() {
     };
 
     trackVisit();
-  }, []);
+  }, [router.pathname]); // Track when pathname changes
 
   // This component doesn't render anything
   return null;
