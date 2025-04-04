@@ -1,6 +1,7 @@
 import { FaGlobeAmericas, FaRunning, FaBook, FaHeadphones } from "react-icons/fa";
 import Recommendations from "../components/Recommendations";
 import Layout from "../components/Layout";
+import Image from "next/image";
 
 export default function Resume() {
   return (
@@ -48,55 +49,109 @@ export default function Resume() {
           <section>
             <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400">Work Experience</h3>
             <div className="space-y-8">
-              <div>
-                <h4 className="text-xl font-medium">Senior Quality Assurance Engineer</h4>
-                <p className="text-gray-600 dark:text-gray-400">Bloomreach • Full-time • Sep 2024 - Present • Brno, South Moravia, Czechia • Remote</p>
-                <ul className="list-disc ml-6 mt-2 space-y-2">
-                  <li>Specializing in Robot Framework and k6 for comprehensive test automation</li>
-                  <li>Contributing to the development and maintenance of automated test suites</li>
-                  <li>Collaborating with cross-functional teams to ensure software quality</li>
-                  <li>Implementing best practices in test automation and quality assurance</li>
-                </ul>
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-12 h-12 relative mt-1">
+                  <Image
+                    src="/images/companies/bloomreach.png"
+                    alt="Bloomreach logo"
+                    fill
+                    className="object-contain dark:invert-[.85] dark:brightness-200 transition-all duration-200"
+                  />
+                </div>
+                <div className="flex-grow">
+                  <h4 className="text-xl font-medium">Senior Quality Assurance Engineer</h4>
+                  <p className="text-gray-600 dark:text-gray-400">Bloomreach • Full-time • Sep 2024 - Present • Brno, South Moravia, Czechia • Remote</p>
+                  <ul className="list-disc ml-6 mt-2 space-y-2">
+                    <li>Specializing in Robot Framework and k6 for comprehensive test automation</li>
+                    <li>Contributing to the development and maintenance of automated test suites</li>
+                    <li>Collaborating with cross-functional teams to ensure software quality</li>
+                    <li>Implementing best practices in test automation and quality assurance</li>
+                  </ul>
+                </div>
               </div>
-              <div>
-                <h4 className="text-xl font-medium">QA Engineer</h4>
-                <p className="text-gray-600 dark:text-gray-400">Investown • 10/2022 - Present • Prague</p>
-                <ul className="list-disc ml-6 mt-2 space-y-2">
-                  <li>Designed, developed, and maintain a comprehensive test framework in the fastest-growing fintech startup in the Czech Republic</li>
-                  <li>Implemented end-to-end regression and visual tests for both web and mobile applications using Playwright and TypeScript</li>
-                  <li>Test Android and iOS apps using Detox</li>
-                  <li>Contribute to the CI/CD pipeline to ensure thorough testing of new code changes before release</li>
-                </ul>
+
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-12 h-12 relative mt-1">
+                  <Image
+                    src="/images/companies/investown.png"
+                    alt="Investown logo"
+                    fill
+                    className="object-contain dark:invert-[.85] dark:brightness-200 transition-all duration-200"
+                  />
+                </div>
+                <div className="flex-grow">
+                  <h4 className="text-xl font-medium">QA Engineer</h4>
+                  <p className="text-gray-600 dark:text-gray-400">Investown • 10/2022 - Present • Prague</p>
+                  <ul className="list-disc ml-6 mt-2 space-y-2">
+                    <li>Designed, developed, and maintain a comprehensive test framework in the fastest-growing fintech startup in the Czech Republic</li>
+                    <li>Implemented end-to-end regression and visual tests for both web and mobile applications using Playwright and TypeScript</li>
+                    <li>Test Android and iOS apps using Detox</li>
+                    <li>Contribute to the CI/CD pipeline to ensure thorough testing of new code changes before release</li>
+                  </ul>
+                </div>
               </div>
-              <div>
-                <h4 className="text-xl font-medium">Senior QA Engineer</h4>
-                <p className="text-gray-600 dark:text-gray-400">Currys CoE, s.r.o. • 09/2021 - 03/2024 • Brno</p>
-                <ul className="list-disc ml-6 mt-2 space-y-2">
-                  <li>Contributed to application development for Currys stores, ensuring smooth customer interactions via iPads</li>
-                  <li>Utilized Postman for API testing and CodeceptJS for end-to-end testing</li>
-                  <li>Used tools including BrowserStack, Bamboo, Jenkins, Bitbucket, Jira, Zephyr</li>
-                  <li>Implemented k6 for performance testing and visual testing</li>
-                </ul>
+
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 relative mt-1">
+                  <Image
+                    src="/images/companies/currys.svg"
+                    alt="Currys logo"
+                    fill
+                    className="object-contain dark:invert-[.85] dark:brightness-200 transition-all duration-200"
+                  />
+                </div>
+                <div className="flex-grow">
+                  <h4 className="text-xl font-medium">Senior QA Engineer</h4>
+                  <p className="text-gray-600 dark:text-gray-400">Currys CoE, s.r.o. • 09/2021 - 03/2024 • Brno</p>
+                  <ul className="list-disc ml-6 mt-2 space-y-2">
+                    <li>Contributed to application development for Currys stores, ensuring smooth customer interactions via iPads</li>
+                    <li>Utilized Postman for API testing and CodeceptJS for end-to-end testing</li>
+                    <li>Used tools including BrowserStack, Bamboo, Jenkins, Bitbucket, Jira, Zephyr</li>
+                    <li>Implemented k6 for performance testing and visual testing</li>
+                  </ul>
+                </div>
               </div>
-              <div>
-                <h4 className="text-xl font-medium">Test Engineer</h4>
-                <p className="text-gray-600 dark:text-gray-400">GlobalLogic Slovakia • 11/2017 - 06/2019 • Košice</p>
-                <ul className="list-disc ml-6 mt-2 space-y-2">
-                  <li>Conducted web application testing for wearable defibrillator project using Selenium and Python</li>
-                  <li>Worked on secure document sharing project ensuring safe document sharing across platforms</li>
-                  <li>Utilized tools including Pytest, Git, Jira, Zephyr, Confluence, and Appium</li>
-                  <li>Performed UI/UX testing, manual testing, and bug reporting</li>
-                </ul>
+
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 relative mt-1">
+                  <Image
+                    src="/images/companies/globallogic.svg"
+                    alt="GlobalLogic logo"
+                    fill
+                    className="object-contain dark:invert-[.85] dark:brightness-200 transition-all duration-200"
+                  />
+                </div>
+                <div className="flex-grow">
+                  <h4 className="text-xl font-medium">Test Engineer</h4>
+                  <p className="text-gray-600 dark:text-gray-400">GlobalLogic Slovakia • 11/2017 - 06/2019 • Košice</p>
+                  <ul className="list-disc ml-6 mt-2 space-y-2">
+                    <li>Conducted web application testing for wearable defibrillator project using Selenium and Python</li>
+                    <li>Worked on secure document sharing project ensuring safe document sharing across platforms</li>
+                    <li>Utilized tools including Pytest, Git, Jira, Zephyr, Confluence, and Appium</li>
+                    <li>Performed UI/UX testing, manual testing, and bug reporting</li>
+                  </ul>
+                </div>
               </div>
-              <div>
-                <h4 className="text-xl font-medium">Test Automation Developer</h4>
-                <p className="text-gray-600 dark:text-gray-400">FPT Slovakia • 08/2015 - 10/2017 • Košice</p>
-                <ul className="list-disc ml-6 mt-2 space-y-2">
-                  <li>Designed and developed automated tests for REST Web services using CA DevTest (LISA)</li>
-                  <li>Worked with tools including Spira, Jira, TortoiseSVN, XML, and JSON</li>
-                  <li>Served as manual tester using Mantis and Polarion</li>
-                  <li>Member of internal security testing team focusing on web application security using Burp Suite, Webscarab, and OWASP ZAP</li>
-                </ul>
+
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 relative mt-1">
+                  <Image
+                    src="/images/companies/fpt.svg"
+                    alt="FPT logo"
+                    fill
+                    className="object-contain dark:invert-[.85] dark:brightness-200 transition-all duration-200"
+                  />
+                </div>
+                <div className="flex-grow">
+                  <h4 className="text-xl font-medium">Test Automation Developer</h4>
+                  <p className="text-gray-600 dark:text-gray-400">FPT Slovakia • 08/2015 - 10/2017 • Košice</p>
+                  <ul className="list-disc ml-6 mt-2 space-y-2">
+                    <li>Designed and developed automated tests for REST Web services using CA DevTest (LISA)</li>
+                    <li>Worked with tools including Spira, Jira, TortoiseSVN, XML, and JSON</li>
+                    <li>Served as manual tester using Mantis and Polarion</li>
+                    <li>Member of internal security testing team focusing on web application security using Burp Suite, Webscarab, and OWASP ZAP</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </section>
