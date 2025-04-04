@@ -45,7 +45,6 @@ export default function BlogPost({ post, allPosts }) {
 
   return (
     <Layout
-      title={`${post.title} - Michal Drajna's Blog`}
       description={post.excerpt}
       image={post.coverImage}
     >
@@ -95,49 +94,49 @@ export default function BlogPost({ post, allPosts }) {
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
               {post.excerpt}
             </p>
-
-            {/* Share buttons */}
-            <div className="flex items-center gap-4">
-              <span className="text-gray-600 dark:text-gray-400">Share:</span>
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={() => handleShare('twitter')}
-                className="text-gray-600 dark:text-gray-400 hover:text-teal-600 dark:hover:text-teal-400"
-                aria-label="Share on Twitter"
-              >
-                <FaTwitter size={20} />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={() => handleShare('linkedin')}
-                className="text-gray-600 dark:text-gray-400 hover:text-teal-600 dark:hover:text-teal-400"
-                aria-label="Share on LinkedIn"
-              >
-                <FaLinkedin size={20} />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={() => handleShare('copy')}
-                className="text-gray-600 dark:text-gray-400 hover:text-teal-600 dark:hover:text-teal-400"
-                aria-label="Copy link"
-              >
-                <FaCopy size={20} />
-              </motion.button>
-              {copySuccess && (
-                <span className="text-sm text-teal-600 dark:text-teal-400">
-                  Link copied!
-                </span>
-              )}
-            </div>
           </header>
 
           <div 
             className="prose prose-lg dark:prose-invert max-w-none"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
+
+          {/* Share buttons */}
+          <div className="flex items-center gap-4 mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+            <span className="text-gray-600 dark:text-gray-400">Share this article:</span>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => handleShare('twitter')}
+              className="text-gray-600 dark:text-gray-400 hover:text-teal-600 dark:hover:text-teal-400"
+              aria-label="Share on Twitter"
+            >
+              <FaTwitter size={20} />
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => handleShare('linkedin')}
+              className="text-gray-600 dark:text-gray-400 hover:text-teal-600 dark:hover:text-teal-400"
+              aria-label="Share on LinkedIn"
+            >
+              <FaLinkedin size={20} />
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => handleShare('copy')}
+              className="text-gray-600 dark:text-gray-400 hover:text-teal-600 dark:hover:text-teal-400"
+              aria-label="Copy link"
+            >
+              <FaCopy size={20} />
+            </motion.button>
+            {copySuccess && (
+              <span className="text-sm text-teal-600 dark:text-teal-400">
+                Link copied!
+              </span>
+            )}
+          </div>
 
           {/* Related Posts */}
           <RelatedPosts currentPost={post} allPosts={allPosts} />
