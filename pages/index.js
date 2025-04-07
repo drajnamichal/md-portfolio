@@ -7,6 +7,15 @@ import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
 import SocialIcons from '../components/SocialIcons';
 
+// This enables Static Site Generation (SSG)
+export async function getStaticProps() {
+  return {
+    props: {},
+    // Revalidate every hour
+    revalidate: 3600,
+  };
+}
+
 export default function Home() {
   return (
     <Layout
@@ -59,12 +68,11 @@ export default function Home() {
             <Image
               src={profile}
               alt="Michal Drajna - QA Engineer"
-              layout="fill"
-              objectFit="cover"
+              fill
               priority
               placeholder="blur"
               sizes="(max-width: 768px) 320px, 384px"
-              className="transform transition-transform duration-500 hover:scale-105"
+              className="object-cover transform transition-transform duration-500 hover:scale-105"
             />
           </motion.div>
         </section>
