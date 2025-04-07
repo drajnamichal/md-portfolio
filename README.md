@@ -1,4 +1,4 @@
-# Michal Drajna Portfolio Website
+# Michal Drajna - Portfolio Website
 
 A modern, responsive portfolio website built with Next.js, showcasing my work as a QA Engineer and Test Automation specialist.
 
