@@ -13,6 +13,7 @@ const nextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     formats: ['image/webp'],
+    unoptimized: true, // Required for static export
   },
   // Enable static optimization
   experimental: {
@@ -20,6 +21,13 @@ const nextConfig = {
     scrollRestoration: true,
     optimizePackageImports: ['framer-motion', 'react-icons'],
   },
+  // Configure static export
+  output: 'export',
+  // Disable image optimization for static export
+  images: {
+    unoptimized: true,
+  },
+  // Configure caching headers
   async headers() {
     return [
       {
@@ -61,6 +69,10 @@ const nextConfig = {
         ],
       },
     ];
+  },
+  // Disable server components for static export
+  experimental: {
+    appDir: false,
   },
 };
 
