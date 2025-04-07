@@ -11,8 +11,6 @@ import SocialIcons from '../components/SocialIcons';
 export async function getStaticProps() {
   return {
     props: {},
-    // Revalidate every hour
-    revalidate: 3600,
   };
 }
 

@@ -57,8 +57,6 @@ export async function getStaticProps() {
     props: {
       featuredItems,
     },
-    // Revalidate every hour
-    revalidate: 3600,
   };
 }
 

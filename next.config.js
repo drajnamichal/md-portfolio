@@ -20,7 +20,6 @@ const nextConfig = {
     optimizeCss: true,
     scrollRestoration: true,
     optimizePackageImports: ['framer-motion', 'react-icons'],
-    appDir: false, // Disable server components for static export
   },
   // Configure static export
   output: 'export',
