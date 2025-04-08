@@ -74,11 +74,11 @@ export function middleware(request: NextRequest) {
   // Clean up old entries every hour
   if (now % (60 * 60 * 1000) < 1000) {
     const hourAgo = now - 60 * 60 * 1000;
-    for (const [key, value] of ipRequestMap.entries()) {
+    Array.from(ipRequestMap.entries()).forEach(([key, value]) => {
       if (value.timestamp < hourAgo) {
         ipRequestMap.delete(key);
       }
-    }
+    });
   }
 
   return response;
