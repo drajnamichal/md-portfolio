@@ -95,10 +95,10 @@ export class RateLimiter {
 
   cleanup(): void {
     const now = Date.now();
-    for (const [key, value] of this.requests.entries()) {
+    Array.from(this.requests.entries()).forEach(([key, value]) => {
       if (now - value.timestamp > this.windowMs) {
         this.requests.delete(key);
       }
-    }
+    });
   }
 }

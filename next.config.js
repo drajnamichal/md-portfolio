@@ -23,6 +23,8 @@ const nextConfig = {
   },
   // Configure static export
   output: 'export',
+  // Security configurations
+  poweredByHeader: false, // Remove X-Powered-By header
 };
 
 module.exports = nextConfig;
