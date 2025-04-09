@@ -35,11 +35,11 @@ export function middleware(request: NextRequest) {
     'Content-Security-Policy',
     [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-eval' 'unsafe-inline' *.vercel-insights.com *.youtube.com *.browserstack.com",
+      "script-src 'self' 'unsafe-eval' 'unsafe-inline' *.vercel-insights.com *.youtube.com *.browserstack.com *.supabase.co",
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: blob: https:",
       "font-src 'self'",
-      "connect-src 'self' *.vercel-insights.com",
+      "connect-src 'self' *.vercel-insights.com *.supabase.co",
       "frame-src 'self' *.youtube.com",
       "media-src 'self'",
       "object-src 'none'",
