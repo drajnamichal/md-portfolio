@@ -33,6 +33,7 @@ export default function CaseStudy({ study }) {
         <div
           className="flex items-center justify-between cursor-pointer"
           onClick={() => setIsExpanded(!isExpanded)}
+          data-test-id="case-study-toggle"
         >
           <h4 className="text-xl font-medium text-gray-900 dark:text-white">Project Details</h4>
           <motion.div animate={{ rotate: isExpanded ? 180 : 0 }} transition={{ duration: 0.2 }}>

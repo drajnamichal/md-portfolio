@@ -136,6 +136,7 @@ export default function BlogPost({ post, allPosts }) {
               onClick={() => handleShare('twitter')}
               className="text-gray-600 dark:text-gray-400 hover:text-teal-600 dark:hover:text-teal-400"
               aria-label="Share on Twitter"
+              data-test-id="share-twitter"
             >
               <FaTwitter size={20} />
             </motion.button>
@@ -145,6 +146,7 @@ export default function BlogPost({ post, allPosts }) {
               onClick={() => handleShare('linkedin')}
               className="text-gray-600 dark:text-gray-400 hover:text-teal-600 dark:hover:text-teal-400"
               aria-label="Share on LinkedIn"
+              data-test-id="share-linkedin"
             >
               <FaLinkedin size={20} />
             </motion.button>
@@ -154,6 +156,7 @@ export default function BlogPost({ post, allPosts }) {
               onClick={() => handleShare('copy')}
               className="text-gray-600 dark:text-gray-400 hover:text-teal-600 dark:hover:text-teal-400"
               aria-label="Copy link"
+              data-test-id="share-copy"
             >
               <FaCopy size={20} />
             </motion.button>

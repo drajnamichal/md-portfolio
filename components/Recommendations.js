@@ -49,6 +49,7 @@ export default function Recommendations() {
             }`}
             onClick={() => setCurrentIndex(index)}
             aria-label={`Go to slide ${index + 1}`}
+            data-test-id={`recommendation-dot-${index}`}
           />
         ))}
       </div>

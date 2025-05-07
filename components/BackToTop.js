@@ -38,6 +38,7 @@ export default function BackToTop() {
           onClick={scrollToTop}
           className="fixed bottom-8 right-8 p-3 rounded-full bg-teal-600 dark:bg-teal-500 text-white shadow-lg hover:bg-teal-700 dark:hover:bg-teal-600 transition-colors z-50"
           title="Back to top"
+          data-test-id="back-to-top"
         >
           <FaArrowUp className="w-5 h-5" />
         </motion.button>

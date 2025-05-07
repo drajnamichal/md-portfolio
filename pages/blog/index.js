@@ -47,6 +47,7 @@ export default function Blog({ posts }) {
               value={searchTerm}
               onChange={e => setSearchTerm(e.target.value)}
               className="w-full px-4 py-2 pl-10 rounded-lg border dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-800 dark:text-white focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+              data-test-id="search-input"
             />
             <FaSearch className="absolute left-3 top-3 text-gray-400" />
           </div>
@@ -59,6 +60,7 @@ export default function Blog({ posts }) {
                   ? 'bg-teal-600 text-white'
                   : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
               }`}
+              data-test-id="tag-all"
             >
               All
             </button>
@@ -71,6 +73,7 @@ export default function Blog({ posts }) {
                     ? 'bg-teal-600 text-white'
                     : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
                 }`}
+                data-test-id={`tag-${tag}`}
               >
                 {tag}
               </button>

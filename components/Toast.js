@@ -50,6 +50,7 @@ export default function Toast({ message, type = 'success', onClose, duration = 3
             onClick={onClose}
             className="ml-4 hover:opacity-75 transition-opacity"
             aria-label="Close notification"
+            data-test-id="toast-close"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path

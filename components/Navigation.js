@@ -91,6 +91,7 @@ export default function Navigation() {
               onClick={toggleMenu}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100"
               aria-expanded={isOpen}
+              data-test-id="mobile-menu-toggle"
             >
               <span className="sr-only">Open main menu</span>
               {isOpen ? menuIcons.close : menuIcons.open}

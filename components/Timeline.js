@@ -29,6 +29,7 @@ export default function Timeline({ experiences }) {
               <div
                 className="cursor-pointer"
                 onClick={() => setExpandedId(expandedId === index ? null : index)}
+                data-test-id={`timeline-toggle-${index}`}
               >
                 <div className="flex items-center justify-between">
                   <h4 className="text-xl font-medium text-gray-900 dark:text-white">{exp.title}</h4>
