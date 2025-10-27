@@ -1,4 +1,5 @@
 // Temporary debug endpoint - DELETE THIS FILE after testing!
+// Updated to force redeploy
 export default async function handler(req, res) {
   const envCheck = {
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL || 'MISSING',
