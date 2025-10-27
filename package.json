@@ -2,6 +2,9 @@
   "name": "michal_drajna_portfolio",
   "version": "1.4.7",
   "private": true,
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -13,6 +16,7 @@
     "commit-push": "sh scripts/auto-commit.sh"
   },
   "dependencies": {
+    "@stripe/stripe-js": "^8.1.0",
     "@supabase/supabase-js": "^2.49.4",
     "@tailwindcss/typography": "^0.5.16",
     "@types/sanitize-html": "^2.15.0",
@@ -32,6 +36,7 @@
     "react-slick": "^0.30.3",
     "sanitize-html": "^2.15.0",
     "slick-carousel": "^1.8.1",
+    "stripe": "^19.1.0",
     "swiper": "^9.4.0",
     "tailwind-scrollbar": "^3.0.4",
     "typewriter-effect": "^2.21.0"

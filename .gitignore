@@ -27,6 +27,7 @@ yarn-error.log*
 
 # local env files
 .env*.local
+SUPABASE_CREDENTIALS.txt
 
 # vercel
 .vercel
