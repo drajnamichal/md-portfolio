@@ -106,16 +106,16 @@ export default function CoursePage() {
 
   return (
     <Layout
-      title="Playwright MCP Mastery Course | Michal Drajna"
+      title="Playwright MCP & Agents Course | Michal Drajna"
       description="Master Playwright with Model Context Protocol. Learn AI-powered test automation."
       image="/playwright.png"
     >
       <div className="max-w-7xl mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-2">
-          Playwright MCP Mastery
+          Playwright MCP & Agents
         </h1>
         <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-          Master Playwright with Model Context Protocol
+          Master Playwright with Model Context Protocol and AI Agents
         </p>
 
         {!hasAccess ? (

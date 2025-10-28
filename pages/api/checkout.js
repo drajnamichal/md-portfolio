@@ -26,8 +26,9 @@ export default async function handler(req, res) {
     const coursePrices = {
       'playwright-mcp': {
         price: 9900, // $99.00 in cents
-        name: 'Playwright MCP Mastery Course',
-        description: 'Complete guide to mastering Playwright with Model Context Protocol',
+        name: 'Playwright MCP & Agents Course',
+        description:
+          'Complete guide to mastering Playwright with Model Context Protocol and AI Agents',
       },
     };
 

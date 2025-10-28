@@ -17,9 +17,9 @@ import AnimatedCounter from '../components/AnimatedCounter';
 export default function Courses() {
   const courses = [
     {
-      title: 'Playwright MCP Mastery',
+      title: 'Playwright MCP & Agents',
       description:
-        'Master Playwright with Model Context Protocol (MCP). Learn how to build intelligent test automation using AI-powered tools and modern testing techniques.',
+        'Master Playwright with Model Context Protocol (MCP) and AI Agents. Learn how to build intelligent test automation using AI-powered tools, agents, and modern testing techniques.',
       image: '/playwright.png',
       price: 99,
       courseId: 'playwright-mcp',
@@ -27,12 +27,12 @@ export default function Courses() {
       topics: [
         'Introduction to Model Context Protocol',
         'Building MCP servers for testing',
+        'AI Agents for test automation',
         'AI-powered test generation',
         'Advanced Playwright automation',
         'Integration with CI/CD pipelines',
         'Real-world testing scenarios',
         'Best practices and patterns',
-        'Performance optimization',
       ],
       features: [
         '8+ hours of video content',
