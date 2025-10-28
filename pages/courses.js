@@ -231,7 +231,7 @@ export default function Courses() {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-12 mb-16 max-w-6xl mx-auto px-4">
+      <div className="flex flex-col gap-12 mb-16 max-w-4xl mx-auto px-4">
         {courses.map((course, index) => (
           <div
             key={index}
@@ -246,7 +246,7 @@ export default function Courses() {
                     alt={course.title}
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
                     quality={90}
                     priority={index === 0}
                   />
