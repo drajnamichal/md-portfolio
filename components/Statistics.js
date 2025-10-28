@@ -6,7 +6,7 @@ export default function Statistics() {
   const stats = [
     {
       icon: FaUserGraduate,
-      value: '900',
+      value: '1200',
       suffix: '+',
       label: 'Students Trained',
       color: 'text-blue-500',

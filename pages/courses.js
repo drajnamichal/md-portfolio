@@ -195,7 +195,7 @@ export default function Courses() {
         <div className="text-center">
           <div className="flex items-center justify-center text-4xl text-teal-600 mb-2">
             <FaUserGraduate className="mr-2" />
-            <AnimatedCounter value="900" suffix="+" />
+            <AnimatedCounter value="1200" suffix="+" />
           </div>
           <p className="text-gray-600 dark:text-gray-300">Students Trained</p>
         </div>
