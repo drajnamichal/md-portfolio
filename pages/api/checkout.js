@@ -14,6 +14,14 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Course ID and email are required' });
     }
 
+    // Check if Stripe is properly configured
+    if (!process.env.STRIPE_SECRET_KEY) {
+      console.error('STRIPE_SECRET_KEY is not set');
+      return res
+        .status(500)
+        .json({ error: 'Payment system not configured. Please contact support.' });
+    }
+
     // Define course prices
     const coursePrices = {
       'playwright-mcp': {
@@ -59,6 +67,18 @@ export default async function handler(req, res) {
     res.status(200).json({ sessionId: session.id, url: session.url });
   } catch (error) {
     console.error('Stripe checkout error:', error);
-    res.status(500).json({ error: 'Failed to create checkout session' });
+
+    // Provide more specific error information
+    let errorMessage = 'Failed to create checkout session';
+
+    if (error.type === 'StripeInvalidRequestError') {
+      errorMessage = 'Invalid payment configuration. Please contact support.';
+    } else if (error.type === 'StripeAPIError') {
+      errorMessage = 'Payment service temporarily unavailable. Please try again.';
+    } else if (error.message) {
+      errorMessage = error.message;
+    }
+
+    res.status(500).json({ error: errorMessage });
   }
 }

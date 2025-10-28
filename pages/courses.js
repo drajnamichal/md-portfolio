@@ -120,16 +120,32 @@ export default function Courses() {
         body: JSON.stringify({ courseId, email }),
       });
 
+      // Check if response is ok before trying to parse JSON
+      if (!response.ok) {
+        // Try to get error message from response
+        let errorMessage = 'Failed to create checkout session';
+        try {
+          const errorData = await response.json();
+          errorMessage = errorData.error || errorMessage;
+        } catch {
+          // If JSON parsing fails, use status text
+          errorMessage = response.statusText || errorMessage;
+        }
+        throw new Error(errorMessage);
+      }
+
+      // Parse JSON only if response is ok
       const data = await response.json();
 
-      if (!response.ok) {
-        throw new Error(data.error || 'Failed to create checkout session');
+      if (!data.url) {
+        throw new Error('Invalid response from payment system');
       }
 
       // Redirect to Stripe Checkout
       window.location.href = data.url;
     } catch (err) {
-      setError(err.message);
+      console.error('Checkout error:', err);
+      setError(err.message || 'An unexpected error occurred. Please try again.');
       setLoading(false);
     }
   };
