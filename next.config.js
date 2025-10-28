@@ -13,7 +13,7 @@ const nextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     formats: ['image/webp'],
-    unoptimized: true, // Required for static export
+    // Remove unoptimized: true to enable image optimization
   },
   // Enable static optimization
   experimental: {
@@ -21,8 +21,8 @@ const nextConfig = {
     scrollRestoration: true,
     optimizePackageImports: ['framer-motion', 'react-icons'],
   },
-  // Configure static export
-  output: 'export',
+  // Remove static export to enable API routes and server-side functionality
+  // output: 'export', // Commented out to enable course platform
   // Security configurations
   poweredByHeader: false, // Remove X-Powered-By header
 };
